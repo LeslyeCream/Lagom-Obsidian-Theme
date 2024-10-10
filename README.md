@@ -82,9 +82,11 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 
 # Special thanks
 
-@Bluemoondragon07 For its fantastic theme that encouraged me to choose Obsidian as my replacement to evernote.
+[@Bluemoondragon07](https://github.com/Bluemoondragon07/obsidian-big-and-bold) For its fantastic theme that encouraged me to choose Obsidian as my replacement to Evernote.
 
 @ariehen In this [post](https://forum.obsidian.md/t/properties-view-css-the-fall-collection/66512) for properties in the notes 
+
+[@death_au](https://github.com/deathau)
 
 # Contribution
 
