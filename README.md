@@ -27,6 +27,7 @@ A phone-focused theme for Obsidian
 ![IMG_20241009_142625](https://github.com/user-attachments/assets/622c6872-f15f-4129-81f8-cac6e4f6a03d)
 ![IMG_20241009_142756](https://github.com/user-attachments/assets/b83784ae-0f98-4709-8b40-ef25ff979c36)
 ![IMG_20241009_142848](https://github.com/user-attachments/assets/7e8465cf-e6a5-4cca-a0ca-59c3d2b318ed)
+![IMG_20241009_142919](https://github.com/user-attachments/assets/cfc7eec7-4e88-4589-b1ec-cc9d29cac693)
 
 
 
