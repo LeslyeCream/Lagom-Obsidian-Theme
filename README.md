@@ -34,7 +34,7 @@ A phone-focused theme for Obsidian
 
 # Note
 
-It is recommended to use *Commander* and *Iconize* with this theme for a complete experience.
+It is recommended to use *Commander*, *Iconize* and *File explorer note count* with this theme for a complete experience.
 
 # Special thanks
 
