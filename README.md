@@ -35,6 +35,12 @@ A phone-focused theme for Obsidian
 
 It is recommended to use *Commander*, *Iconize* and *File explorer note count* with this theme for a complete experience.
 
+# Roadmap
+
+- Clean and improve the css code 
+- Adapt it for the rest of the platforms 
+- Fix some aesthetic details
+
 # Special thanks
 
 @Bluemoondragon07 For its fantastic theme that encouraged me to choose Obsidian as my replacement to evernote.
