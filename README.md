@@ -41,7 +41,22 @@ A phone-focused theme for Obsidian
 **Quotes:** Caecelia 
 
 *I'm still looking for similar alternatives to these fonts that harmonize with each other.*
+# Features
 
+- The file panel occupies 100% of the screen to take advantage of the available space. 
+
+- Files show their full name on multiple lines. No more unfinished titles or ellipses!
+
+- Nested folders with a subtle open-folder indicator
+
+  ![IMG_20241010_162206](https://github.com/user-attachments/assets/2ac5c144-f451-44ce-a2f0-c52c70850f04)
+
+
+- Editor dims blocks of text that is not in focus (and slightly increases the font size of text in focus) 
+
+- Separator inspired by the book *A Psalm for the Wild-Built*
+
+- Code blocks more similar in appearance to a macOS terminal (colorful for dark mode and monochromatic for light mode)
 
 # Note
 
