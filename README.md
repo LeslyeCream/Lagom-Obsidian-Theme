@@ -30,12 +30,11 @@ A phone-focused theme for Obsidian
 
 *The fonts I use in the screenshots:* 
 
-**Main typeface:** Akrobat semibold or Pragati regular 
+**Main font:** Akrobat semibold or Pragati regular 
 
 **Headers:** Play fair display 
 
-**Mono:** I love the Nothing font but I am not sure if it is possible for personal use. So... nothing for now. 
-
+**Mono:** I love the [Nothing](https://us.nothing.tech/) font but I'm not really sure if it is possible for personal use. So... nothing for now. 👀 
 
 **Code:** Jetbrains
 
