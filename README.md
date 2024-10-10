@@ -40,6 +40,7 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 - Clean and improve the css code 
 - Adapt it for the rest of the platforms 
 - Fix some aesthetic details
+- Add options for *Style Settings*
 
 # Special thanks
 
