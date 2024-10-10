@@ -28,7 +28,20 @@ A phone-focused theme for Obsidian
 ![IMG_20241009_142848](https://github.com/user-attachments/assets/7e8465cf-e6a5-4cca-a0ca-59c3d2b318ed)
 ![IMG_20241009_142919](https://github.com/user-attachments/assets/cfc7eec7-4e88-4589-b1ec-cc9d29cac693)
 
+*The fonts I use in the screenshots:* 
 
+**Main typeface:** Akrobat semibold or Pragati regular 
+
+**Headers:** Play fair display 
+
+**Mono:** I love the Nothing font but I am not sure if it is possible for personal use. So... nothing for now. 
+
+
+**Code:** Jetbrains
+
+**Quotes:** Caecelia 
+
+*I'm still looking for similar alternatives to these fonts that harmonize with each other.*
 
 
 # Note
