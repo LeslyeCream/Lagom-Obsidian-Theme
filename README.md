@@ -23,6 +23,13 @@ A phone-focused theme for Obsidian
 *work in progress...*
 
 # Screenshots
+![IMG_20241009_142545](https://github.com/user-attachments/assets/dd1ea94f-fee5-4325-ac63-748f0ed751b9)
+![IMG_20241009_142625](https://github.com/user-attachments/assets/622c6872-f15f-4129-81f8-cac6e4f6a03d)
+![IMG_20241009_142756](https://github.com/user-attachments/assets/b83784ae-0f98-4709-8b40-ef25ff979c36)
+![IMG_20241009_142848](https://github.com/user-attachments/assets/7e8465cf-e6a5-4cca-a0ca-59c3d2b318ed)
+
+
+
 
 # Note
 
