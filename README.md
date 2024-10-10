@@ -1,6 +1,5 @@
 ![IMG_20241009_134537](https://github.com/user-attachments/assets/2e1aa59f-633e-4d55-a696-e9930a093022)
 
-# Lagom-Obsidian-Theme
 A phone-focused theme for Obsidian
 
 [Lagom](https://en.wikipedia.org/wiki/Lagom) tries to focus on just the right amount of changes needed to make it look aesthetically more conventional and modern. It's not about reinventing the wheel or offering a unique or special theme. I just think it's a diamond in the rough that needs to be polished to shine on its own. ✨ 
