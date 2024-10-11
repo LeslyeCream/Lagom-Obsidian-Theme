@@ -19,6 +19,8 @@ A phone-focused theme for Obsidian
   
 5. Do not follow a specific color palette or typeface.
 
+6. Complementary and modular.
+
 *work in progress...*
 
 # Screenshots
@@ -34,7 +36,7 @@ A phone-focused theme for Obsidian
 
 **Headers:** Play fair display 
 
-**Mono:** I love the [Nothing](https://us.nothing.tech/) font but I'm not really sure if it is possible for personal use. So... nothing for now. 👀 
+**Mono:** I love the [Nothing](https://us.nothing.tech/) mono font but I'm not really sure if it is possible for personal use. So... nothing for now. 👀 
 
 **Code:** Jetbrains
 
