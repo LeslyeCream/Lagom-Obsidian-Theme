@@ -6,9 +6,8 @@ settings:
   - 
       id: icon-settings
       title: Show settings
-      title.es: Mostrar icono de ajustes
       type: variable-select
-      default: Hide
+      default: "Hide"
       options:
           - 
               label: Hide
@@ -19,7 +18,6 @@ settings:
   - 
       id: num-of-notes
       title: Show number of notes
-      title.es: Mostrar numero de notas
       type: variable-select
       default: Hide
       options:
@@ -32,7 +30,7 @@ settings:
   - 
       id: show-explorer-buttons
       title: Show explorer buttons
-      title.es: Mostrar butones del explorador
+
       type: variable-select
       default: Show
       options:
@@ -45,7 +43,6 @@ settings:
   - 
       id: editor-text-bar
       title: Show editor bar
-      title.es: Mostrar barra de edición
       type: variable-select
       default: Hide
       options:
@@ -58,7 +55,6 @@ settings:
   - 
       id: files-bookmarks-search-bar
       title: Show menu files
-      title.es: Mostrar barra superior de archivos
       type: variable-select
       default: Hide
       options:
@@ -71,7 +67,6 @@ settings:
   - 
       id: show-vault-name
       title: Show vault
-      title.es: Mostrar nombre de la bóveda
       type: variable-select
       default: Hide
       options:
@@ -84,7 +79,6 @@ settings:
   - 
       id: scrollbars
       title: Show scrollbars
-      title.es: Mostar barras de desplazamiento
       type: variable-select
       default: Hide
       options:
@@ -101,44 +95,43 @@ name: Notes & Editor
 id: notes-values
 settings:
   - 
+      id: text-note-section
+      title: Text note
+      type: heading
+      level: 2
+  - 
       id: default-font-size
-      title: Note - font size
-      title.es: Tamaño de fuente
+      title: Font size
       type: variable-number
       default: 17.5
       format: px
   - 
       id: p-spacing
       title: Paragraph spacing
-      title.es: Distancia entre párrafos
       type: variable-number
       default: 24
       format: px
   - 
       id: list-indent
       title: List indent  
-      title.es: sangria general en listas
       type: variable-number
       default: 17
       format: px
   - 
       id: letter-spacing-note
       title: Letter spacing
-      title.es: Distancia entre letras
       type: variable-number
       default: 0.03
       format: px
   - 
       id: line-height-note
       title: Line height
-      title.es: Distancia entre lineas
       type: variable-number
       default: 24.5
       format: px
   - 
       id: text-note-align
       title: Text align 
-      title.es: Alineación de texto
       type: variable-select
       default: justify
       options:
@@ -155,49 +148,49 @@ settings:
               label: Right
               value: right
   - 
-      id: headers-space-simetry
-      title: Headers space
-      title.es: Distancia entre encabezados
-      type: variable-number
-      default: 1.5
-      format: em
-  - 
       id: focus-active-line-opacity
       title: Opacity active line
-      title.es: Opacidad de linea activa
       type: variable-number
-      default: 0.85
+      default: 0.8
   - 
       id: focus-non-active-line-opacity
       title: Opacity non-active line
-      title.es: Opacidad en lineas no enfocadas
+
       type: variable-number
       default: 0.65
   - 
       id: active-line-font-size
       title: Active line font size
-      title.es: Tamaño de letra en linea activa
+
       type: variable-number
       default: 18
       format: px
   - 
       id: divisor-content
       title: Divisor content
-      title.es: Contenido dentro del divisor
+
       type: variable-text
       default: o0o
       quotes: true
   - 
-      id: inline-code-font-size
-      title: inline code font size
-      title.es: Tamaño de letra en código en linea
+      id: headers-section
+      title: Headers
+      type: heading
+      level: 2
+  - 
+      id: headers-space-simetry
+      title:  Vertical space
       type: variable-number
-      default: 12.5
-      format: px
+      default: 1.5
+      format: em
+  - 
+      id: inline-title-section
+      title: Inline title
+      type: heading
+      level: 2
   - 
       id: inline-title-align
-      title: Inline title align
-      title.es: Alineación de título de nota
+      title: Title align
       type: variable-select
       default: justify
       options:
@@ -215,29 +208,41 @@ settings:
               value: right
   - 
       id: inline-title-size
-      title: Inline title font size
-      title.es: Tamaño de letra en título
+      title: Font size
       type: variable-number
       default: 18.2
       format: px
   - 
-      id: icon-file
-      title: Change icon file
-      title.es: Cambiar icono de archivo
-      type: variable-text
-      default: "@"
-      quotes: true 
+      id: code-block-section
+      title: Code blocks & Inline code
+      type: heading
+      level: 2
   - 
       id: code-block-font-size
-      title: Code block font size
-      title.es: Tamaño de letra en bloques de código
+      title: Font size
       type: variable-number
       default: 14
       format: px
   - 
+      id: inline-code-font-size
+      title: inline code font size
+      type: variable-number
+      default: 12.5
+      format: px
+  - 
+      id: quotes-section
+      title: Quotes
+      type: heading
+      level: 2
+  - 
+      id: quote-font-size
+      title: Font size
+      type: variable-number
+      default: 15.7
+      format: px
+  - 
       id: quotes-align
-      title: Quotes align text
-      title.es: Alineación de citas
+      title: Align text
       type: variable-select
       default: justify
       options:
@@ -254,9 +259,13 @@ settings:
               label: Right
               value: right
   - 
+      id: callouts-section
+      title: Callouts
+      type: heading
+      level: 2
+  - 
       id: hide-callout-title
-      title: Show callout title
-      title.es: Mostrar titulo en callouts
+      title: Show  title
       type: variable-select
       default: Show
       options:
@@ -276,7 +285,6 @@ settings:
   - 
       id: hide-empty-properties
       title: Show empty properties
-      title.es: Ocultar propiedades vacias
       type: variable-select
       default: Hide
       options:
@@ -288,8 +296,7 @@ settings:
               value: unset
   - 
       id: hide-add-button
-      title: Show add properties button
-      title.es: Mostrar botón "Añadir propiedades"
+      title: Show 'add properties' button
       type: variable-select
       default: Hide
       options:
@@ -302,24 +309,21 @@ settings:
   - 
       id: metadata-label-width
       title: Properties key width
-      title.es: Ancho de clave en propiedades 
       type: variable-number-slider
       default: 39
       min: 25
       max: 50
       step: 1
-      format: percent
+      format: px
   - 
       id: properties-icon-size
       title: Icon size
-      title.es:  Tamaño de icono en propiedades
       type: variable-number
       default: unset
       format: px
   - 
       id: hide-bounderies-yaml
-      title: Show "---" in YAML (only editor)
-      title.es: Mostrar guiones en YAML (modo editor)
+      title: Show "---" in Source mode
       type: variable-select
       default: Hide
       options:
@@ -332,22 +336,46 @@ settings:
 */
 
 /* @settings
-name: Others
+name: Obsidian UI
 id: others-values
 settings:
-  - 
-      id: nav-item-size
-      title: Explorer files font size 
-      type: variable-number
-      default: 17
-      format: px
   - 
       id: radius-s
       title: Radius border
       type: variable-number
       default: 11.2
       format: px
+  - 
 */
+
+/* @settings
+name: Files
+id: files-folders
+settings:
+  - 
+      id: icon-file
+      title: Icon file
+
+      type: variable-text
+      default: "·"
+      quotes: true 
+  - 
+      id: nav-item-size
+      title: Font size
+      type: variable-number
+      default: 17
+      format: px
+*/
+
+/* ::::: OBSIDIAN THEMES ::::: */
+
+body.theme-dark {
+  opacity: 0.68; 
+}
+
+body.theme-light {
+   opacity: 0.75;
+}
 
 
 /* :::::::::: LINKS :::::::::: */
@@ -402,12 +430,6 @@ settings:
 
 
 /* :::::::::: ACTIVE LINE :::::::::: */
-.CodeMirror-activeline.CodeMirror-linebackground, .cm-active.cm-line {
-  /* border-bottom: 1.8px solid var(--background-modifier-border); */
-  background: var(--background-secondary);
-  font-size: var(--active-line-font-size);
-  width: fit-content;
-}
 
 /* Focus active line */
 .CodeMirror-lines:not(.selecting) .CodeMirror-code > :not(.CodeMirror-activeline) {
@@ -415,8 +437,15 @@ settings:
 }
 .cm-editor.cm-focused .cm-line:not(.cm-active) {
   opacity: var(--focus-non-active-line-opacity);
+  font-size: var(--default-font-size) !important;
+	
 }
 
+.CodeMirror-activeline.CodeMirror-linebackground, .cm-active.cm-line {
+  border-bottom: 1.4px solid var(--text-accent);
+  font-size: var(--active-line-font-size);
+  width: fit-content;
+}
 
 /* ::::::::: CHECKBOXES :::::::::: */
 .mod-rtl .checkbox-container {
@@ -446,9 +475,10 @@ padding: 0px !important;
 /* :::::::::: BLOCK QUOTES :::::::::: */
 .markdown-rendered blockquote, .blockquote-normal .markdown-rendered blockquote {
   text-align: var(--quotes-align);
-  padding: 0px 12px 0px 12px !important;
-  border-left: 0px solid !important;
-  display: flex;
+  padding: 0px 10px 0px 10px !important;
+  border-left: 0px !important;
+  font-size: var(--quote-font-size);
+	margin: 10px 5px 10px 5px;
 }
 
 
@@ -458,7 +488,6 @@ padding: 0px !important;
   border-radius: 0px;
   padding-left: 7px;
   padding-right: 7px;
-  background: var(--background-modifier-border);
 }
 
 
@@ -551,17 +580,18 @@ input[type=checkbox]:checked {
 
 /* :::::::::: CODE BLOCKS :::::::::: */
 .markdown-rendered pre {
+	margin: 16px 0px 16px 0px !important;
 background: var(--background-secondary);
 border-radius: var(--radius-s);
 box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
 font-size: var(--code-block-font-size);
-	
 }
 
 /* CODE BLOCK PREVIEW AND EDITOR */
-.cm-s-obsidian .HyperMD-codeblock, .cm-s-obsidian span.cm-inline-code {
-font-size: var(--code-block-font-size);
-border: 2.5px solid var(--background-primary);
+.cm-s-obsidian .HyperMD-codeblock, .cm-s-obsidian {
+	/* span.cm-inline-code */
+  font-size: var(--code-block-font-size);
+  border: 2.5px solid var(--background-primary);
 
 }
 
@@ -598,17 +628,18 @@ body.theme-dark .markdown-preview-view pre::before {
 
 /* CODE BLOCK EDITOR MODE */
 .cm-line.HyperMD-codeblock {
-	padding-right: 125px;
+	background: transparent !important;
 }
 
 /* MODIFY "COPY" BUTTON */
 .markdown-rendered button.copy-code-button {
-  font-size: 14.7px;
-  margin-top: 5.7px;
-  margin-right: 10px;
+  font-size: var(--code-block-font-size);
+  margin-right: 15px !important;
+  padding: 0px;
+  top: 3.5px;
 }
 
-/* NUMBER LINES */
+/* ::::: NUMBER LINES / THANKS TO @    FOR THE CODE ::::: */
 body:not(.no-codeblock-line-numbers)
 .HyperMD-codeblock-begin{
 counter-reset:codeblock-line-numbers;
@@ -653,7 +684,7 @@ color:var(--text-muted);text-align:right;content:counter(codeblock-line-numbers)
 
 /* :::::::::: HEADERS :::::::::: */
 body {
-  --h1-size: calc(var(--default-font-size) / 0.79) !important;
+  --h1-size: calc(var(--default-font-size) / 0.84) !important;
   --h2-size: calc(var(--default-font-size) / 0.88) !important;
   --h3-size: calc(var(--default-font-size) / 0.99) !important;
   --h4-size: calc(var(--default-font-size) / 1.2) !important;
@@ -668,13 +699,15 @@ body {
 .markdown-reading-view h5,
 .markdown-reading-view h6 {
   line-height: var(--headers-space-simetry);
-  margin: 0.1px !important;
+  margin: 0px !important;
   text-align: justify;
   letter-spacing: 0.1px !important;
   max-width: fit-content !important;
+  padding: 0px !important;
+	
 }
 
-/* HIDE HEADERS BUTTON */
+/* HIDE HEADERS ICON */
 .collapse-icon svg.svg-icon {
   display: none;
 }
@@ -749,9 +782,11 @@ body {
 }
 
 /* TABLE TITLE */
-.markdown-rendered thead tr th {
+.markdown-rendered thead t tr th {
   text-align: center;
   border-bottom: 1px solid var(--background-modifier-border);
+  background: var(--background-secondary);
+	font-weight: 600;
 }
 
 /* TABLE STYLE */
@@ -761,7 +796,7 @@ table {
   min-width: 100%;
   width: fit-content;
   margin: calc(var(--custom-line-height) * 1.5) auto;
-  font-size: calc(var(--default-font-size) - 1px);
+  font-size: var(--default-font-size);
   border-radius: var(--radius-s);
   border: 1px solid var(--background-modifier-border);
 }
@@ -821,14 +856,14 @@ body {
 
 /* HIDE ADD BUTTON */
 .metadata-add-button {
-	display: var(--hide-add-button) !important;
+  display: var(--hide-add-button) !important;
   width: fit-content !important;
   text-align: center;
   margin: 0px auto 0px auto !important;
 }
 
 
-/* TO-DO fix aliases and so on */
+/* TO-DO fix aliases, dates values and so on */
 .metadata-properties, .metadata-properties *, .metadata-properties-heading {
   text-transform: capitalize;
   font-size: var(--metadata-label-font-size);
@@ -867,18 +902,20 @@ font-family: var(--font-ui);
 span.cm-atom.cm-hmd-frontmatter {
 font-size: var(--default-font-size);
 font-family: var(--font-ui);
+color: var(--text-accent);
 }
 
 /* separator */
 span.cm-meta.cm-hmd-frontmatter {
 font-size: var(--default-font-size);
 font-family: var(--font-ui);
+color: var(--text-accent);
 }
 
 /* values */
 .cm-hmd-frontmatter {}
 
-/* Hide "---"  (EDITOR MODE) */
+/* Hide "---"  (EDITOR MODE)  */
 .cm-hmd-frontmatter.cm-hmd-frontmatter.cm-def {
 	display: var(--hide-bounderies-yaml);
 }
@@ -886,7 +923,7 @@ font-family: var(--font-ui);
 
 /* :::::::::: CALLOUTS :::::::::: */
 .cm-callout {}
-
+.hide-callout .callout-title {}
 .callout[data-callout="note"] {}
 
 .callout-icon {
@@ -910,10 +947,8 @@ font-family: var(--font-ui);
   padding: 0px;
 }
 
-.hide-callout .callout-title {}
-
 .callout-title-inner {
-	display: var(--hide-callout-title);
+  display: var(--hide-callout-title);
   font-size: var(--h4-size);
   position: flex;
   margin-left: auto;
@@ -931,7 +966,7 @@ font-family: var(--font-ui);
 }
 
 
- /* ::::::::::: EMBEDS NOTES :::::::::: */
+ /* ::::::::::: EMBED NOTES :::::::::: */
 body {
   --embed-max-height: 400px;
   --embed-border-left: none;
@@ -976,12 +1011,12 @@ body {
   border-bottom: 1px solid;
   border-image-slice: 1;
   border-width: 1px;
-  border-image-source: linear-gradient(to right, transparent, var(--background-modifier-border), transparent);
+  border-image-source: linear-gradient(to right, transparent, var(--text-accent), transparent);
 }
 
 hr {
-		margin-top: 30px !important;
-		margin-bottom: 30px !important;
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
 }
 
 /* DIVISOR ICON */
@@ -993,19 +1028,11 @@ hr {
   transform: translate(-50%, -50%);
   transform-origin: 50% 50%;
   padding: 0.25rem;
-  color: var(--background-modifier-border);
+  color: var(--text-accent);
   background-color: var(--background-primary);
   margin-top: -2.5px;
 }
 
-/* ::::: OBSIDIAN UI ::::: */
-body.theme-dark {
-  opacity: 0.8 !important; 
-}
-
-body.theme-light {
-  opacity: 0.88;
-}
 
 
  /* ::::: VARIABLES ::::: */
@@ -1037,6 +1064,7 @@ body {
   padding-bottom: 6px;
 }
 
+
 /* ::::: COMMANDER TOOLBAR ::::: */
 .view-header {
   margin-right: 15px !important;
@@ -1047,7 +1075,7 @@ body {
 
 /* ::::: EXPLORER BUTTONS :::::: */
 .nav-header{
-	display: var(--show-explorer-buttons);
+  display: var(--show-explorer-buttons);
   box-shadow: var(--mac-terminal-shadow) !important;
   border: 0.5px solid var(--background-modifier-border);
   margin: 0px 25px 12px 25px !important;
@@ -1086,21 +1114,21 @@ body {
 /* HIDE SETTINGS ICON */
 .workspace-drawer-header-icon {
   display: var(--icon-settings);
-	padding: 0px;
-	position: relative;
-	top: 15px;
-	margin: 0px;
-	margin-right: 10px;
+  padding: 0px;
+  position: relative;
+  top: 15px;
+  margin: 0px;
+  margin-right: 8px;
 }
 
 /* ::::: HIDE INFO AND NUM_NOTES VAULT ::::: */
 .workspace-drawer-header-info {
-	display: var(--num-of-notes);
-	padding: 0px;
-	top: 15px;
-	position: absolute;
-	margin-left: 33%;
-	margin-right: auto;
+  display: var(--num-of-notes);
+  padding: 0px;
+  top: 15px;
+  position: absolute;
+  margin-left: 31%;
+  margin-right: auto;
  /* display: var(--num-of-notes); */
 }
 
@@ -1140,17 +1168,14 @@ body.is-mobile .workspace-drawer-backdrop {
 
 */
 
-
 /* ::::: FILES, BOOKMARKS, SEARCH BAR :::::: */
-
 body.is-mobile .workspace-drawer-active-tab-header {
   display: var(--files-bookmarks-search-bar);
   border-radius: var(--radius-s);
-  padding: 8px; 
+  padding: 8px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
   margin: 8px 23px 0px 23px !important; 
 }
-
 
 /*
 body.is-mobile .workspace-drawer-tab-option-item {
@@ -1166,7 +1191,6 @@ body.is-mobile .workspace-drawer-header {
 }
 
 */
-
 
 
 /* ::::: TOP BUTTONS ::::: */
@@ -1186,7 +1210,6 @@ body.is-mobile .workspace-drawer-header {
   left: -100px;
   position: absolute;
 }
-
 
 
 /* ::::: TEXT EDITOR BAR ::::: */
@@ -1239,7 +1262,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 
 /* :::::::::: MENU :::::::::: */
 .is-mobile .menu {
-	font-size: var(--nav-item-size) !important;
+  font-size: var(--nav-item-size) !important;
   max-width: 85%;
   max-height: calc(100% - 100px);
 
@@ -1311,7 +1334,7 @@ body {
 }
 
 
-/* ::::: FILES AND FOLDERS - EXPLORER ::::: */
+/* ::::: FILES AND FOLDERS ::::: */
 body {
   --folder-1: var(--normal-folder-1);
   --folder-1-open: var(--normal-folder-1-open);
@@ -1345,15 +1368,13 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
   background: transparent !important;
 }
 
-
 /* FRAME NAME LIST */
 .nav-file-title {
   /* padding-left: -20px !important; */
   border-radius: 0px !important;
   margin: 0px !important;
-  padding-bottom: 2px; /* space between notes */
-  padding-top: 5px;
- 
+  padding-bottom: auto; /* space between notes */
+  padding-top: 7px;
 }
 
 .nav-file-title.is-active,
@@ -1366,10 +1387,8 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
   line-height: 1.12;
 }
 
- 
 /* FILE COLOR SELECTED */
 .nav-file-title:not(.is-mobile):hover {
-	
 }
 
 /* TO-DO - CHECK THIS */
@@ -1397,11 +1416,12 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
 
 /* :::::::::: FOLDERS :::::::::: */
 .nav-folder {
-  border: 1px solid var(--text-accent);
+  border: 1.6px solid var(--text-muted);
   border-radius: var(--radius-s);
   margin-bottom: 15px;
   margin-left: 13px;
   margin-right: 13px;
+  box-shadow: var(--background-modifier-box-shadow) 0px 0px 1.1px 0.1px;
 }
 
 /* highlight selected folder */
@@ -1586,7 +1606,7 @@ filter: brightness(90%);
 }
 
 .search-result-container.mod-global-search {}
-
+.search-info-more-matches {}
 .search-suggest-info-text {}
 
 .search-result-file-matches {
@@ -1597,10 +1617,7 @@ filter: brightness(90%);
   margin-right: 10px;
 }
 
-.search-info-more-matches {}
-
-
-/* ::::: EXACT TEXT ::::: */
+/* EXACT TEXT */
 .search-info-container {}
 
 .search-result-file-match:hover .search-result-file-match-destination-file {
@@ -1611,16 +1628,14 @@ filter: brightness(90%);
   font-size: calc(var(--default_size) - 1px);
 }
 
-
-/* ::::: NUM RESULTS & SORT OPTIONS ::::: */
+/* NUM RESULTS & SORT OPTIONS */
 .search-results-result-count, .search-results-info .dropdown {
   font-size: calc(var(--default_size) - 1px) !important;
 }
 
-
-/* ::::: SEARCH BAR ::::: */
+/* SEARCH */
 .global-search-input-container {
   border-radius: var(--radius-s);
-  box-shadow: var(--background-modifier-box-shadow) 0px 0px 2.5px 0px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
   border: 1px solid var(--background-modifier-border);
 }
