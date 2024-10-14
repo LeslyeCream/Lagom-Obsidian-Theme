@@ -70,12 +70,17 @@ A phone-focused theme for Obsidian
 
 - Code blocks more similar in appearance to a MacOS terminal (colorful for dark mode and monochromatic for light mode)
 
-![IMG_20241010_165806](https://github.com/user-attachments/assets/2d5b69e2-e5e7-4610-82d4-6c43c498dbde)
+![IMG_20241014_091844](https://github.com/user-attachments/assets/7637aa52-3ff6-41c7-95d0-be6332659164)
 
 
 # Note
 
 It is recommended to use *Commander*, *Iconize* and *File explorer note count* with this theme for a complete experience.
+
+# Comparison 
+
+![IMG_20241014_094621](https://github.com/user-attachments/assets/861dcc25-2a73-4ecd-a180-2b290e330adf)
+
 
 # Roadmap
 
