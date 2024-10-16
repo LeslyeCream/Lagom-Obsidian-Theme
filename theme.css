@@ -1,11 +1,19 @@
+/* :::::: If you really like this theme ::::: */
+/* ::::: please consider support me ::::: */
+/* ::::: https://ko-fi.com/leslyecream ::::: */
+/* ::::: or contribute reporting bugs ::::: */
+/* ::: code improvements and sharing ideas ::: */
+/* :::::::::::::::: THANK YOU! ᵔᴥᵔ :::::::::::::::: */
+
+
 /* ::::: LAGOM SETTINGS ::::: */
 body {
   --mac-terminal-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
-  --font-text-size: 17.9px; 
+  --font-text-size: 17.9px; /* UI */
   --nav-item-size: 16.6px; /* files */
   --radius-s: 11.2px;
   --nav-indentation-guide-width: unset;
-  --default-font-size: 16.5px;
+  --default-font-size: 16.5px; /* Notes and editor */
   --line-height-note: 24px;
   --letter-spacing-note: 0.25px;
   --text-note-align: justify;
@@ -24,26 +32,43 @@ body {
   --hide-add-button: flex;
   --hide-bounderies-yaml: none;
   --hide-callout-title: none;
+  --callouts-align-text: justify;
+  --callout-font-size-title: 16px;
   --properties-icon-size: unset;
-  --divisor-content: "o0o";
+  --divisor-icon: "o0o";
   --show-explorer-buttons: unset;
   --icon-settings: none;
   --num-of-notes: none;
   --show-vault-name: none;
   --files-bookmarks-search-bar: flex;
-  --editor-text-bar: none;
+  --show-editor-text-bar: none;
   --scrollbars: none;
+  --icon-ui-opacity: 0.85;
+  --show-embed-title: block;
+  --metadata-label-font-size: calc(var(--default-font-size) - 1px);
+  --metadata-input-font-size: var(--default-font-size);
+  --metadata-property-radius: var(--radius-s);
+  --metadata-label-width: 39% !important;
+  --metadata-divider-color: none;
+  /*--metadata-gap: 23px; */
+  /*--metadata-property-background: #49292; */
+  --metadata-display-editing: none !important;
+  --theme-dark-opacity: 0.7;
+  --theme-light-opacity: 0.85;
+  --table-border-width: 1px solid;
+  --table-header-weight: normal;
 	
 }
+
 
 /* ::::: OBSIDIAN THEMES ::::: */
 
 body.theme-dark {
-  opacity: 0.68; 
+  opacity: var(--theme-dark-opacity); 
 }
 
 body.theme-light {
-   opacity: 0.75;
+   opacity: var(--theme-light-opacity);
 }
 
 
@@ -109,7 +134,6 @@ body.theme-light {
 */	
 }
 
-
 /* :::::::::: ACTIVE LINE :::::::::: */
 
 /* Focus active line */
@@ -120,7 +144,6 @@ body.theme-light {
 /* Non-active blocks */ 
 .cm-editor.cm-focused .cm-line:not(.cm-active) {
   opacity: var(--focus-non-active-line-opacity);
-  font-size: var(--default-font-size);
 }
 
 /* active line */
@@ -131,7 +154,7 @@ body.theme-light {
 }
 
 .CodeMirror-activeline.CodeMirror-linebackground, .cm-active.cm-line::before {
-	content: var(--active-line-indicator);
+  content: var(--active-line-indicator);
   color: var(--text-accent);
   font-weight: 600;
 	
@@ -145,10 +168,9 @@ padding: 0px !important;
 
 /* :::::::::: INLINE TITLE :::::::::: */
 .inline-title {
+	padding-bottom: 10px;
   letter-spacing: var(--letter-spacing-note);
-  margin: 0px;
-  margin-bottom: 25px;
-  font-family: unset;
+  margin-bottom: 0px;
   text-align: var(--inline-title-align);
   font-size: var(--inline-title-size);
 }
@@ -173,7 +195,7 @@ padding: 0px !important;
 
 
 /* :::::::::: INLINE CODE  ::::::::::  */
-.markdown-preview-view code {
+.markdown-preview-view code  {
   font-size: var(--inline-code-font-size);
   border-radius: 0px;
   padding-left: 7px;
@@ -190,7 +212,6 @@ padding: 0px !important;
 
 .embedded-backlinks {
   /* inside */
- /* background: green*/
   margin: 0px !important;
   border-radius: var(--radius-s);
 }
@@ -221,9 +242,7 @@ padding: 0px !important;
 
 
 /* :::::::::: TASKS (PENDING) :::::::::: */
-span.cm-formatting-task {
-	background: red;
-}
+span.cm-formatting-task {}
 /*
 
 input[type=checkbox] {
@@ -271,20 +290,21 @@ input[type=checkbox]:checked {
 
 
 /* :::::::::: CODE BLOCKS :::::::::: */
+
+/* Read mode */
 .markdown-rendered pre {
-	margin: 16px 0px 16px 0px !important;
-background: var(--background-secondary);
-border-radius: var(--radius-s);
-box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
-font-size: var(--code-block-font-size);
+  margin: 16px 0px 16px 0px !important;
+  background: var(--background-secondary);
+  border-radius: var(--radius-s);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+  font-size: var(--code-block-font-size);
 }
 
 /* CODE BLOCK PREVIEW AND EDITOR */
-.cm-s-obsidian .HyperMD-codeblock, .cm-s-obsidian {
-	/* span.cm-inline-code */
+.cm-s-obsidian .HyperMD-codeblock span.cm-inline-code {
+/* .cm-s-obsidian ---- break editor font size */
   font-size: var(--code-block-font-size);
   border: 2.5px solid var(--background-primary);
-
 }
 
 /* MACOS TERMINAL */
@@ -396,7 +416,6 @@ body {
   letter-spacing: 0.1px !important;
   max-width: fit-content !important;
   padding: 0px !important;
-	
 }
 
 /* HIDE HEADERS ICON */
@@ -451,10 +470,6 @@ a.tag {
 
 
 /* :::::::::: TABLES :::::::::: */
-body {
-  --table-border-width: 1px solid;
-  --table-header-weight: normal;
-}
 
 /* ALTERNATE COLORS */
 .markdown-preview-view tr:nth-child(odd) {
@@ -519,17 +534,7 @@ tr:last-child td:last-child {
 }
 
 
-/*  ::::::::::  PROPERTIES :::::::::: */
-body {
-  --metadata-label-font-size: calc(var(--default-font-size) - 1px);
-  --metadata-input-font-size: var(--default-font-size);
-  --metadata-property-radius: var(--radius-s);
-  --metadata-label-width: 39% !important;
-  --metadata-divider-color: none;
- /* --metadata-gap: 23px; */
-  /* --metadata-property-background: #49292; */
-  --metadata-display-editing: none !important;
-}
+/* ::::: PROPERTIES ::::: */
 
 /* HIDE EMPTY PROPERTY */
 .metadata-property:has([placeholder="No value"]) {
@@ -554,7 +559,6 @@ body {
   margin: 0px auto 0px auto !important;
 }
 
-
 /* TO-DO fix aliases, dates values and so on */
 .metadata-properties, .metadata-properties *, .metadata-properties-heading {
   text-transform: capitalize;
@@ -568,6 +572,7 @@ body {
 }
 
 .metadata-container {
+	margin-top: 10px;
   border-bottom: dashed 2.1px var(--background-modifier-border);
   border-top: dashed 2.1px var(--background-modifier-border);
   padding-top: 5px;
@@ -580,28 +585,28 @@ body {
 
 /* values */
 span.cm-meta.cm-hmd-frontmatter + span.cm-hmd-frontmatter {
-font-size: var(--default-font-size);
-font-family: var(--font-ui);
+  font-size: var(--default-font-size);
+  font-family: var(--font-ui);
 }
 
 /* numbers */
 span.cm-number.cm-hmd-frontmatter {
-font-size: var(--default-font-size);
-font-family: var(--font-ui);
+  font-size: var(--default-font-size);
+  font-family: var(--font-ui);
 }
 
 /* key text */
 span.cm-atom.cm-hmd-frontmatter {
-font-size: var(--default-font-size);
-font-family: var(--font-ui);
-color: var(--text-accent);
+  font-size: var(--default-font-size);
+  font-family: var(--font-ui);
+  color: var(--text-accent);
 }
 
 /* separator */
 span.cm-meta.cm-hmd-frontmatter {
-font-size: var(--default-font-size);
-font-family: var(--font-ui);
-color: var(--text-accent);
+  font-size: var(--default-font-size);
+  font-family: var(--font-ui);
+  color: var(--text-accent);
 }
 
 /* values */
@@ -609,14 +614,16 @@ color: var(--text-accent);
 
 /* Hide "---"  (EDITOR MODE)  */
 .cm-hmd-frontmatter.cm-hmd-frontmatter.cm-def {
-	display: var(--hide-bounderies-yaml);
+  display: var(--hide-bounderies-yaml);
 }
 
 
 /* :::::::::: CALLOUTS :::::::::: */
 .cm-callout {}
 .hide-callout .callout-title {}
-.callout[data-callout="note"] {}
+
+.callout[data-callout="note"] {
+}
 
 .callout-icon {
   --icon-size: 0em;
@@ -633,7 +640,7 @@ color: var(--text-accent);
 }
 
 .callout-content p {
-  text-align: justify;
+  text-align: var(--callouts-align-text);
   margin: 10px 12px 12px 12px !important;
   display: block !important;
   padding: 0px;
@@ -641,7 +648,7 @@ color: var(--text-accent);
 
 .callout-title-inner {
   display: var(--hide-callout-title);
-  font-size: var(--h4-size);
+  font-size: var(--callout-font-size-title);
   position: flex;
   margin-left: auto;
   margin-right: auto;
@@ -667,30 +674,31 @@ body {
 /* HIDE EMBED ICON NOTE */
 .markdown-embed-link >.svg-icon.lucide-link {
   display: none;
+  margin-top: 15px;
+  margin-left: 37px;
 }
 
-.markdown-embed {
-  border-left: none;
-}
+.markdown-embed {}
 
-/* REMOVE EMBED TITLE */
+/* REMOVE TITLE */
 .markdown-preview-view .markdown-embed-title,
 .markdown-preview-view .obsidian-metatable {
   text-align: center;
-  margin-top: 15px;
-  display: none;
+  display: block;
+  margin-top: 10px;
+  padding: 4px 0px 4px 0px !important;
+  margin-bottom: 15px;
+  border-radius: calc(var(--radius-s) - 1.8px);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
 }
 
+
 .markdown-embed {
-/* overflow: auto; */
-  padding-top: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: -2px !important;
+	padding: 5px 21px 5px 21px;
+  overflow: auto;
   border-radius: var(--radius-s);
   border: 1px solid var(--background-modifier-border);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
-	
 }
  
  
@@ -714,7 +722,7 @@ hr {
 
 /* DIVISOR ICON */
 .markdown-preview-view hr::after, .markdown-source-view hr::after {
-  content: var(--divisor-content);
+  content: var(--divisor-icon);
   display: inline-block;
   position: absolute;
   left: 50%;
@@ -726,9 +734,6 @@ hr {
   margin-top: -2.5px;
 }
 
-
-
- /* ::::: VARIABLES ::::: */
 /*
 
 .workspace-drawer-backdrop, .modal-container, .is-phone, .suggestion-bg{
@@ -761,8 +766,8 @@ hr {
 /* ::::: EXPLORER BUTTONS :::::: */
 .nav-header{
   display: var(--show-explorer-buttons);
-  box-shadow: var(--mac-terminal-shadow) !important;
-  border: 0.5px solid var(--background-modifier-border);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+  border: 1px solid var(--background-modifier-border);
   margin: 0px 25px 12px 25px !important;
   border-radius: var(--radius-s);
 }
@@ -832,25 +837,23 @@ hr {
 
 /*  ::::: FILE EXPLORER POP-UP ::::: */
 
-/*
 
-body.is-mobile .workspace-drawer { 
-  background-color: var(--background-primary);
-}
 
-body.is-mobile .workspace-drawer-inner {
-  margin: 7px 15px 7px 15px;
+body.is-mobile.popup-explorer .workspace-drawer {}
+
+body.is-mobile.popup-explorer .workspace-drawer-inner {
+  margin: 10px 15px 10px 15px;
   border-radius: var(--radius-s);
-  border: 1px solid #00000044;
+  border: 1px solid var(--background-modifier-border);
   box-shadow: var(--background-modifier-box-shadow) 0px 0px 2.5px 0px;
-padding: 0px 3px 5px 3px;
+  padding: 0px 3px 5px 3px;
 }
 
-body.is-mobile .workspace-drawer-backdrop {
-  background: #ffffff00;
+body.is-mobile.popup-explorer .workspace-drawer-backdrop {
+  background: hsla(black, 0.5);
 }
 
-*/
+
 
 /* ::::: FILES, BOOKMARKS, SEARCH BAR :::::: */
 body.is-mobile .workspace-drawer-active-tab-header {
@@ -898,7 +901,7 @@ body.is-mobile .workspace-drawer-header {
 
 /* ::::: TEXT EDITOR BAR ::::: */
 .mobile-toolbar-options-container {
-  display: var(--editor-text-bar);
+  display: var(--show-editor-text-bar);
  /*
  
   border: 1px var(--background-modifier-border) solid;
@@ -927,12 +930,12 @@ body.is-mobile .workspace-drawer-header {
 
 /*  :::::  NAVIGATION BAR ::::: */
 .mobile-navbar {
-  border: 0.5px solid var(--background-modifier-border);
+  border: 1px solid var(--background-modifier-border);
   border-radius: var(--radius-s);
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 10px;
-  box-shadow: var(--mac-terminal-shadow);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
 }
 
 
@@ -975,7 +978,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 /*  :::::  UI ICONS  :::::  */
 .is-mobile {
   --icon-l-stroke-width: 1.8px;
-  --icon-opacity: 0.85;
+  --icon-opacity: var(--icon-ui-opacity);
 }
 
 
@@ -1368,7 +1371,7 @@ settings:
               label: Show
               value: unset
   - 
-      id: editor-text-bar
+      id: show-editor-text-bar
       title: Show editor bar
       type: variable-select
       default: unset
@@ -1426,6 +1429,8 @@ settings:
       title: Text note
       type: heading
       level: 2
+      collapsed: true
+
   - 
       id: default-font-size
       title: Font size
@@ -1482,7 +1487,6 @@ settings:
   - 
       id: focus-non-active-line-opacity
       title: Opacity non-active line
-
       type: variable-number
       default: 0.65
   - 
@@ -1493,7 +1497,7 @@ settings:
       default: 17
       format: px
   - 
-      id: divisor-content
+      id: divisor-icon
       title: Divisor content
       type: variable-text
       default: o0o
@@ -1502,13 +1506,13 @@ settings:
       id: active-line-indicator
       title: Active line indicator
       type: variable-text
-      default: oooo
+      default: —
       quotes: true
   - 
       id: show-dotted-line
       title: Show line indicator
       type: variable-select
-      default: Show
+      default: 1.5px
       options:
           - 
               label: Show
@@ -1521,6 +1525,7 @@ settings:
       title: Headers
       type: heading
       level: 2
+      collapsed: true
   - 
       id: headers-space-simetry
       title:  Vertical space
@@ -1532,6 +1537,8 @@ settings:
       title: Inline title
       type: heading
       level: 2
+      collapsed: true
+
   - 
       id: inline-title-align
       title: Title align
@@ -1561,6 +1568,8 @@ settings:
       title: Code blocks & Inline code
       type: heading
       level: 2
+      collapsed: true
+
   - 
       id: code-block-font-size
       title: Font size
@@ -1578,6 +1587,8 @@ settings:
       title: Quotes
       type: heading
       level: 2
+      collapsed: true
+
   - 
       id: quote-font-size
       title: Font size
@@ -1607,11 +1618,13 @@ settings:
       title: Callouts
       type: heading
       level: 2
+      collapsed: true
+
   - 
       id: hide-callout-title
       title: Show  title
       type: variable-select
-      default: Show
+      default: unset
       options:
           - 
               label: Hide
@@ -1620,6 +1633,47 @@ settings:
               label: Show
               value: unset
   - 
+      id: callout-font-size-title
+      title: Font size
+      type: variable-number
+      default: 16
+      format: px
+  - 
+      id: callouts-align-text
+      title: Align text
+      type: variable-select
+      default: justify
+      options:
+          - 
+              label: Justify
+              value: justify
+          - 
+              label: Center
+              value: center
+          - 
+              label: Left
+              value: left
+          - 
+              label: Right
+              value: right
+  - 
+      id: embed-section
+      title: Embed notes
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: show-embed-title
+      title: Show  embed title
+      type: variable-select
+      default: none
+      options:
+          - 
+              label: Hide
+              value: None
+          - 
+              label: Show
+              value: block
 */
 
 /* @settings
@@ -1630,7 +1684,7 @@ settings:
       id: hide-empty-properties
       title: Show empty properties
       type: variable-select
-      default: Hide
+      default: none
       options:
           - 
               label: Hide
@@ -1669,7 +1723,7 @@ settings:
       id: hide-bounderies-yaml
       title: Show "---" in Source mode
       type: variable-select
-      default: Hide
+      default: none
       options:
           - 
               label: Hide
@@ -1690,21 +1744,32 @@ settings:
       default: 11.2
       format: px
   - 
-      id: font-text-size
-      title: UI font size
+      id: icon-ui-opacity
+      title: Icons opacity
       type: variable-number
-      default: 16.8
+      default: 0.85
       format: px
+  - 
+      id: theme-light-opacity
+      title: Light mode - Opacity
+      type: variable-number
+      default: 0.85
+      format: 
+  - 
+      id: theme-dark-opacity
+      title: Dark mode - Opacity
+      type: variable-number
+      default: 0.75
+      format: 
 */
 
 /* @settings
-name: Files
+name: Explorer & Files
 id: files-folders
 settings:
   - 
       id: icon-file
       title: Icon file
-
       type: variable-text
       default: "·"
       quotes: true 
@@ -1714,4 +1779,9 @@ settings:
       type: variable-number
       default: 17
       format: px
+  - 
+      id: popup-explorer
+      title: Pop-up style
+      type: class-toggle
+      default: true
 */
