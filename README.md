@@ -38,13 +38,11 @@ A phone-focused theme for Obsidian
 
 **Headers:** Play fair display 
 
-**Mono:** I love the [Nothing](https://us.nothing.tech/) mono font but I'm not really sure if it is possible for personal use. So... nothing for now. 👀 
+**Mono:** I love the [Nothing](https://us.nothing.tech/) mono font but I'm not really sure if it is possible for personal use. So... Losevka Regular for now. 
 
 **Code:** Jetbrains
 
 **Quotes:** Caecelia 
-
-*I'm still looking for similar alternatives to these fonts that harmonize with each other.*
 
 # Features
 
@@ -100,7 +98,7 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 # Contribution
 
 Contribute reporting bugs, code improvements and of course, feedback is welcome! 
-
+***
 If you really like this theme, please consider buy me a cupcake ᵔᴥᵔ
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W349H97)
