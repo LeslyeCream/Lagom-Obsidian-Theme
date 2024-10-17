@@ -9,7 +9,6 @@
 /* ::::: LAGOM SETTINGS ::::: */
 body {
   --mac-terminal-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
-  --font-text-size: 17.9px; /* UI */
   --nav-item-size: 16.6px; /* files */
   --radius-s: 11.2px;
   --nav-indentation-guide-width: unset;
@@ -26,6 +25,7 @@ body {
   --inline-title-align: center;
   --inline-title-size: calc(var(--default-font-size) + 1.7px);
   --inline-code-font-size: calc(var(--default-font-size) - 1.5 px)
+  --code-block-font-size: 14px;
   --quotes-align: center;
   --quote-font-size: var(--default-font-size);
   --hide-empty-properties: none;
@@ -35,7 +35,8 @@ body {
   --callouts-align-text: justify;
   --callout-font-size-title: 16px;
   --properties-icon-size: unset;
-  --divisor-icon: "o0o";
+  --separator-icon: "o0o";
+  --separator-icon-color
   --show-explorer-buttons: unset;
   --icon-settings: none;
   --num-of-notes: none;
@@ -104,7 +105,7 @@ body.theme-light {
 .cm-s-obsidian {
 	font-size: var(--default-font-size);
   padding: 0px !important;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: 15px;
   margin-right: 15px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
@@ -302,7 +303,6 @@ input[type=checkbox]:checked {
 
 /* CODE BLOCK PREVIEW AND EDITOR */
 .cm-s-obsidian .HyperMD-codeblock span.cm-inline-code {
-/* .cm-s-obsidian ---- break editor font size */
   font-size: var(--code-block-font-size);
   border: 2.5px solid var(--background-primary);
 }
@@ -622,7 +622,16 @@ span.cm-meta.cm-hmd-frontmatter {
 .cm-callout {}
 .hide-callout .callout-title {}
 
-.callout[data-callout="note"] {
+.callout[data-callout="one"] {
+background: var(--callout-one-color);
+}
+
+.callout[data-callout="two"] {
+background: var(--callout-two-color);
+}
+
+.callout[data-callout="three"] {
+background: var(--callout-three-color);
 }
 
 .callout-icon {
@@ -641,7 +650,7 @@ span.cm-meta.cm-hmd-frontmatter {
 
 .callout-content p {
   text-align: var(--callouts-align-text);
-  margin: 10px 12px 12px 12px !important;
+  margin: 12px 12px 12px 12px !important;
   display: block !important;
   padding: 0px;
 }
@@ -649,17 +658,13 @@ span.cm-meta.cm-hmd-frontmatter {
 .callout-title-inner {
   display: var(--hide-callout-title);
   font-size: var(--callout-font-size-title);
-  position: flex;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 12px;
+  margin: 7px auto 7px auto;
   padding-bottom: 3.8px;
   border-bottom: 0.7px solid;
 /* Remove space */
 }
 
 .callout {
-  box-shadow: var(--background-modifier-box-shadow) 0px 0px 2.5px 0px;
   border: 1px solid var(--background-modifier-border);
   padding: 0px 10px 2px 10px !important;
 }
@@ -684,25 +689,22 @@ body {
 .markdown-preview-view .markdown-embed-title,
 .markdown-preview-view .obsidian-metatable {
   text-align: center;
-  display: block;
-  margin-top: 10px;
-  padding: 4px 0px 4px 0px !important;
-  margin-bottom: 15px;
-  border-radius: calc(var(--radius-s) - 1.8px);
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+  display: var(--show-embed-title);
+  margin: 0px;
+  border-radius: var(--radius-s);
+  padding: 1px 1px 1px 1px !important;
 }
 
 
 .markdown-embed {
-	padding: 5px 21px 5px 21px;
-  overflow: auto;
+	padding: 15px 21px 0px 21px;
   border-radius: var(--radius-s);
   border: 1px solid var(--background-modifier-border);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
 }
  
  
- /* ::::: DIVISOR GRADIENT ::::: */
+ /* ::::: Separator GRADIENT ::::: */
 .cm-line hr,
 .markdown-preview-view hr {
   margin-block-start: 4em;
@@ -712,7 +714,7 @@ body {
   border-bottom: 1px solid;
   border-image-slice: 1;
   border-width: 1px;
-  border-image-source: linear-gradient(to right, transparent, var(--text-accent), transparent);
+  border-image-source: linear-gradient(to right, transparent, var(--separator-icon-color), transparent);
 }
 
 hr {
@@ -720,16 +722,16 @@ hr {
   margin-bottom: 30px !important;
 }
 
-/* DIVISOR ICON */
+/* Separator icon */
 .markdown-preview-view hr::after, .markdown-source-view hr::after {
-  content: var(--divisor-icon);
+  content: var(--separator-icon);
   display: inline-block;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
   transform-origin: 50% 50%;
   padding: 0.25rem;
-  color: var(--text-accent);
+  color: var(--separator-icon-color);
   background-color: var(--background-primary);
   margin-top: -2.5px;
 }
@@ -757,9 +759,8 @@ hr {
 
 /* ::::: COMMANDER TOOLBAR ::::: */
 .view-header {
-  margin-right: 15px !important;
-  margin-left: 15px !important;
-  padding: 0px 0px 0px 0px !important;
+	margin: 0px 14px 0px 14px !important;
+  padding: 0px !important;
 }
 
 
@@ -836,9 +837,6 @@ hr {
 
 
 /*  ::::: FILE EXPLORER POP-UP ::::: */
-
-
-
 body.is-mobile.popup-explorer .workspace-drawer {}
 
 body.is-mobile.popup-explorer .workspace-drawer-inner {
@@ -850,7 +848,7 @@ body.is-mobile.popup-explorer .workspace-drawer-inner {
 }
 
 body.is-mobile.popup-explorer .workspace-drawer-backdrop {
-  background: hsla(black, 0.5);
+  background: hsla(black, 0.65);
 }
 
 
@@ -900,22 +898,7 @@ body.is-mobile .workspace-drawer-header {
 
 
 /* ::::: TEXT EDITOR BAR ::::: */
-.mobile-toolbar-options-container {
-  display: var(--show-editor-text-bar);
- /*
- 
-  border: 1px var(--background-modifier-border) solid;
-  display: block;
-  bottom: 10px;
-  border-radius: var(--radius-s);
-  margin-left: 36px;
-  margin-right: 36px;
-  margin-top: 30px;
-  width: 85%;
-  position: relative;
-  */
-}
-
+.mobile-toolbar-options-container {}
 .mobile-toolbar {}
 
 /*  :::::  COMMAND PALETTE ::::: */
@@ -1402,7 +1385,7 @@ settings:
       options:
           - 
               label: Hide
-              value: None
+              value: none
           - 
               label: Show
               value: unset
@@ -1497,12 +1480,23 @@ settings:
       default: 17
       format: px
   - 
-      id: divisor-icon
-      title: Divisor content
+      id: separator-icon
+      title: Separator content
       type: variable-text
       default: o0o
       quotes: true
   - 
+      id: separator-icon-color
+      title: Separator color
+      type: variable-color
+      opacity: true
+      format: rgb
+      alt-format:
+         -
+             id: accent-rgb
+             format: rgb
+      default: '#6C6C6C6B'
+  -
       id: active-line-indicator
       title: Active line indicator
       type: variable-text
@@ -1657,6 +1651,39 @@ settings:
               label: Right
               value: right
   - 
+      id: callout-one-color
+      title: 1. Custom callout color
+      type: variable-color
+      opacity: true
+      format: rgb
+      alt-format:
+         -
+             id: accent-rgb
+             format: rgb
+      default: '#ff00007d'
+  - 
+      id: callout-two-color
+      title: 2. Custom callout color
+      type: variable-color
+      opacity: true
+      format: rgb
+      alt-format:
+         -
+             id: accent-rgb
+             format: rgb
+      default: '#1d00ff7e'
+  - 
+      id: callout-three-color
+      title: 3. - Custom callout color
+      type: variable-color
+      opacity: true
+      format: rgb
+      alt-format:
+         -
+             id: accent-rgb
+             format: rgb
+      default: '#02ff007c'
+  - 
       id: embed-section
       title: Embed notes
       type: heading
@@ -1777,7 +1804,7 @@ settings:
       id: nav-item-size
       title: Font size
       type: variable-number
-      default: 17
+      default: 16
       format: px
   - 
       id: popup-explorer
