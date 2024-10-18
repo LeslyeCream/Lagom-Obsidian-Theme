@@ -20,12 +20,12 @@ body {
   --focus-non-active-line-opacity: 0.6;
   --show-dotted-line: 1px;
   --active-line-font-size: calc(var(--default-font-size) + 1px);
-  --active-line-indicator: "—";
+  --active-line-indicator: "+ ";
   --icon-file-indicator: "·";
   --inline-title-align: center;
   --inline-title-size: calc(var(--default-font-size) + 1.7px);
   --inline-code-font-size: calc(var(--default-font-size) - 1.5 px)
-  --code-block-font-size: 14px;
+  --code-block-font-size: 12px;
   --quotes-align: center;
   --quote-font-size: var(--default-font-size);
   --hide-empty-properties: none;
@@ -42,7 +42,7 @@ body {
   --num-of-notes: none;
   --show-vault-name: none;
   --files-bookmarks-search-bar: flex;
-  --show-editor-text-bar: none;
+  --show-editor-text-bar: unset;
   --scrollbars: none;
   --icon-ui-opacity: 0.85;
   --show-embed-title: block;
@@ -58,7 +58,13 @@ body {
   --theme-light-opacity: 0.85;
   --table-border-width: 1px solid;
   --table-header-weight: normal;
-	
+	--h1-size: calc(var(--default-font-size) / 0.84) !important;
+  --h2-size: calc(var(--default-font-size) / 0.88) !important;
+  --h3-size: calc(var(--default-font-size) / 0.99) !important;
+  --h4-size: calc(var(--default-font-size) / 1.2) !important;
+  --h5-size: calc(var(--default-font-size) / 0.99) !important;
+  --headers-space-simetry: 1.3em;
+	--folder-border-color: #50505088;
 }
 
 
@@ -163,7 +169,7 @@ body.theme-light {
 
 /* ::::::::: CHECKBOXES :::::::::: */
 .mod-rtl .checkbox-container {
-padding: 0px !important;
+  padding: 0px !important;
 }
 
 
@@ -305,6 +311,12 @@ input[type=checkbox]:checked {
 .cm-s-obsidian .HyperMD-codeblock span.cm-inline-code {
   font-size: var(--code-block-font-size);
   border: 2.5px solid var(--background-primary);
+  -webkit-font-smoothing: auto;
+}
+
+/* Don't wrap codeblocks */
+pre > code, code[class*="language-"] {
+  white-space: pre !important;
 }
 
 /* MACOS TERMINAL */
@@ -351,26 +363,25 @@ body.theme-dark .markdown-preview-view pre::before {
   top: 3.5px;
 }
 
-/* ::::: NUMBER LINES / THANKS TO @    FOR THE CODE ::::: */
+/* ::::: NUMBER LINES  ::::: */
 body:not(.no-codeblock-line-numbers)
 .HyperMD-codeblock-begin{
-counter-reset:codeblock-line-numbers;
+  counter-reset:codeblock-line-numbers;
 }
 
 body:not(.no-codeblock-line-numbers)
 .HyperMD-codeblock.cm-line:not(.HyperMD-codeblock-begin,.HyperMD-codeblock-end){
-padding-left:2.8em;
+  padding-left:2.8em;
 }
 
 body:not(.no-codeblock-line-numbers)
 .HyperMD-codeblock:not(.HyperMD-codeblock-begin,.HyperMD-codeblock-end):before{
-	
-color:var(--text-muted);text-align:right;content:counter(codeblock-line-numbers);counter-increment:codeblock-line-numbers;background-color:var(--bg2);width:1.7em;height:100%;padding-right:1.4em;font-size:.75em;line-height:2;position:absolute;left:0
+  color:var(--text-muted);text-align:right;content:counter(codeblock-line-numbers);counter-increment:codeblock-line-numbers;background-color:var(--bg2);width:1.7em;height:100%;padding-right:1.4em;font-size:.75em;line-height:2;position:absolute;left:0
 }
 
 .obsidian-banner-spacer {
-    height: calc(var(--banner-height) - 10rem);
-   /* display: none;*/
+  height: calc(var(--banner-height) - 10rem);
+ /* display: none;*/
 }
 
 .frontmatter-container {
@@ -378,7 +389,7 @@ color:var(--text-muted);text-align:right;content:counter(codeblock-line-numbers)
 }
 
 .cm-hmd-frontmatter {
-	background: var(--background-modifier-box-shadow) !important;
+  background: var(--background-modifier-box-shadow) !important;
 }
 
 /* ROW NUMBERS IN GUTTER SOURCE / LIVE PREVIEW */
@@ -395,14 +406,6 @@ color:var(--text-muted);text-align:right;content:counter(codeblock-line-numbers)
 
 
 /* :::::::::: HEADERS :::::::::: */
-body {
-  --h1-size: calc(var(--default-font-size) / 0.84) !important;
-  --h2-size: calc(var(--default-font-size) / 0.88) !important;
-  --h3-size: calc(var(--default-font-size) / 0.99) !important;
-  --h4-size: calc(var(--default-font-size) / 1.2) !important;
-  --h5-size: calc(var(--default-font-size) / 0.99) !important;
-}
-
 .mod-cm6 .cm-editor .HyperMD-header,
 .markdown-reading-view h1,
 .markdown-reading-view h2,
@@ -410,12 +413,12 @@ body {
 .markdown-reading-view h4,
 .markdown-reading-view h5,
 .markdown-reading-view h6 {
-  line-height: var(--headers-space-simetry);
-  margin: 0px !important;
   text-align: justify;
+  margin: 18px 0px 18px 0px !important;
   letter-spacing: 0.1px !important;
   max-width: fit-content !important;
   padding: 0px !important;
+  line-height: var(--headers-space-simetry);
 }
 
 /* HIDE HEADERS ICON */
@@ -1086,7 +1089,7 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
 
 /* :::::::::: FOLDERS :::::::::: */
 .nav-folder {
-  border: 1px solid var(--text-muted);
+  border: 1px solid var(--folder-border-color);
   border-radius: var(--radius-s);
   margin-bottom: 15px;
   margin-left: 13px;
@@ -1522,7 +1525,7 @@ settings:
       collapsed: true
   - 
       id: headers-space-simetry
-      title:  Vertical space
+      title:  Line height
       type: variable-number
       default: 1.5
       format: em
@@ -1811,4 +1814,15 @@ settings:
       title: Pop-up style
       type: class-toggle
       default: true
+  - 
+      id: folder-border-color
+      title: Border color (folders)
+      type: variable-color
+      opacity: true
+      format: rgb
+      alt-format:
+         -
+             id: accent-rgb
+             format: rgb
+      default: '#6c6c6c6b'
 */
