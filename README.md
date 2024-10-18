@@ -6,8 +6,6 @@ A phone-focused theme for Obsidian
 
 [Lagom](https://en.wikipedia.org/wiki/Lagom) tries to focus on just the right amount of changes needed to make it look aesthetically more conventional and modern. It's not about reinventing the wheel or offering a unique or special theme. I just think it's a diamond in the rough that needs to be polished to shine on its own. ✨ 
 
-*This theme is a way for me to learn about the way (design and css) and constantly improve while sharing my results* ☺ 
-
 **The theme attempts to follow the following principles:**
 
 1. Avoid as much as possible an extreme minimalism that prevents me from recognizing what is and what is not in the UI.
@@ -38,7 +36,7 @@ A phone-focused theme for Obsidian
 
 **Headers:** Play fair display 
 
-**Mono:** I love the [Nothing](https://us.nothing.tech/) mono font but I'm not really sure if it is possible for personal use. So... Losevka Regular for now. 
+**Mono:** Losevka Regular. 
 
 **Code:** Jetbrains
 
@@ -95,10 +93,13 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 
 [@death_au](https://github.com/deathau)
 
+[AlanG](https://forum.obsidian.md/t/how-to-disable-line-wrapping-in-code-blocks/69900) for its snippet for the code blocks
+
 # Contribution
 
 Contribute reporting bugs, code improvements and of course, feedback is welcome! 
 ***
-If you really like this theme, please consider buy me a cupcake ᵔᴥᵔ
+
+If you really like this theme, please consider support me ᵔᴥᵔ
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W349H97)
