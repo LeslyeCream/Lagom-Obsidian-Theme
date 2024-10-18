@@ -4,7 +4,7 @@ A phone-focused theme for Obsidian
 
 ![Github Releases](https://img.shields.io/github/downloads/leslyecream/Lagom-Obsidian-Theme/latest/total.svg?style=flat) ![Visitor](https://visitor-badge.laobi.icu/badge?page_id=leslyecream.Lagom-Obsidian-Theme)
 
-[Lagom](https://en.wikipedia.org/wiki/Lagom) tries to focus on just the right amount of changes needed to make it look aesthetically more conventional and modern. It's not about reinventing the wheel or offering a unique or special theme. I just think it's a diamond in the rough that needs to be polished to shine on its own. ✨ 
+[Lagom](https://en.wikipedia.org/wiki/Lagom) tries to focus on just the right amount of changes needed to make it look aesthetically more conventional and modern. It's not about reinventing the wheel or offering a unique or special theme. I simply think Obsidian is a diamond in the rough that needs to be polished to shine on its own.✨ 
 
 **The theme attempts to follow the following principles:**
 
@@ -17,7 +17,7 @@ A phone-focused theme for Obsidian
    
 4. Focused exclusively for use on phones or tablets.
   
-5. Do not follow a specific color palette or typeface.
+5. Do not follow a specific color palette or typeface (so you can use it with the one you prefer!) 
 
 6. Complementary and modular.
 
