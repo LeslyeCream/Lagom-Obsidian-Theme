@@ -26,11 +26,12 @@ body {
   --inline-title-size: calc(var(--default-font-size) + 1.7px);
   --inline-code-font-size: calc(var(--default-font-size) - 1.5 px)
   --code-block-font-size: 12px;
+	--code-size:1px;
   --quotes-align: center;
   --quote-font-size: var(--default-font-size);
   --hide-empty-properties: none;
   --hide-add-button: flex;
-  --hide-bounderies-yaml: none;
+  --hide-separator-yaml: none;
   --hide-callout-title: none;
   --callouts-align-text: justify;
   --callout-font-size-title: 16px;
@@ -68,7 +69,7 @@ body {
 }
 
 
-/* ::::: OBSIDIAN THEMES ::::: */
+/* ::::: OBSIDIAN THEME ::::: */
 
 body.theme-dark {
   opacity: var(--theme-dark-opacity); 
@@ -175,6 +176,7 @@ body.theme-light {
 
 /* :::::::::: INLINE TITLE :::::::::: */
 .inline-title {
+	font-family: unset;
 	padding-bottom: 10px;
   letter-spacing: var(--letter-spacing-note);
   margin-bottom: 0px;
@@ -211,41 +213,23 @@ body.theme-light {
 
 
 /* ::::::::::  BACKLINKS :::::::::: */
-.embedded-backlinks .backlink-pane > .tree-item-self {
-  margin-top: 34px;
-  margin-left: -5px;
-  /* background: blue; */
-}
+.embedded-backlinks .backlink-pane > .tree-item-self {}
 
-.embedded-backlinks {
-  /* inside */
-  margin: 0px !important;
-  border-radius: var(--radius-s);
-}
+
+.embedded-backlinks .nav-buttons-container {}
+
+.embedded-backlinks .nav-header > .search-input-container {}
+
+.embedded-backlinks .nav-header{}
+
+
+.embedded-backlinks {}
 
 /* BACKLINK BOX (OUTSIDE) */
-.embedded-backlinks .tree-item.search-result {
-  border-radius: var(--radius-s);
-  margin-bottom: 10px;
-  margin-top: 10px;
-  padding: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  width: 100%;
-  /* background: gray; */
-	
-}
+.embedded-backlinks .tree-item.search-result {}
 
 /* RESUME BACKLINKS BOX */
-.embedded-backlinks .search-result-file-match {
-  white-space: initial;
-  margin-left: 7px
-  margin-top: 7px;
-  margin-bottom: 0px;
-  text-align: justify;
-  padding-right: 35px;
-  border: 0px;
-}
+.embedded-backlinks .search-result-file-match {}
 
 
 /* :::::::::: TASKS (PENDING) :::::::::: */
@@ -311,7 +295,6 @@ input[type=checkbox]:checked {
 .cm-s-obsidian .HyperMD-codeblock span.cm-inline-code {
   font-size: var(--code-block-font-size);
   border: 2.5px solid var(--background-primary);
-  -webkit-font-smoothing: auto;
 }
 
 /* Don't wrap codeblocks */
@@ -319,7 +302,7 @@ pre > code, code[class*="language-"] {
   white-space: pre !important;
 }
 
-/* MACOS TERMINAL */
+/* ::::: MACOS TERMINAL ::::: */
 .markdown-preview-view pre {
   padding: 55px 15px 15px 15px;
 } 
@@ -352,7 +335,9 @@ body.theme-dark .markdown-preview-view pre::before {
 
 /* CODE BLOCK EDITOR MODE */
 .cm-line.HyperMD-codeblock {
-	background: transparent !important;
+  background: transparent !important;
+  white-space: pre !important;
+
 }
 
 /* MODIFY "COPY" BUTTON */
@@ -499,7 +484,7 @@ a.tag {
 	font-weight: 600;
 }
 
-/* TABLE STYLE */
+/* STYLE */
 table {
   box-shadow: var(--background-modifier-box-shadow) 0px 0px 2.5px 0px;
   /* max-width: 100%; */
@@ -510,6 +495,11 @@ table {
   border-radius: var(--radius-s);
   border: 1px solid var(--background-modifier-border);
 }
+
+td {
+    border-left: 1px solid var(--background-secondary) !important;
+    border-right: 1px solid var(--background-secondary) !important;
+} 
 
 /* ROUNDED CORNERS */
 :root table {
@@ -538,6 +528,8 @@ tr:last-child td:last-child {
 
 
 /* ::::: PROPERTIES ::::: */
+
+
 
 /* HIDE EMPTY PROPERTY */
 .metadata-property:has([placeholder="No value"]) {
@@ -583,7 +575,23 @@ tr:last-child td:last-child {
   /* --input-height: var(--metadata-input-height); */
 }
 
+/* fixed datetime position (?) */
+.metadata-property input[type='datetime-local'] {
+   display: flex;
+   justify-content: right;
+   left: 17px; /* hide tiny icon */
+   margin: 0px;
+   padding: 0px;
+  }
+  
+/* fixed tags position (?) */
+.metadata-property[data-property-key="tags"] .multi-select-pill {
+	background: transparent;
+	left: 53px;
+	display: inline !important;
+}
 
+.metadata-property[data-property-key="tags"] {}
 /* :::::::::: YAML COLORS :::::::::: */
 
 /* values */
@@ -615,9 +623,9 @@ span.cm-meta.cm-hmd-frontmatter {
 /* values */
 .cm-hmd-frontmatter {}
 
-/* Hide "---"  (EDITOR MODE)  */
+/* Hide separators  (EDITOR MODE)  */
 .cm-hmd-frontmatter.cm-hmd-frontmatter.cm-def {
-  display: var(--hide-bounderies-yaml);
+  display: var(--hide-separator-yaml);
 }
 
 
@@ -664,6 +672,8 @@ background: var(--callout-three-color);
   margin: 7px auto 7px auto;
   padding-bottom: 3.8px;
   border-bottom: 0.7px solid;
+  white-space: norma!important;
+  text-align: center;
 /* Remove space */
 }
 
@@ -700,7 +710,7 @@ body {
 
 
 .markdown-embed {
-	padding: 15px 21px 0px 21px;
+	padding: 15px 21px 15px 21px;
   border-radius: var(--radius-s);
   border: 1px solid var(--background-modifier-border);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
@@ -717,7 +727,7 @@ body {
   border-bottom: 1px solid;
   border-image-slice: 1;
   border-width: 1px;
-  border-image-source: linear-gradient(to right, transparent, var(--separator-icon-color), transparent);
+  border-image-source: linear-gradient(to right, transparent, var(--separator-icon-color), transparent) !important;
 }
 
 hr {
@@ -776,15 +786,7 @@ hr {
   border-radius: var(--radius-s);
 }
 
-/* multiline file text */
-.nav-file-title,
-.nav-folder-title,
-.nav-file-title-content:not(.mk-tree-text),
-.nav-folder-title-content {
-  white-space: normal;
-  width: auto;
-  text-align: justify;
-}
+
 
 
 /* :::::  SETTINGS  ::::: */
@@ -865,6 +867,16 @@ body.is-mobile .workspace-drawer-active-tab-header {
   margin: 8px 23px 0px 23px !important; 
 }
 
+/* multiline file text */
+.nav-file-title,
+.nav-folder-title,
+.nav-file-title-content:not(.mk-tree-text),
+.nav-folder-title-content {
+  white-space: normal;
+  width: auto;
+  text-align: justify;
+}
+
 /*
 body.is-mobile .workspace-drawer-tab-option-item {
   background-color: brown;
@@ -904,6 +916,7 @@ body.is-mobile .workspace-drawer-header {
 .mobile-toolbar-options-container {}
 .mobile-toolbar {}
 
+
 /*  :::::  COMMAND PALETTE ::::: */
 .is-phone .prompt {
   width: 86%;
@@ -937,7 +950,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 .is-mobile .menu {
   font-size: var(--nav-item-size) !important;
   max-width: 85%;
-  max-height: calc(100% - 100px);
+  max-height: calc(100% - 10px);
 
   /*
   min-width: unset;
@@ -1566,7 +1579,12 @@ settings:
       type: heading
       level: 2
       collapsed: true
-
+  - 
+      id: code-size
+      title: Font size (Editor)
+      type: variable-number
+      default: 14
+      format: px
   - 
       id: code-block-font-size
       title: Font size
@@ -1575,7 +1593,7 @@ settings:
       format: px
   - 
       id: inline-code-font-size
-      title: inline code font size
+      title: Inline code font size
       type: variable-number
       default: 12.5
       format: px
@@ -1750,7 +1768,7 @@ settings:
       default: unset
       format: px
   - 
-      id: hide-bounderies-yaml
+      id: hide-separator-yaml
       title: Show "---" in Source mode
       type: variable-select
       default: none
