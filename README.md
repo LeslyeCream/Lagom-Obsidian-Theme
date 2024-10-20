@@ -2,7 +2,8 @@
 
 A phone-focused theme for Obsidian
 
-![Github Releases](https://img.shields.io/github/downloads/leslyecream/Lagom-Obsidian-Theme/latest/total.svg?style=flat) ![Visitor](https://visitor-badge.laobi.icu/badge?page_id=leslyecream.Lagom-Obsidian-Theme)
+[![Github All Releases](https://img.shields.io/github/downloads/LeslyeCream/Lagom-Obsidian-Theme/total.svg)]()
+
 
 [Lagom](https://en.wikipedia.org/wiki/Lagom) tries to focus on just the right amount of changes needed to make it look aesthetically more conventional and modern. It's not about reinventing the wheel or offering a unique or special theme. I simply think Obsidian is a diamond in the rough that needs to be polished to shine on its own.✨ 
 
