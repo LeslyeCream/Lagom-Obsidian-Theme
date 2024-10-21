@@ -3,7 +3,7 @@
 A phone-focused theme for Obsidian
 
 [Screenshots](#screenshots) | 
-[Features](#features) | [Comparison](#comparison) | [Kofi](#contribution)
+[Features](#features) | [What's new](#changelog) | [Kofi](#contribution)
 
 
 [Lagom](https://en.wikipedia.org/wiki/Lagom) tries to focus on just the right amount of changes needed to make it look aesthetically more conventional and modern. It's not about reinventing the wheel or offering a unique or special theme. I simply think Obsidian is a diamond in the rough that needs to be polished to shine on its own.✨ 
@@ -96,6 +96,16 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 [@death_au](https://github.com/deathau)
 
 [AlanG](https://forum.obsidian.md/t/how-to-disable-line-wrapping-in-code-blocks/69900) for its snippet for the code blocks
+
+# Changelog
+
+- Fixed the position of the date and labels in properties. Now it is aligned with the other values
+
+- A tiny correction in the embedded notes (the bottom padding was too short)
+
+- Tables show vertical separator lines inside.
+
+- New option to separately choose font size inside code blocks in edit mode and preview mode.
 
 # Contribution
 
