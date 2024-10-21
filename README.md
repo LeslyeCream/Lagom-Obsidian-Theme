@@ -21,7 +21,7 @@ A phone-focused theme for Obsidian
   
 5. Do not follow a specific color palette or typeface (so you can use it with the one you prefer!) 
 
-6. Complementary and modular. *Works great with Gruvbox, Reshi, Timiri, Cardstock and more*
+6. Complementary and modular.
 
 *Work in progress...*
 
@@ -87,7 +87,7 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 - Clean and improve the css code 
 - Adapt it for the rest of the platforms 
 - Fix some aesthetic details
-- Add options for *Style Settings*
+- [x] ~~Add options for *Style Settings~~
 
 # Special thanks
 
