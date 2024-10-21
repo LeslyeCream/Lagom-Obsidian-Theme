@@ -96,7 +96,6 @@ body.theme-light {
 
  /* ::::: EDITOR AND READ MODE ::::: */
 
-/* BOTH MODES */
 .cm-s-obsidian, .markdown-preview-view, .CodeMirror-lines {
   line-height: var(--line-height-note);
   letter-spacing: var(--letter-spacing-note); 
@@ -116,9 +115,14 @@ body.theme-light {
   margin-left: 15px;
   margin-right: 15px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
-  border: 1.2px dotted var(--background-modifier-border);
+  border: 1.2px solid var(--background-modifier-border);
   border-top-left-radius: var(--radius-s);
   border-top-right-radius: var(--radius-s);
+}
+
+.cm-line {
+  font-family: "iosevka-regular" !important;
+  font-size: calc(var(--default-font-size) - 2px);
 }
 
 /* ::::: READ MODE ::::: */
@@ -156,10 +160,13 @@ body.theme-light {
 
 /* active line */
 .CodeMirror-activeline.CodeMirror-linebackground, .cm-active.cm-line {
+ /*
   border-bottom: var(--show-dotted-line) dotted var(--text-accent);
   font-size: var(--active-line-font-size);
+ */
   width: fit-content;
 }
+
 
 .CodeMirror-activeline.CodeMirror-linebackground, .cm-active.cm-line::before {
   content: var(--active-line-indicator);
@@ -577,21 +584,39 @@ tr:last-child td:last-child {
 
 /* fixed datetime position (?) */
 .metadata-property input[type='datetime-local'] {
-   display: flex;
-   justify-content: right;
-   left: 17px; /* hide tiny icon */
-   margin: 0px;
-   padding: 0px;
-  }
-  
-/* fixed tags position (?) */
-.metadata-property[data-property-key="tags"] .multi-select-pill {
-	background: transparent;
-	left: 53px;
-	display: inline !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  left: 20px;
+  margin: 0px;
+  padding: 0px;
+  font-size: var(--metadata-label-font-size);
 }
 
-.metadata-property[data-property-key="tags"] {}
+/* DATE VALUE */
+.metadata-property input[type='date'] {
+  left: 20px;
+  font-size: var(--metadata-label-font-size);
+}
+.metadata-property input[type='number'] {
+  font-size: var(--metadata-label-font-size);
+
+}
+/* ALLS VALUES */
+.metadata-property-value {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* fixed tags position (?) */
+.metadata-property[data-property-key="tags"] .multi-select-pill {
+  display: flex !important;
+  background: transparent;
+  margin: 0px;
+  border-radius: 0px;
+  left: 53px;
+}
+
+
 /* :::::::::: YAML COLORS :::::::::: */
 
 /* values */
@@ -831,7 +856,11 @@ hr {
 .workspace-drawer-header-switcher {
   display: var(--show-vault-name);
   font-style: normal ;
+  top: 5px;
+  left: 4px;
 }
+
+.workspace-drawer-header-name {}
 
 /* ::::: IMPORTANT - FILE EXPLORER ::::: */
 .workspace-drawer {
@@ -1769,7 +1798,7 @@ settings:
       format: px
   - 
       id: hide-separator-yaml
-      title: Show "---" in Source mode
+      title: Show separators in Source mode
       type: variable-select
       default: none
       options:
