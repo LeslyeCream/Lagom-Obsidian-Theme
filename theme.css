@@ -942,7 +942,17 @@ body.is-mobile .workspace-drawer-header {
 
 
 /* ::::: TEXT EDITOR BAR ::::: */
-.mobile-toolbar-options-container {}
+.mobile-toolbar-options-container {
+  border: 1px var(--background-modifier-border) solid; 
+    margin-left: 36px;
+    margin-right: 36px;
+    border-radius: var(--radius-s);
+    margin-bottom: 10px;
+    width: 85%;
+    height: fit-content;
+padding: 0px !important;
+}
+
 .mobile-toolbar {}
 
 
