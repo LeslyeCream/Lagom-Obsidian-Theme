@@ -3,7 +3,7 @@
 A phone-focused theme for Obsidian
 
 [Screenshots](#screenshots) | 
-[Features](#features) | [What's new](#changelog) | [Kofi](#contribution)
+[Features](#features) | [What's new](#changelog) | [Fonts](#fonts) | [Kofi](#contribution)
 
 
 [Lagom](https://en.wikipedia.org/wiki/Lagom) tries to focus on just the right amount of changes needed to make it look aesthetically more conventional and modern. It's not about reinventing the wheel or offering a unique or special theme. I simply think Obsidian is a diamond in the rough that needs to be polished to shine on its own.✨ 
@@ -23,7 +23,7 @@ A phone-focused theme for Obsidian
 
 6. Complementary and modular. *Works great with Gruvbox, Reshi, Timiri, Cardstock and more*
 
-*work in progress...*
+*Work in progress...*
 
 # Screenshots
 ![IMG_20241009_142545](https://github.com/user-attachments/assets/dd1ea94f-fee5-4325-ac63-748f0ed751b9)
@@ -32,7 +32,7 @@ A phone-focused theme for Obsidian
 ![IMG_20241009_142848](https://github.com/user-attachments/assets/7e8465cf-e6a5-4cca-a0ca-59c3d2b318ed)
 ![IMG_20241009_142919](https://github.com/user-attachments/assets/cfc7eec7-4e88-4589-b1ec-cc9d29cac693)
 
-*The fonts I use in the screenshots:* 
+# Fonts
 
 **Main font:** Akrobat semibold or Pragati regular 
 
