@@ -21,7 +21,7 @@ A phone-focused theme for Obsidian
   
 5. Do not follow a specific color palette or typeface (so you can use it with the one you prefer!) 
 
-6. Complementary and modular.
+6. Complementary and modular. *Works great with Gruvbox, Reshi, Timiri, Cardstock and more*
 
 *work in progress...*
 
@@ -43,6 +43,8 @@ A phone-focused theme for Obsidian
 **Code:** Jetbrains
 
 **Quotes:** Caecelia 
+
+[Download snippet](https://github.com/LeslyeCream/Lagom-Obsidian-Theme/blob/main/Fonts.css)
 
 # Features
 
