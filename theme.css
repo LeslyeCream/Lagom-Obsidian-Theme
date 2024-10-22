@@ -25,9 +25,10 @@ body {
   --inline-title-align: center;
   --inline-title-size: calc(var(--default-font-size) + 1.7px);
   --inline-code-font-size: calc(var(--default-font-size) - 1.5 px)
-  --code-block-font-size: 12px;
-	--code-size:1px;
-  --quotes-align: center;
+  --code-size-edit-mode: 13.9px;
+  --code-size: 13.9px;
+  --macos-button-size: 16px;
+  --quotes-align: justify;
   --quote-font-size: var(--default-font-size);
   --hide-empty-properties: none;
   --hide-add-button: flex;
@@ -65,7 +66,9 @@ body {
   --h4-size: calc(var(--default-font-size) / 1.2) !important;
   --h5-size: calc(var(--default-font-size) / 0.99) !important;
   --headers-space-simetry: 1.3em;
-	--folder-border-color: #50505088;
+  --folder-border-color: #50505088;
+  --list-indent: 17px;
+	
 }
 
 
@@ -206,16 +209,6 @@ body.theme-light {
   padding: 0px 10px 0px 10px !important;
   border-left: 0px !important;
   font-size: var(--quote-font-size);
-	margin: 10px 5px 10px 5px;
-}
-
-
-/* :::::::::: INLINE CODE  ::::::::::  */
-.markdown-preview-view code  {
-  font-size: var(--inline-code-font-size);
-  border-radius: 0px;
-  padding-left: 7px;
-  padding-right: 7px;
 }
 
 
@@ -288,21 +281,39 @@ input[type=checkbox]:checked {
 
 
 /* :::::::::: CODE BLOCKS :::::::::: */
+ /* INLINE CODE - edit view */ 
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+	font-size: var(--code-size);
+}
 
-/* Read mode */
+/* Inline code and code blocks - read mode */
+.markdown-preview-view code  {
+  border-radius: 0px;
+  padding-left: 7px;
+  padding-right: 7px;
+  font-size: var(--code-size);
+}
+
+/* Read mode - only code block */
 .markdown-rendered pre {
   margin: 16px 0px 16px 0px !important;
   background: var(--background-secondary);
   border-radius: var(--radius-s);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
-  font-size: var(--code-block-font-size);
+  font-size: var(--code-size);
+}
+
+/* CODE BLOCK EDITOR MODE */
+.cm-line.HyperMD-codeblock {
+	border-radius: 0px;
+  white-space: pre !important;
+  font-size: var(--code-size-edit-mode);
+  background: var(--background-secondary) !important;
+  border: 1.5px solid var(--background-primary);
 }
 
 /* CODE BLOCK PREVIEW AND EDITOR */
-.cm-s-obsidian .HyperMD-codeblock span.cm-inline-code {
-  font-size: var(--code-block-font-size);
-  border: 2.5px solid var(--background-primary);
-}
+.cm-s-obsidian .HyperMD-codeblock span.cm-inline-code {}
 
 /* Don't wrap codeblocks */
 pre > code, code[class*="language-"] {
@@ -314,19 +325,20 @@ pre > code, code[class*="language-"] {
   padding: 55px 15px 15px 15px;
 } 
 
-/* MAC MONOCHROMANIC BUTTONS */
+/* MacOS Light Mode */
 body.theme-light .markdown-preview-view pre::before {
   content: "●●●";
   position: absolute;
-  top: 5px;
+  top: 0px;
   left: 15px;
-  font-size: var(--default-font-size);
+  font-size: var(--macos-button-size);
   color: var(--background-modifier-border);
   letter-spacing: 8px;
   border-bottom: 1.5px solid;
+  padding: 0px !important;
 }
 
-/* MAC COLORFUL BUTTONS */
+/* MacOS Night Mode */
 body.theme-dark .markdown-preview-view pre::before {
   content: "";
   position: absolute;
@@ -340,14 +352,7 @@ body.theme-dark .markdown-preview-view pre::before {
   z-index: 2;
 }
 
-/* CODE BLOCK EDITOR MODE */
-.cm-line.HyperMD-codeblock {
-  background: transparent !important;
-  white-space: pre !important;
-
-}
-
-/* MODIFY "COPY" BUTTON */
+/* Copy Button */
 .markdown-rendered button.copy-code-button {
   font-size: unset);
   margin-right: 15px !important;
@@ -483,12 +488,13 @@ a.tag {
   font-size: var(--default-font-size);
 }
 
-/* TABLE TITLE */
+/* TITLE */
 .markdown-rendered thead t tr th {
   text-align: center;
   border-bottom: 1px solid var(--background-modifier-border);
   background: var(--background-secondary);
 	font-weight: 600;
+
 }
 
 /* STYLE */
@@ -500,14 +506,17 @@ table {
   margin: calc(var(--custom-line-height) * 1.5) auto;
   font-size: var(--default-font-size);
   border-radius: var(--radius-s);
-  border: 1px solid var(--background-modifier-border);
+  border-bottom: 1px solid var(--background-modifier-border);
 }
 
 td {
-    border-left: 1px solid var(--background-secondary) !important;
-    border-right: 1px solid var(--background-secondary) !important;
+    border-left: 1px solid var(--background-modifier-border) !important;
+    border-right: 1px solid var(--background-modifier-border) !important;
 } 
 
+th {
+	border: 1px solid var(--background-modifier-border) !important;
+}
 /* ROUNDED CORNERS */
 :root table {
 --table-border-radius: var(--radius-s);
@@ -613,7 +622,7 @@ tr:last-child td:last-child {
   background: transparent;
   margin: 0px;
   border-radius: 0px;
-  left: 53px;
+  left: 25px;
 }
 
 
@@ -621,26 +630,22 @@ tr:last-child td:last-child {
 
 /* values */
 span.cm-meta.cm-hmd-frontmatter + span.cm-hmd-frontmatter {
-  font-size: var(--default-font-size);
   font-family: var(--font-ui);
 }
 
 /* numbers */
 span.cm-number.cm-hmd-frontmatter {
-  font-size: var(--default-font-size);
   font-family: var(--font-ui);
 }
 
 /* key text */
 span.cm-atom.cm-hmd-frontmatter {
-  font-size: var(--default-font-size);
   font-family: var(--font-ui);
   color: var(--text-accent);
 }
 
 /* separator */
 span.cm-meta.cm-hmd-frontmatter {
-  font-size: var(--default-font-size);
   font-family: var(--font-ui);
   color: var(--text-accent);
 }
@@ -721,8 +726,6 @@ body {
   margin-left: 37px;
 }
 
-.markdown-embed {}
-
 /* REMOVE TITLE */
 .markdown-preview-view .markdown-embed-title,
 .markdown-preview-view .obsidian-metatable {
@@ -789,10 +792,7 @@ hr {
 
 */
 
-.nav-file{
-  border-bottom: 1.7px solid #00000015;
-  padding-bottom: 6px;
-}
+
 
 
 /* ::::: COMMANDER TOOLBAR ::::: */
@@ -944,23 +944,33 @@ body.is-mobile .workspace-drawer-header {
 /* ::::: TEXT EDITOR BAR ::::: */
 .mobile-toolbar-options-container {
   border: 1px var(--background-modifier-border) solid; 
-    margin-left: 36px;
-    margin-right: 36px;
-    border-radius: var(--radius-s);
-    margin-bottom: 10px;
-    width: 85%;
-    height: fit-content;
-padding: 0px !important;
+  margin-left: 34px;
+  margin-right: 34px;
+  border-radius: var(--radius-s);
+  margin-bottom: 10px;
+  width: 85%;
+  height: fit-content;
+  padding: 0px !important;
+  bottom: auto !important;
+  top: 0px !important;
+  display: flex !important;
+   justify-content: center !important;
+   align-items: center !important; /* Centra el contenido verticalmente */
+  }
+  
 }
 
-.mobile-toolbar {}
+.mobile-toolbar {
+	position: absolute !important;
+	background: red !important;
+}
 
 
 /*  :::::  COMMAND PALETTE ::::: */
 .is-phone .prompt {
   width: 86%;
   height: 95%;
-  margin-top: -5px;
+  margin-top: 15px;
   border-radius: var(--radius-s);
   box-shadow: var(--background-modifier-box-shadow) 0px 0px 2.5px 0px;
 }
@@ -973,7 +983,7 @@ padding: 0px !important;
   margin-left: 30px;
   margin-right: 30px;
   margin-bottom: 10px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 1.5px 0px !important;
 }
 
 
@@ -1068,6 +1078,11 @@ body {
   --folder-3: var(--normal-folder-3);
   --folder-3-open: var(--normal-folder-3-open);
   --folder-padding: 2.3px;
+}
+
+.nav-file{
+  border-bottom: 1.7px solid var(--background-modifier-border);
+  padding-bottom: 6px;
 }
 
 /* THE FILE NAME */
@@ -1410,7 +1425,7 @@ settings:
               value: unset
   - 
       id: show-editor-text-bar
-      title: Show editor bar
+      title: Show toolbar
       type: variable-select
       default: unset
       options:
@@ -1620,21 +1635,21 @@ settings:
       collapsed: true
   - 
       id: code-size
+      title: Font size (Preview)
+      type: variable-number
+      default: 15
+      format: px
+  - 
+      id: code-size-edit-mode
       title: Font size (Editor)
       type: variable-number
-      default: 14
+      default: 15
       format: px
   - 
-      id: code-block-font-size
-      title: Font size
+      id: macos-button-size
+      title: MacOS buttons size
       type: variable-number
-      default: 14
-      format: px
-  - 
-      id: inline-code-font-size
-      title: Inline code font size
-      type: variable-number
-      default: 12.5
+      default: 16
       format: px
   - 
       id: quotes-section
