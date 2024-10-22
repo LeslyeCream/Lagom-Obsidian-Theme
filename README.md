@@ -99,7 +99,7 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 
 [AlanG](https://forum.obsidian.md/t/how-to-disable-line-wrapping-in-code-blocks/69900) for its snippet for the code blocks
 
-# Changelog
+# Changelog (v1.3)
 
 - Fixed the position of the date and labels in properties. Now it is aligned with the other values
 
@@ -108,6 +108,10 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 - Tables show vertical separator lines inside.
 
 - New option to separately choose font size inside code blocks in edit mode and preview mode.
+
+- Fixed top margin of Command palette 
+
+- Small changes in tables
 
 # Contribution
 
