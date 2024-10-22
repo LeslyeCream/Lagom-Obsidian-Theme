@@ -102,7 +102,7 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 
 [AlanG](https://forum.obsidian.md/t/how-to-disable-line-wrapping-in-code-blocks/69900) for its snippet for the code blocks
 
-# Changelog (v1.3)
+# Changelog
 
 - Fixed the position of the date and labels in properties. Now it is aligned with the other values
 
