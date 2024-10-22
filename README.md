@@ -48,7 +48,10 @@ A phone-focused theme for Obsidian
 
 # Features
 
-- The file panel occupies 100% of the screen to take advantage of the available space. 
+- The file panel occupies 100% of the screen to take advantage of the available space (optional pop-up style)
+
+  ![Screenshot_20241022-092322](https://github.com/user-attachments/assets/34297bcd-458b-477d-97ea-c42d90a5404f)
+
 
 - Files show their full name on multiple lines. No more unfinished titles or ellipses!
 
@@ -87,7 +90,7 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 - Clean and improve the css code 
 - Adapt it for the rest of the platforms 
 - Fix some aesthetic details
-- [x] ~~Add options for *Style Settings~~
+- [x] ~~Add options for Style Settings~~
 
 # Special thanks
 
