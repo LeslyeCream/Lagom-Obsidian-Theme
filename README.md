@@ -119,6 +119,10 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 # Contribution
 
 Contribute reporting bugs, code improvements and of course, feedback is welcome! 
+
+Please open an issue on github or send me an [email](mailto:lagom.haggler091@slmail.me). I will try to fix it as soon as possible. 
+
+
 ***
 
 If you really like this theme, please consider support me ᵔᴥᵔ
