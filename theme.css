@@ -68,7 +68,7 @@ body {
   --headers-space-simetry: 1.3em;
   --folder-border-color: #50505088;
   --list-indent: 17px;
-	
+  --tabs-height: 300px;
 }
 
 
@@ -94,6 +94,21 @@ body.theme-light {
   text-decoration: underline 2px !important;
   text-underline-offset: 0.19em;
   /* text-indent: 10px; */
+}
+
+/* TABS */ 
+.mobile-tab-title {
+	order: 1;
+	white-space: wrap;
+}
+
+.mobile-tab-preview {
+	order: 2;
+	height: var(--tabs-height);
+}
+
+.mobile-tab-switcher-scroll::webkit-scrollbar {
+	display: none;
 }
 
 
@@ -124,7 +139,6 @@ body.theme-light {
 }
 
 .cm-line {
-  font-family: "iosevka-regular" !important;
   font-size: calc(var(--default-font-size) - 2px);
 }
 
@@ -1897,4 +1911,16 @@ settings:
              id: accent-rgb
              format: rgb
       default: '#6c6c6c6b'
+*/
+
+/* @settings
+name: Tabs
+id: tabs
+settings:
+  - 
+      id: tabs-height
+      title: Tab height
+      type: variable-number
+      default: 300
+      format: px
 */
