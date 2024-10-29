@@ -3,7 +3,7 @@
 A phone-focused theme for Obsidian
 
 [Screenshots](#screenshots) | 
-[Features](#features) | [What's new](#changelog) | [Fonts](#fonts) | [Kofi](#contribution)
+[Features](#features) | [What's new](#changelog) | [Fonts](#fonts) | [Buy me a coffe](#contribution)
 
 
 [Lagom](https://en.wikipedia.org/wiki/Lagom) tries to focus on just the right amount of changes needed to make it look aesthetically more conventional and modern. It's not about reinventing the wheel or offering a unique or special theme. I simply think Obsidian is a diamond in the rough that needs to be polished to shine on its own.✨ 
@@ -138,9 +138,7 @@ Contribute reporting bugs, code improvements and of course, feedback is welcome!
 
 Please open an issue on github or send me an [email](mailto:lagom.haggler091@slmail.me). I will try to fix it as soon as possible. 
 
-
-***
-
 If you really like this theme, please consider support me ᵔᴥᵔ
 
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/W7W349H97)
+<a href="https://www.buymeacoffee.com/leslyecream"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=leslyecream&button_colour=694830&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" /></a>
+
