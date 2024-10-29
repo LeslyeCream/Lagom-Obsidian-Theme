@@ -56,6 +56,7 @@ body {
   /*--metadata-gap: 23px; */
   /*--metadata-property-background: #49292; */
   --metadata-display-editing: none !important;
+  --properties-editor-font-size: var(--default-font-size);
   --theme-dark-opacity: 0.7;
   --theme-light-opacity: 0.85;
   --table-border-width: 1px solid;
@@ -138,9 +139,7 @@ body.theme-light {
   border-top-right-radius: var(--radius-s);
 }
 
-.cm-line {
-  font-size: calc(var(--default-font-size) - 2px);
-}
+.cm-line::not(.cm-s-obsidian) {}
 
 /* ::::: READ MODE ::::: */
 .workspace-split.mod-root .view-content {}
@@ -624,7 +623,7 @@ tr:last-child td:last-child {
   font-size: var(--metadata-label-font-size);
 
 }
-/* ALLS VALUES */
+/* VALUES */
 .metadata-property-value {
   display: flex;
   justify-content: flex-end;
@@ -645,23 +644,29 @@ tr:last-child td:last-child {
 /* values */
 span.cm-meta.cm-hmd-frontmatter + span.cm-hmd-frontmatter {
   font-family: var(--font-ui);
+  font-size: var(--properties-editor-font-size);
 }
 
 /* numbers */
 span.cm-number.cm-hmd-frontmatter {
   font-family: var(--font-ui);
+  font-size: var(--properties-editor-font-size);
+
 }
 
 /* key text */
 span.cm-atom.cm-hmd-frontmatter {
   font-family: var(--font-ui);
   color: var(--text-accent);
+  font-size: var(--properties-editor-font-size);
+
 }
 
 /* separator */
 span.cm-meta.cm-hmd-frontmatter {
   font-family: var(--font-ui);
   color: var(--text-accent);
+  font-size: var(--properties-editor-font-size);
 }
 
 /* values */
@@ -1094,18 +1099,13 @@ body {
   --folder-padding: 2.3px;
 }
 
-.nav-file{
-  border-bottom: 1.7px solid var(--background-modifier-border);
-  padding-bottom: 6px;
+.nav-file {
+  border-bottom: 1.4px solid var(--background-modifier-border);
 }
 
 /* THE FILE NAME */
 .nav-file-title-content {
   padding-right: 10px;
- /*
-  padding-bottom: 5px !important;
-  padding-top: 0px !important;
-  */
 }
 
 body:not(.is-grabbing) .nav-file-title:hover {
@@ -1124,21 +1124,18 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
 
 /* FRAME NAME LIST */
 .nav-file-title {
-  /* padding-left: -20px !important; */
   border-radius: 0px !important;
   margin: 0px !important;
-  padding-bottom: auto; /* space between notes */
-  padding-top: 10px;
 }
 
 .nav-file-title.is-active,
 .nav-folder-title.is-active {
   background: transparent !important;
-  border-radius: 0px !important;
 }
 
 .nav-file-title-content {
   line-height: 1.12;
+  padding: 5px 0px 5px 0px;
 }
 
 /* FILE COLOR SELECTED */
@@ -1154,14 +1151,12 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
 .nav-file-title:before {
   content: var(--icon-file-indicator);
   padding-right: 7px;
-  font-size: 1.3em;
-  padding-top: 0px;
+  font-size: 1.4em;
+  padding-bottom: 7px;
   margin-left: -18px;
 }
 
-.nav-folder-children .nav-folder .nav-file:last-child {
-  border-bottom: none;
-}
+.nav-folder-children .nav-folder .nav-file:last-child {}
 
 .workspace-leaf-content[data-type="starred"] .nav-file-title::before {
   display: none;
@@ -1170,31 +1165,21 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
 
 /* :::::::::: FOLDERS :::::::::: */
 .nav-folder {
-  border: 1px solid var(--folder-border-color);
+  border: 0.9px solid var(--folder-border-color);
   border-radius: var(--radius-s);
-  margin-bottom: 15px;
-  margin-left: 13px;
-  margin-right: 13px;
   box-shadow: var(--background-modifier-box-shadow) 0px 0px 1.4px 0px;
+  margin: 11px 13px 11px 13px !important;
 }
 
 /* highlight selected folder */
-.nav-folder:hover {
-/*	background: red; */
-}
+.nav-folder:hover {}
+
 .nav-folder-children {
-  margin: 10px 10px 10px 10px;
+  margin: 0px 10px 0px 10px;
 }
 
 /* HIDE INDICATORS */
-body:not(.nav-folder-indicators) .nav-folder-collapse-indicator {
-
-  /*
-  display: none;
-  padding-left: 10px;
-  */
-  
-}
+body:not(.nav-folder-indicators) .nav-folder-collapse-indicator {}
 
 /* ROOT FOLDER FRAME */
 body:not(.nav-folder-indicators) .nav-folder-title {
@@ -1254,8 +1239,8 @@ body, .folder-notebooks {
 
 /*  :::::  SIDEBAR  :::::  */
 .workspace-drawer-active-tab-header {
-/* FILES TOP BAR */
-  border: 0px var (--background-modifier-border)  !important;
+/* FILES MENU TOP BAR */
+  border: 1px var (--background-modifier-border)  !important;
   border-radius: var(--radius-s);
   background: var(--background-primary) !important;
 }
@@ -1557,13 +1542,6 @@ settings:
       type: variable-number
       default: 0.65
   - 
-      id: active-line-font-size
-      title: Active line font size
-
-      type: variable-number
-      default: 17
-      format: px
-  - 
       id: separator-icon
       title: Separator content
       type: variable-text
@@ -1834,6 +1812,12 @@ settings:
       title: Icon size
       type: variable-number
       default: unset
+      format: px
+  - 
+      id: properties-editor-font-size
+      title: YAML font size
+      type: variable-number
+      default: 16
       format: px
   - 
       id: hide-separator-yaml
