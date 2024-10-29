@@ -104,6 +104,22 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 
 # Changelog
 
+**V1.4**
+
+- Removed the option to change the font size in the active line (apparently it is not useful?) and caused display problems in editor mode.
+  
+- New option to change the height in the new preview of opened tabs.
+  
+- The note name in the tab list is displayed on multiple lines.
+
+- It is now possible to choose the font size of YAML metadata in editor mode.
+
+- The icon next to each file was slightly misaligned, now it is centered correctly in relation to the text height.
+
+- Some other minor changes
+  
+**V1.3**
+
 - Fixed the position of the date and labels in properties. Now it is aligned with the other values
 
 - A tiny correction in the embedded notes (the bottom padding was too short)
