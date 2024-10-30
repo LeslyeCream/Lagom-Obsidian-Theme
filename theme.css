@@ -318,7 +318,7 @@ input[type=checkbox]:checked {
 
 /* CODE BLOCK EDITOR MODE */
 .cm-line.HyperMD-codeblock {
-	border-radius: 0px;
+  border-radius: 0px;
   white-space: pre !important;
   font-size: var(--code-size-edit-mode);
   background: var(--background-secondary) !important;
@@ -329,7 +329,7 @@ input[type=checkbox]:checked {
 .cm-s-obsidian .HyperMD-codeblock span.cm-inline-code {}
 
 /* Don't wrap codeblocks */
-pre > code, code[class*="language-"] {
+.code-wrap pre > code, code[class*="language-"] {
   white-space: pre !important;
 }
 
@@ -1626,6 +1626,11 @@ settings:
       level: 2
       collapsed: true
   - 
+      id: code-wrap
+      title: Wrap code
+      type: class-toggle
+      default: false
+  - 
       id: code-size
       title: Font size (Preview)
       type: variable-number
@@ -1764,7 +1769,7 @@ settings:
       options:
           - 
               label: Hide
-              value: None
+              value: none
           - 
               label: Show
               value: block
