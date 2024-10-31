@@ -102,9 +102,12 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 
 [AlanG](https://forum.obsidian.md/t/how-to-disable-line-wrapping-in-code-blocks/69900) for its snippet for the code blocks
 
+@LuisaKart By the code to modify the new tab view
+
 # Changelog
 
 **V1.4**
+- New option to change the size of headers
 
 - Removed the option to change the font size in the active line (apparently it is not useful?) and caused display problems in editor mode.
   
