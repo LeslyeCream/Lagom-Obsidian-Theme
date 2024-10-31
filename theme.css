@@ -61,11 +61,11 @@ body {
   --theme-light-opacity: 0.85;
   --table-border-width: 1px solid;
   --table-header-weight: normal;
-	--h1-size: calc(var(--default-font-size) / 0.84) !important;
-  --h2-size: calc(var(--default-font-size) / 0.88) !important;
-  --h3-size: calc(var(--default-font-size) / 0.99) !important;
-  --h4-size: calc(var(--default-font-size) / 1.2) !important;
-  --h5-size: calc(var(--default-font-size) / 0.99) !important;
+  --h1-size: 20px;
+  --h2-size: 18px;
+  --h3-size: 17px;
+  --h4-size: 14px;
+  --h5-size: 12px;
   --headers-space-simetry: 1.3em;
   --folder-border-color: #50505088;
   --list-indent: 17px;
@@ -99,17 +99,17 @@ body.theme-light {
 
 /* TABS */ 
 .mobile-tab-title {
-	order: 1;
-	white-space: wrap;
+  order: 1;
+  white-space: wrap;
 }
 
 .mobile-tab-preview {
-	order: 2;
-	height: var(--tabs-height);
+  order: 2;
+  height: var(--tabs-height);
 }
 
 .mobile-tab-switcher-scroll::webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 
@@ -128,7 +128,7 @@ body.theme-light {
 .theme-light, .cm-s-obsidian::not(.theme-dark) {}
 
 .cm-s-obsidian {
-	font-size: var(--default-font-size);
+  font-size: var(--default-font-size);
   padding: 0px !important;
   margin-top: 15px;
   margin-left: 15px;
@@ -199,8 +199,8 @@ body.theme-light {
 
 /* :::::::::: INLINE TITLE :::::::::: */
 .inline-title {
-	font-family: unset;
-	padding-bottom: 10px;
+  font-family: unset;
+  padding-bottom: 10px;
   letter-spacing: var(--letter-spacing-note);
   margin-bottom: 0px;
   text-align: var(--inline-title-align);
@@ -1583,8 +1583,56 @@ settings:
       level: 2
       collapsed: true
   - 
+      id: headers-font-size
+      title: Font size
+      type: heading
+      level: 3
+      collapsed: true
+  - 
+      id: h1-size
+      title: Header H1
+      type: variable-number
+      default: 20
+      format: px
+  - 
+      id: h2-size
+      title: Header H2
+      type: variable-number
+      default: 18
+      format: px
+  - 
+      id: h3-size
+      title: Header H3
+      type: variable-number
+      default: 16
+      format: px
+  - 
+      id: h4-size
+      title: Header H4
+      type: variable-number
+      default: 14
+      format: px
+  - 
+      id: h5-size
+      title: Header H5
+      type: variable-number
+      default: 12
+      format: px
+  - 
+      id: h6-size
+      title: Header H6
+      type: variable-number
+      default: 10
+      format: px
+  - 
+      id: headers-others
+      title: Others
+      type: heading
+      level: 3
+      collapsed: true
+  - 
       id: headers-space-simetry
-      title:  Line height
+      title: Header space
       type: variable-number
       default: 1.5
       format: em
