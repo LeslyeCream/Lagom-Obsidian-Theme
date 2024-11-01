@@ -143,5 +143,4 @@ Please open an issue on github or send me an [email](mailto:lagom.haggler091@slm
 
 If you really like this theme, please consider support me ᵔᴥᵔ
 
-<a href="https://www.buymeacoffee.com/leslyecream"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=leslyecream&button_colour=694830&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" /></a>
-
+<a href='https://ko-fi.com/W7W349H97' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://storage.ko-fi.com/cdn/kofi1.png?v=6' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
