@@ -107,6 +107,8 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 # Changelog
 
 **V1.4**
+- Fix disproportionate margin in images
+
 - New option to change the size of headers
 
 - Removed the option to change the font size in the active line (apparently it is not useful?) and caused display problems in editor mode.
