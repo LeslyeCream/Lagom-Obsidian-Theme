@@ -9,10 +9,10 @@
 /* ::::: LAGOM SETTINGS ::::: */
 body {
   --mac-terminal-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
-  --nav-item-size: 16.6px; /* files */
+  --nav-item-size: 15.5px; /* files */
   --radius-s: 11.2px;
   --nav-indentation-guide-width: unset;
-  --default-font-size: 16.5px; /* Notes and editor */
+  --default-font-size: 17.8px; /* Notes and editor */
   --line-height-note: 24px;
   --letter-spacing-note: 0.25px;
   --text-note-align: justify;
@@ -129,7 +129,7 @@ body.theme-light {
 .cm-s-obsidian {
   font-size: var(--default-font-size);
   padding: 0px !important;
-  margin-top: 15px;
+  margin-top: 10px;
   margin-left: 15px;
   margin-right: 15px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
@@ -750,6 +750,7 @@ body {
 .markdown-preview-view .markdown-embed-title,
 .markdown-preview-view .obsidian-metatable {
   text-align: center;
+  white-space: wrap;
   display: var(--show-embed-title);
   margin: 0px;
   border-radius: var(--radius-s);
@@ -1101,7 +1102,7 @@ body {
 }
 
 .nav-file {
-/*  border-bottom: 1.4px solid */var(--background-modifier-border);
+  border-bottom: 1.4px solid var(--background-modifier-border);
 }
 
 /* THE FILE NAME */
