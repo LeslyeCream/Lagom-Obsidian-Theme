@@ -9,7 +9,7 @@
 /* ::::: LAGOM SETTINGS ::::: */
 body {
   --mac-terminal-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
-  --nav-item-size: 15.5px; /* files */
+  --nav-item-size: var(--default-font-size); /* files */
   --radius-s: 11.2px;
   --nav-indentation-guide-width: unset;
   --default-font-size: 17.8px; /* Notes and editor */
@@ -29,7 +29,9 @@ body {
   --code-size: 13.9px;
   --macos-button-size: 16px;
   --quotes-align: justify;
+  --quote-padding: 10px 15px 10px 15px;
   --quote-font-size: var(--default-font-size);
+  --quote-icon: "“";
   --hide-empty-properties: none;
   --hide-add-button: flex;
   --hide-separator-yaml: none;
@@ -69,8 +71,29 @@ body {
   --folder-border-color: #50505088;
   --list-indent: 17px;
   --tabs-height: 300px;
+  --bg-url: ;
+  --filename-line-thickness: 1.8px;
+  --filename-separator-style: dotted;
 }
 
+/* ::::: BACKGROUND IMAGE ::::: */
+
+.workspace-bg .app-container::before {
+  background-image: var(--bg-url);
+  opacity: var(--bg-opacity, 0.8);
+  filter: blur(var(--bg-blur, 4px));
+  background-color: var(--uw-background);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1; 
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 
 /* ::::: OBSIDIAN THEME ::::: */
 
@@ -86,6 +109,7 @@ body.theme-light {
 /* :::::::::: LINKS :::::::::: */
 .internal-link {
   text-decoration: 0px !important;
+  font-weight: 600;
 }
 
 .external-link {
@@ -122,6 +146,22 @@ body.theme-light {
 }
 
 /* EDITOR MODE */
+.markdown-preview-view .metadata-add-button {
+--metadata-display-editing: none;
+}
+
+.theme-light .cm-s-obsidian {
+  content: "";
+  background-image: var(--background-image-editor);
+  background-repeat: ;
+  background-size: var(--background-image-editor-size);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
 
 /* TO-DO / FIND BACKGROUND */
 .theme-light, .cm-s-obsidian::not(.theme-dark) {}
@@ -133,32 +173,35 @@ body.theme-light {
   margin-left: 15px;
   margin-right: 15px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
-  border: 1.2px solid var(--background-modifier-border);
+  border: 0.5px solid var(--background-modifier-border);
   border-top-left-radius: var(--radius-s);
   border-top-right-radius: var(--radius-s);
 }
 
-.cm-line::not(.cm-s-obsidian) {}
 
 /* ::::: READ MODE ::::: */
 .workspace-split.mod-root .view-content {}
+
 
 .markdown-preview-view {
   margin-top: 0px;
   padding-left: 29px;
   padding-right: 29px;
+}
 
+
+.page-style-read-mode .markdown-preview-view:not(.markdown-embed):not(.obsidian-metatable):not(.markdown-embed-title) {
 /* Style page for read mode */
-/*
-  margin-right: 15px; 
-  margin-left: 15px; 
-  margin-top: 10px;
-  margin-bottom: 5px; 
+  height: fit-content;
+  min-width: auto;
+  width: auto;
+  margin: 10px 15px 0px 15px !important;
+  padding-left: 19px;
+  padding-right: 19px;
   box-shadow: var(--mac-terminal-shadow);
   border-top-left-radius: var(--radius-s); 
   border-top-right-radius: var(--radius-s); 
-  border: 1px solid var(--background-modifier-border);
-*/	
+  border: 0.5px solid var(--background-modifier-border);
 }
 
 /* :::::::::: ACTIVE LINE :::::::::: */
@@ -206,6 +249,9 @@ body.theme-light {
   font-size: var(--inline-title-size);
 }
 
+.inline-title-always-uppercase .inline-title {
+	text-transform: uppercase;
+}
 
 /* ::::::::::: HIGHLIGHTS :::::::::: */
 .cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight, .markdown-preview-view mark {
@@ -217,10 +263,30 @@ body.theme-light {
 
 /* :::::::::: BLOCK QUOTES :::::::::: */
 .markdown-rendered blockquote, .blockquote-normal .markdown-rendered blockquote {
+  /*
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+*/
+  --blockquote-background-color:var(--background-secondary);
+
   text-align: var(--quotes-align);
-  padding: 0px 10px 0px 10px !important;
+  padding: var(--quote-padding) !important;
   border-left: 0px !important;
   font-size: var(--quote-font-size);
+  border-radius: 0px;
+  border-top: var(--quote-hide-top-line) dashed var(--background-modifier-border);
+  border-bottom: 1.5px dashed var(--background-modifier-border);
+}
+
+blockquote::before {
+  display: block;
+  width: fit-content;
+  content: var(--quote-icon);
+  font-size: 3.5em;
+  position: relative !important;
+  top: 30px;
+  right: 45%;
+  left: 45%; 
+  color: var(--text);
 }
 
 
@@ -309,7 +375,6 @@ input[type=checkbox]:checked {
 /* Read mode - only code block */
 .markdown-rendered pre {
   margin: 16px 0px 16px 0px !important;
-  background: var(--background-secondary);
   border-radius: var(--radius-s);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
   font-size: var(--code-size);
@@ -318,9 +383,8 @@ input[type=checkbox]:checked {
 /* CODE BLOCK EDITOR MODE */
 .cm-line.HyperMD-codeblock {
   border-radius: 0px;
-  white-space: pre !important;
   font-size: var(--code-size-edit-mode);
-  background: var(--background-secondary) !important;
+  background: var(--background-secondary);
   border: 1.5px solid var(--background-primary);
 }
 
@@ -329,7 +393,7 @@ input[type=checkbox]:checked {
 
 /* Don't wrap codeblocks */
 .code-wrap pre > code, code[class*="language-"] {
-  white-space: pre !important;
+  white-space: var(--wrap-code-blocks);
 }
 
 /* ::::: MACOS TERMINAL ::::: */
@@ -366,7 +430,6 @@ body.theme-dark .markdown-preview-view pre::before {
 
 /* Copy Button */
 .markdown-rendered button.copy-code-button {
-  font-size: unset);
   margin-right: 15px !important;
   padding: 0px;
   top: 3.5px;
@@ -423,6 +486,7 @@ body:not(.no-codeblock-line-numbers)
 .markdown-reading-view h5,
 .markdown-reading-view h6 {
   text-align: justify;
+  page-break-after: avoid;
   margin: 18px 0px 18px 0px !important;
   letter-spacing: 0.1px !important;
   max-width: fit-content !important;
@@ -558,7 +622,6 @@ tr:last-child td:last-child {
 /* ::::: PROPERTIES ::::: */
 
 
-
 /* HIDE EMPTY PROPERTY */
 .metadata-property:has([placeholder="No value"]) {
   display: var(--hide-empty-properties) !important;
@@ -598,8 +661,8 @@ tr:last-child td:last-child {
 
 .metadata-container {
 	margin-top: 10px;
-  border-bottom: dashed 2.1px var(--background-modifier-border);
-  border-top: dashed 2.1px var(--background-modifier-border);
+  border-bottom: dotted 2.1px var(--background-modifier-border);
+  border-top: dotted 2.5px var(--background-modifier-border);
   padding-top: 5px;
   padding-bottom: 5px;
   /* --input-height: var(--metadata-input-height); */
@@ -836,8 +899,7 @@ hr {
 
 
 /* :::::  SETTINGS  ::::: */
-.setting-item-description {
-}
+.setting-item-description {}
 
 /* GROUP SETTINGS */
 .vertical-tab-header-group-items {
@@ -890,6 +952,8 @@ hr {
   width: 100%;
 }
 
+.modal-container{}
+
 
 /*  ::::: FILE EXPLORER POP-UP ::::: */
 body.is-mobile.popup-explorer .workspace-drawer {}
@@ -939,7 +1003,6 @@ body.is-mobile .workspace-drawer-header {
   padding: 12px 12px 0;
   background: green;
 }
-
 */
 
 
@@ -983,7 +1046,6 @@ body.is-mobile .workspace-drawer-header {
 
 .mobile-toolbar {
 	position: absolute !important;
-	background: red !important;
 }
 
 
@@ -1020,29 +1082,23 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 .is-mobile .menu {
   font-size: var(--nav-item-size) !important;
   max-width: 85%;
-  max-height: calc(100% - 10px);
-
-  /*
-  min-width: unset;
-  position: absolute; 
-  */
-  
   border-radius-top: var(--radius-s);
-  border-radius-bottom: var(--radius-s);
-  padding: 10px 10px;
-
-/*
+  padding: 15px 15px 0px 15px ;
   overflow-y: auto !important;
-  white-space: ;
-*/
-
 }
 
-.is-mobile .menu-item {
-  padding: 10px;
-  margin-bottom: 5px;
+
+.is-mobile .menu-item:not(.menu-separator) {
+	border-bottom: 0px dashed var(--background-modifier-border);
+	border-radius: 0px;
+  padding: 10px 1px 10px 1px !important;
 }
 
+/* SECONDARY MENU 
+
+.menu-separator:not(.is-mobile, .menu-item) {
+	border-bottom: 1.5px dashed var(--background-modifier-border);
+}
 
 /*  :::::  UI ICONS  :::::  */
 .is-mobile {
@@ -1089,6 +1145,10 @@ body {
   box-shadow: var(--background-modifier-box-shadow) 0px 0px 2.5px 0px;
 }
 
+/* Inputs radius */
+input[type='text'], input[type='search'], input[type='email'], input[type='password'], input[type='number'] {
+  border-radius: var(--radius-s);
+}
 
 /* ::::: FILES AND FOLDERS ::::: */
 body {
@@ -1101,8 +1161,10 @@ body {
   --folder-padding: 2.3px;
 }
 
+/* FILE'S NAME - SEPARATOR */
+
 .nav-file {
-  border-bottom: 1.4px solid var(--background-modifier-border);
+  border-bottom: var(--filename-line-thickness) var(--filename-separator-style) var(--background-modifier-border);
 }
 
 /* THE FILE NAME */
@@ -1111,16 +1173,15 @@ body {
 }
 
 body:not(.is-grabbing) .nav-file-title:hover {
-  font-style: italic;
   background: transparent;
 }
+
 
 /* FILE SELECTED */
 body:not(.is-grabbing) .nav-file-title.is-active:hover {
 }
 
 .nav-file-title:hover {
-  font-style: underline !important;
   background: transparent !important;
 }
 
@@ -1132,11 +1193,14 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
 
 .nav-file-title.is-active,
 .nav-folder-title.is-active {
+	color: var(--text-accent);
+	font-style: italic;
   background: transparent !important;
 }
 
 .nav-file-title-content {
   line-height: 1.12;
+  min-width: 90%;
   padding: 5px 0px 5px 0px;
 }
 
@@ -1578,6 +1642,23 @@ settings:
               label: Hide
               value: 0px
   - 
+      id: page-style-read-mode
+      title: Style Page
+      type: class-toggle
+      default: false
+  - 
+      id: background-image-editor
+      title: Background image (source mode)
+      type: variable-text
+      description: Syntax url(LINK_IMAGE_HERE)
+      default: None
+  - 
+      id: background-image-editor-size
+      title: Background size
+      type: variable-number
+      default: 200
+      format: px
+  - 
       id: headers-section
       title: Headers
       type: heading
@@ -1669,16 +1750,28 @@ settings:
       default: 18.2
       format: px
   - 
+      id: inline-title-always-uppercase
+      title: Uppercase lock
+      type: class-toggle
+      default: true
+  - 
       id: code-block-section
       title: Code blocks & Inline code
       type: heading
       level: 2
       collapsed: true
   - 
-      id: code-wrap
-      title: Wrap code
-      type: class-toggle
-      default: false
+      id: wrap-code-blocks
+      title: Wrap code (Read mode)
+      type: variable-select
+      default: normal
+      options:
+          - 
+              label: Enable
+              value: pre
+          - 
+              label: Disabled
+              value: normal
   - 
       id: code-size
       title: Font size (Preview)
@@ -1729,12 +1822,33 @@ settings:
               label: Right
               value: right
   - 
+      id: quote-padding
+      title: Quote padding
+      type: variable-text
+      default: 10px 15px 10px 15px
+  - 
+      id: quote-icon
+      title: Quote icon
+      type: variable-text
+      default: "“"
+  - 
+      id: quote-hide-top-line
+      title: Hide top line
+      type: variable-select
+      default: True
+      options:
+          - 
+              label: True
+              value: 0px
+          - 
+              label: False
+              value: 1.5px
+  - 
       id: callouts-section
       title: Callouts
       type: heading
       level: 2
       collapsed: true
-
   - 
       id: hide-callout-title
       title: Show  title
@@ -1940,6 +2054,27 @@ settings:
              id: accent-rgb
              format: rgb
       default: '#6c6c6c6b'
+  - 
+      id: filename-separator-style
+      title: Separator style
+      type: variable-select
+      default: dotted
+      options:
+          - 
+              label: Dotted
+              value: dotted
+          - 
+              label: Dashed
+              value: dashed
+          - 
+              label: Solid
+              value: solid
+  - 
+      id: filename-line-thickness
+      title: Line thickness
+      type: variable-number
+      default: 1.8
+      format: px
 */
 
 /* @settings
