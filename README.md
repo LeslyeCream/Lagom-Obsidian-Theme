@@ -109,6 +109,13 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 @LuisaKart By the code to modify the new tab view
 
 # Changelog
+**V1.5**
+- New design for quotes
+- You can now modify the padding of the quote blocks.
+- Option to choose a local image or url as note background in the text editor
+- Now you can always capitalize the title inside the notes.
+- Extra options to customize the dividing line between notes in the file explorer (style and thickness)
+- Small changes in search boxes
 
 **V1.4**
 - Fix disproportionate margin in images
