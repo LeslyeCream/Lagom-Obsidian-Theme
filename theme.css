@@ -9,15 +9,15 @@
 /* ::::: LAGOM SETTINGS ::::: */
 body {
   --mac-terminal-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
-  --nav-item-size: var(--default-font-size); /* files */
+  --nav-item-size: 16.6px; /* files */
   --radius-s: 11.2px;
   --nav-indentation-guide-width: unset;
-  --default-font-size: 17.8px; /* Notes and editor */
+  --default-font-size: 16.6px; /* Notes and editor */
   --line-height-note: 24px;
   --letter-spacing-note: 0.25px;
   --text-note-align: justify;
   --focus-active-line-opacity: 0.8;
-  --focus-non-active-line-opacity: 0.6;
+  --focus-non-active-line-opacity: 0.55;
   --show-dotted-line: 1px;
   --active-line-font-size: calc(var(--default-font-size) + 1px);
   --active-line-indicator: "+ ";
@@ -274,12 +274,10 @@ body.theme-light {
   font-size: var(--quote-font-size);
   border-radius: 0px;
   border-top: var(--quote-hide-top-line) dashed var(--background-modifier-border);
-  border-bottom: 1.5px dashed var(--background-modifier-border);
+  border-bottom: var(--quote-hide-down-line) dashed var(--background-modifier-border);
 }
 
 blockquote::before {
-  display: block;
-  width: fit-content;
   content: var(--quote-icon);
   font-size: 3.5em;
   position: relative !important;
@@ -1835,13 +1833,25 @@ settings:
       id: quote-hide-top-line
       title: Hide top line
       type: variable-select
-      default: True
+      default: Show
       options:
           - 
-              label: True
+              label: Hide
               value: 0px
           - 
-              label: False
+              label: Show
+              value: 1.5px
+  - 
+      id: quote-hide-down-line
+      title: Hide down line
+      type: variable-select
+      default: Show
+      options:
+          - 
+              label: Hide
+              value: 0px
+          - 
+              label: Show
               value: 1.5px
   - 
       id: callouts-section
@@ -1886,38 +1896,7 @@ settings:
               label: Right
               value: right
   - 
-      id: callout-one-color
-      title: 1. Custom callout color
-      type: variable-color
-      opacity: true
-      format: rgb
-      alt-format:
-         -
-             id: accent-rgb
-             format: rgb
-      default: '#ff00007d'
-  - 
-      id: callout-two-color
-      title: 2. Custom callout color
-      type: variable-color
-      opacity: true
-      format: rgb
-      alt-format:
-         -
-             id: accent-rgb
-             format: rgb
-      default: '#1d00ff7e'
-  - 
-      id: callout-three-color
-      title: 3. - Custom callout color
-      type: variable-color
-      opacity: true
-      format: rgb
-      alt-format:
-         -
-             id: accent-rgb
-             format: rgb
-      default: '#02ff007c'
+      
   - 
       id: embed-section
       title: Embed notes
