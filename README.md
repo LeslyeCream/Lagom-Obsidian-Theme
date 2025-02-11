@@ -110,6 +110,10 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 @LuisaKart By the code to modify the new tab view
 
 # Changelog
+**V1.6** 
+- Added option to prevent changes to the Inline-Title in reading mode.
+- Fixed list inconsistency caused by the latest Obsidian update.
+
 **V1.5**
 - New design for quotes
 - You can now modify the padding of the quote blocks.
