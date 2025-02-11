@@ -9,11 +9,11 @@
 /* ::::: LAGOM SETTINGS ::::: */
 body {
   --mac-terminal-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
-  --nav-item-size: 16.6px; /* files */
+  --nav-item-size: 16.7px; /* files */
   --radius-s: 11.2px;
   --nav-indentation-guide-width: unset;
-  --default-font-size: 16.6px; /* Notes and editor */
-  --line-height-note: 24px;
+  --default-font-size: 16.7px; /* Notes and editor */
+  --line-height-note: 26px;
   --letter-spacing-note: 0.25px;
   --text-note-align: justify;
   --focus-active-line-opacity: 0.8;
@@ -26,29 +26,29 @@ body {
   --inline-title-size: calc(var(--default-font-size) + 1.7px);
   --inline-code-font-size: calc(var(--default-font-size) - 1.5 px)
   --code-size-edit-mode: 13.9px;
-  --code-size: 13.9px;
+  --code-size: 14px;
   --macos-button-size: 16px;
   --quotes-align: justify;
   --quote-padding: 10px 15px 10px 15px;
   --quote-font-size: var(--default-font-size);
   --quote-icon: "“";
   --hide-empty-properties: none;
-  --hide-add-button: flex;
+  --hide-add-button: none;
   --hide-separator-yaml: none;
   --hide-callout-title: none;
   --callouts-align-text: justify;
   --callout-font-size-title: 16px;
   --properties-icon-size: unset;
   --separator-icon: "o0o";
-  --separator-icon-color
-  --show-explorer-buttons: unset;
+  --separator-icon-color: #6C6C6C6B
+  --show-explorer-buttons: none;
   --icon-settings: none;
   --num-of-notes: none;
   --show-vault-name: none;
   --files-bookmarks-search-bar: flex;
   --show-editor-text-bar: unset;
   --scrollbars: none;
-  --icon-ui-opacity: 0.85;
+  --icon-ui-opacity: 0.9;
   --show-embed-title: block;
   --metadata-label-font-size: calc(var(--default-font-size) - 1px);
   --metadata-input-font-size: var(--default-font-size);
@@ -58,8 +58,8 @@ body {
   /*--metadata-property-background: #49292; */
   --metadata-display-editing: none !important;
   --properties-editor-font-size: var(--default-font-size);
-  --theme-dark-opacity: 0.7;
-  --theme-light-opacity: 0.85;
+  --theme-dark-opacity: 0.85;
+  --theme-light-opacity: 0.95;
   --table-border-width: 1px solid;
   --table-header-weight: normal;
   --h1-size: 20px;
@@ -75,6 +75,7 @@ body {
   --filename-line-thickness: 1.8px;
   --filename-separator-style: dotted;
 }
+
 
 /* ::::: BACKGROUND IMAGE ::::: */
 
@@ -253,6 +254,10 @@ body.theme-light {
 	text-transform: uppercase;
 }
 
+.block-title-read-mode .workspace-leaf-content[data-mode="preview"] .markdown-preview-view .mod-header .inline-title {
+pointer-events: none;
+}
+
 /* ::::::::::: HIGHLIGHTS :::::::::: */
 .cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight, .markdown-preview-view mark {
   padding-left: 5px;
@@ -308,6 +313,31 @@ blockquote::before {
 .embedded-backlinks .search-result-file-match {}
 
 
+/* ::::: TASK LISTS ::::: */
+.task-list-item {
+	padding: 2px 0px 2px 0px !important;
+	margin: 0px 0px 0px 45px !important;
+}
+
+.markdown-preview-view ul,
+.markdown-preview-view ol,
+.markdown-source-view.cm-s-obsidian ul,
+.markdown-source-view.cm-s-obsidian ol {
+  padding: 2px 0px 2px 0px; /* Reducir el padding izquierdo */
+  margin: 0px 0px 0px -17px; /* Reducir el margen izquierdo */
+	
+}
+
+/* ::::: SUB-LISTS ::::: */
+.markdown-preview-view ul ul,
+.markdown-preview-view ol ol,
+.markdown-source-view.cm-s-obsidian ul ul,
+.markdown-source-view.cm-s-obsidian ol ol {
+  padding 0px;
+  margin-left: 0.6em;
+}
+
+
 /* :::::::::: TASKS (PENDING) :::::::::: */
 span.cm-formatting-task {}
 /*
@@ -321,13 +351,14 @@ input[type=checkbox] {
 }
 */
 
+
 .markdown-preview-view .task-list-item-checkbox { 
-  margin-right: 14px;
+  margin-right: 12px;
   top: 0.35px;
 } 
 
 .markdown-preview-view .task-list-item { 
-  padding-inline-start: 12px; 
+  padding-inline-start: 0px; 
 }
 
 /* 
@@ -353,7 +384,6 @@ input[type=checkbox]:checked {
   background-repeat: no-repeat;
 }
 */
-
 
 
 /* :::::::::: CODE BLOCKS :::::::::: */
@@ -1722,7 +1752,11 @@ settings:
       type: heading
       level: 2
       collapsed: true
-
+  - 
+      id: block-title-read-mode
+      title: Block Inline Title
+      type: class-toggle
+      default: true
   - 
       id: inline-title-align
       title: Title align
@@ -1937,7 +1971,7 @@ settings:
       id: hide-add-button
       title: Show 'add properties' button
       type: variable-select
-      default: none
+      default: None
       options:
           - 
               label: Hide
