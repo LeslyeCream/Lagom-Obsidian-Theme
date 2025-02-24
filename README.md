@@ -37,6 +37,8 @@ A phone-focused theme for Obsidian
 
 **Main font:** Akrobat semibold or Pragati regular 
 
+**Update:** *Recently I have discovered **Interphases Pro Condensed Regular**, It is more pleasant and perhaps more suitable for reading.*
+
 **Headers:** Play fair display 
 
 **Mono:** Losevka Regular. 
