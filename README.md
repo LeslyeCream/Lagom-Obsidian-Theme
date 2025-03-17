@@ -112,6 +112,14 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 @LuisaKart By the code to modify the new tab view
 
 # Changelog
+
+**V1.7**
+- Option to change the background color of the active line
+- Now the images are centered by default and occupy all the width for a better visual consistency with the rest of the content.
+- New option to activate gray -scale images when dark mode is active.
+- Now you can choose the underlined style in local links
+- Small changes in Style Settings
+
 **V1.6** 
 - Added option to prevent changes to the Inline-Title in reading mode.
 - Fixed list inconsistency caused by the latest Obsidian update.
