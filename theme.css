@@ -9,12 +9,12 @@
 /* ::::: LAGOM SETTINGS ::::: */
 body {
   --mac-terminal-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
-  --nav-item-size: 16.7px; /* files */
-  --radius-s: 11.2px;
+  --nav-item-size: 15.8px; /* files */
+  --radius-s: 11.5px;
   --nav-indentation-guide-width: unset;
-  --default-font-size: 16.7px; /* Notes and editor */
+  --default-font-size: 15.8px; /* Notes and editor */
   --line-height-note: 26px;
-  --letter-spacing-note: 0.25px;
+  --letter-spacing-note: 0px;
   --text-note-align: justify;
   --focus-active-line-opacity: 0.8;
   --focus-non-active-line-opacity: 0.55;
@@ -23,7 +23,7 @@ body {
   --active-line-indicator: "+ ";
   --icon-file-indicator: "·";
   --inline-title-align: center;
-  --inline-title-size: calc(var(--default-font-size) + 1.7px);
+  --inline-title-size: 20px;
   --inline-code-font-size: calc(var(--default-font-size) - 1.5 px)
   --code-size-edit-mode: 13.9px;
   --code-size: 14px;
@@ -46,7 +46,7 @@ body {
   --num-of-notes: none;
   --show-vault-name: none;
   --files-bookmarks-search-bar: flex;
-  --show-editor-text-bar: unset;
+  --show-editor-text-bar: none;
   --scrollbars: none;
   --icon-ui-opacity: 0.9;
   --show-embed-title: block;
@@ -56,7 +56,7 @@ body {
   --metadata-divider-color: none;
   /*--metadata-gap: 23px; */
   /*--metadata-property-background: #49292; */
-  --metadata-display-editing: none !important;
+  --metadata-display-editing: none;
   --properties-editor-font-size: var(--default-font-size);
   --theme-dark-opacity: 0.85;
   --theme-light-opacity: 0.95;
@@ -109,15 +109,16 @@ body.theme-light {
 
 /* :::::::::: LINKS :::::::::: */
 .internal-link {
-  text-decoration: 0px !important;
-  font-weight: 600;
+	text-decoration: none !important;
+	border-bottom: 1.95px var(--internal-link-border-style) !important;
 }
 
 .external-link {
   background-image: none;
   padding-right: 0px;
-  text-decoration: underline 2px !important;
-  text-underline-offset: 0.19em;
+  text-decoration: none !important;
+  border-bottom: 1.65px solid;
+  text-underline-offset: 0.2em;
   /* text-indent: 10px; */
 }
 
@@ -207,7 +208,7 @@ body.theme-light {
 
 /* :::::::::: ACTIVE LINE :::::::::: */
 
-/* Focus active line */
+/* Focus active line (?) */
 .CodeMirror-lines:not(.selecting) .CodeMirror-code > :not(.CodeMirror-activeline) {
   opacity: var(--focus-active-line-opacity);
 }
@@ -217,13 +218,14 @@ body.theme-light {
   opacity: var(--focus-non-active-line-opacity);
 }
 
-/* active line */
+/* focus active line */
 .CodeMirror-activeline.CodeMirror-linebackground, .cm-active.cm-line {
  /*
   border-bottom: var(--show-dotted-line) dotted var(--text-accent);
   font-size: var(--active-line-font-size);
  */
   width: fit-content;
+  background: var(--active-line-background)
 }
 
 
@@ -248,6 +250,7 @@ body.theme-light {
   margin-bottom: 0px;
   text-align: var(--inline-title-align);
   font-size: var(--inline-title-size);
+  font-weight: var(--inline-title-bold);
 }
 
 .inline-title-always-uppercase .inline-title {
@@ -272,7 +275,8 @@ pointer-events: none;
   --blockquote-background-color:var(--background-secondary);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
 */
-
+  padding: 0px !important;
+  margin: 0px !important;
   text-align: var(--quotes-align);
   padding: var(--quote-padding) !important;
   border-left: 0px !important;
@@ -323,8 +327,8 @@ blockquote::before {
 .markdown-preview-view ol,
 .markdown-source-view.cm-s-obsidian ul,
 .markdown-source-view.cm-s-obsidian ol {
-  padding: 2px 0px 2px 0px; /* Reducir el padding izquierdo */
-  margin: 0px 0px 0px -17px; /* Reducir el margen izquierdo */
+  padding: 2px 0px 2px 0px;
+  margin: 0px 0px 0px -17px;
 	
 }
 
@@ -516,27 +520,25 @@ body:not(.no-codeblock-line-numbers)
   text-align: justify;
   page-break-after: avoid;
   margin: 18px 0px 18px 0px !important;
-  letter-spacing: 0.1px !important;
+  letter-spacing: 0px !important;
   max-width: fit-content !important;
   padding: 0px !important;
   line-height: var(--headers-space-simetry);
 }
 
-/* HIDE HEADERS ICON */
-.collapse-icon svg.svg-icon {
-  display: none;
-}
 
 .heading-collapse-indicator {
   width: 80% !important;
   position: absolute !important;
 }
 
-/* H6 FOR BOOKS */
+
+/* H6 FOR BOOKS 
 .cm-s-obsidian .cm-header, .markdown-rendered :is(h6) {
   text-align: center !important;
   font-size: 12px;
 }
+*/
 
 
 /* :::::::::: TAGS :::::::::: */
@@ -923,7 +925,10 @@ hr {
   border-radius: var(--radius-s);
 }
 
-
+/* HIDE EXPLORER FOLDER ICON */
+.collapse-icon svg.svg-icon {
+  display: none;
+}
 
 
 /* :::::  SETTINGS  ::::: */
@@ -1364,11 +1369,6 @@ body, .folder-notebooks {
 
 
 /* ::::: IMAGES ::::: */
-.view-content img {
-  border: 1px solid var(--background-modifier-border);
-  border-radius: var(--radius-s);
-  box-shadow: var(--background-modifier-box-shadow) 0px 0px 2.5px 0px;
-}
 
 body {
   --img-align: 0px;
@@ -1377,15 +1377,19 @@ body {
   --img-align: auto;
 }
 
+/*
+
 .img-adjust .view-content .markdown-rendered img:not([width]) {
   min-width: 85%;
   max-width: 85%;
 }
 
-.view-content .markdown-rendered img {
+*/
+
+.markdown-rendered img {
   border-radius: var(--radius-s);
- /* margin: calc(var(--custom-line-height) * 0) var(--img-align); */
-  margin-top: 21px;
+/* margin: calc(var(--custom-line-height) * 0) var(--img-align); */
+ /* margin-top: 12px; */
 }
 
 .img-adjust .view-content img {
@@ -1393,25 +1397,33 @@ body {
 }
 
 .view-content img  {
-  border: 0px solid var(--background-modifier-border); /* BORDE DE IMAGEN */
   border-radius: var(--radius-s);
   display: block;
-  box-shadow: var(--background-modifier-box-shadow) 0px 0px 5px 0px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+  box-shadow: var(--background-modifier-box-shadow) 0px 0px 2.5px 0px;
 }
 
 .markdown-rendered img {
   transform: scale(9px.1);
 }
 
+
 .theme-light img, .theme-light .page-gallery__image  {
-  filter: contrast(100%) saturate(105%);
+  filter: saturate(105%);
+  opacity: 0.95;
 }
 
 .theme-library img, .theme-library .page-gallery__image  {
 } 
 
-.theme-dark img, .theme-dark .page-gallery__image {
-filter: brightness(90%);
+.grayscale-dark-mode.theme-dark img, .theme-dark .page-gallery__image {
+  filter: brightness(90%);
+  filter: grayscale(100%) !important; 
+  opacity: var(--opacity-grayscale-images);
 }
 
 
@@ -1475,7 +1487,7 @@ filter: brightness(90%);
 
 /* @settings
 
-name: Hide & Unhide elements 
+name: Hide elements 
 id: hide-elements
 settings:
   - 
@@ -1575,7 +1587,6 @@ settings:
       type: heading
       level: 2
       collapsed: true
-
   - 
       id: default-font-size
       title: Font size
@@ -1658,6 +1669,17 @@ settings:
       default: —
       quotes: true
   - 
+      id: active-line-background
+      title: Background
+      type: variable-color
+      opacity: true
+      format: rgb
+      alt-format:
+         -
+             id: accent-rgb
+             format: rgb
+      default: '#6C6C6C6B'
+  -
       id: show-dotted-line
       title: Show line indicator
       type: variable-select
@@ -1678,7 +1700,7 @@ settings:
       id: background-image-editor
       title: Background image (source mode)
       type: variable-text
-      description: Syntax url(LINK_IMAGE_HERE)
+      description: url(https://example.com/image.jpg)
       default: None
   - 
       id: background-image-editor-size
@@ -1780,6 +1802,12 @@ settings:
       title: Font size
       type: variable-number
       default: 18.2
+      format: px
+  - 
+      id: inline-title-bold
+      title: Bold
+      type: variable-number
+      default: 400
       format: px
   - 
       id: inline-title-always-uppercase
@@ -1949,6 +1977,47 @@ settings:
           - 
               label: Show
               value: block
+  - 
+      id: images-section
+      title: Images
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: grayscale-dark-mode
+      title: Grayscale images
+      description: Only dark mode
+      type: class-toggle
+      default: true
+  - 
+      id: opacity-grayscale-images
+      title: Opacity
+      type: variable-number
+      default: 0.9
+      format:
+  - 
+      id: links-section
+      title: Links
+      type: heading
+      level: 2
+      collapsed: true
+  - 
+      id: internal-link-border-style
+      title: Underline style
+      description: Only affect local links
+      type: variable-select
+      default: dotted
+      options:
+          - 
+              label: Dotted
+              value: dotted
+          - 
+              label: Dashed
+              value: dashed
+          - 
+              label: Solid
+              value: solid
+  - 
 */
 
 /* @settings
