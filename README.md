@@ -35,9 +35,7 @@ A phone-focused theme for Obsidian
 
 # Fonts
 
-**Main font:** Akrobat semibold or Pragati regular 
-
-**Update:** *Recently I have discovered **Interphases Pro Condensed Regular**, It is more pleasant and perhaps more suitable for reading.*
+**Main font:** Akrobat Semibold or Pragati Regular but *Interphases Pro Condensed Regular* It is more pleasant and perhaps more suitable for reading.*
 
 **Headers:** Play fair display 
 
@@ -116,7 +114,7 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 **V1.7**
 - Option to change the background color of the active line
 - Now the images are centered by default and occupy all the width for a better visual consistency with the rest of the content.
-- New option to activate gray -scale images when dark mode is active.
+- New option to activate gray-scale images when dark mode is active.
 - Now you can choose the underlined style in local links
 - Small changes in Style Settings
 
