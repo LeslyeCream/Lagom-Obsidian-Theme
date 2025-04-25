@@ -49,7 +49,6 @@ body {
   --show-editor-text-bar: none;
   --scrollbars: none;
   --icon-ui-opacity: 0.9;
-  --show-embed-title: block;
   --metadata-label-font-size: calc(var(--default-font-size) - 1px);
   --metadata-input-font-size: var(--default-font-size);
   --metadata-property-radius: var(--radius-s);
@@ -248,7 +247,7 @@ body.theme-light {
   padding-bottom: 10px;
   letter-spacing: var(--letter-spacing-note);
   margin-bottom: 0px;
-  text-align: var(--inline-title-align);
+  text-align: var(--inline-title-align) !important;
   font-size: var(--inline-title-size);
   font-weight: var(--inline-title-bold);
 }
@@ -344,25 +343,26 @@ blockquote::before {
 
 /* :::::::::: TASKS (PENDING) :::::::::: */
 span.cm-formatting-task {}
+
 /*
 
 input[type=checkbox] {
   --webkit-appearance: none;
   border-radius: 50%;
-  border: 2px solid !important;
   padding-top: 0px;
   margin: 0px;
 }
+
 */
 
-
+/* TASK CHECKBOX */
 .markdown-preview-view .task-list-item-checkbox { 
-  margin-right: 12px;
-  top: 0.35px;
+  margin-right: 10px;
 } 
 
+/* TASK ITEM */
 .markdown-preview-view .task-list-item { 
-  padding-inline-start: 0px; 
+  padding-inline-start: 10px;
 }
 
 /* 
@@ -517,10 +517,10 @@ body:not(.no-codeblock-line-numbers)
 .markdown-reading-view h4,
 .markdown-reading-view h5,
 .markdown-reading-view h6 {
-  text-align: justify;
+  text-align: var(--headers-align) !important;
   page-break-after: avoid;
   margin: 18px 0px 18px 0px !important;
-  letter-spacing: 0px !important;
+ /* letter-spacing: 0.5px !important; */
   max-width: fit-content !important;
   padding: 0px !important;
   line-height: var(--headers-space-simetry);
@@ -531,14 +531,6 @@ body:not(.no-codeblock-line-numbers)
   width: 80% !important;
   position: absolute !important;
 }
-
-
-/* H6 FOR BOOKS 
-.cm-s-obsidian .cm-header, .markdown-rendered :is(h6) {
-  text-align: center !important;
-  font-size: 12px;
-}
-*/
 
 
 /* :::::::::: TAGS :::::::::: */
@@ -815,9 +807,7 @@ background: var(--callout-three-color);
   margin: 7px auto 7px auto;
   padding-bottom: 3.8px;
   border-bottom: 0.7px solid;
-  white-space: norma!important;
-  text-align: center;
-/* Remove space */
+  white-space: normal !important;
 }
 
 .callout {
@@ -834,30 +824,53 @@ body {
 
 /* HIDE EMBED ICON NOTE */
 .markdown-embed-link >.svg-icon.lucide-link {
-  display: none;
-  margin-top: 15px;
-  margin-left: 37px;
+  display: var(--icon-link-embed-notes);
+  color: transparent;
+  margin: 3px 3px 3px 3px;
+  border-radius: 100%;
+  background: var(--background-secondary);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 1px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
 }
 
-/* REMOVE TITLE */
+
+
+/* SHOW TITLE - DEFUALT */
 .markdown-preview-view .markdown-embed-title,
 .markdown-preview-view .obsidian-metatable {
   text-align: center;
+  border-bottom: 1.5px solid var(--text-accent);
+  border-image-source: linear-gradient(to right, transparent, var(--separator-icon-color), transparent) !important;
+  border-image-slice: 1;
+  border-width: 1px;
   white-space: wrap;
-  display: var(--show-embed-title);
-  margin: 0px;
-  border-radius: var(--radius-s);
-  padding: 1px 1px 1px 1px !important;
+  display: block;
+  margin: 0px 0px 10px 0px;
+  padding: 1px 1px 10px 1px !important;
 }
 
 
+/* HIDE TITLE - STYLE SETTINGS */
+.hide-embed-title .markdown-preview-view .markdown-embed-title,
+.markdown-preview-view .obsidian-metatable {
+  border-bottom: 0px solid var(--text-accent);
+  display: none;
+}
+
+
+/* EMBED CONTENT */
 .markdown-embed {
-	padding: 15px 21px 15px 21px;
+  padding: 15px 21px 15px 21px;
   border-radius: var(--radius-s);
   border: 1px solid var(--background-modifier-border);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
 }
- 
+
+
+/* Fix top space when title is disabled */
+.hide-embed-title .markdown-embed {
+  padding: 35px 21px 15px 21px;
+}
+
  
  /* ::::: Separator GRADIENT ::::: */
 .cm-line hr,
@@ -911,7 +924,7 @@ hr {
 
 /* ::::: COMMANDER TOOLBAR ::::: */
 .view-header {
-	margin: 0px 14px 0px 14px !important;
+	margin: 0px 0px 0px 11px !important;
   padding: 0px !important;
 }
 
@@ -1019,9 +1032,9 @@ body.is-mobile .workspace-drawer-active-tab-header {
 .nav-folder-title,
 .nav-file-title-content:not(.mk-tree-text),
 .nav-folder-title-content {
-  white-space: normal;
-  width: auto;
-  text-align: justify;
+  white-space: pre-wrap;
+  text-align: var(--multiline-files-explorer);
+  hyphens: var(--hyphens-files-explorer) !important; 
 }
 
 /*
@@ -1115,9 +1128,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 .is-mobile .menu {
   font-size: var(--nav-item-size) !important;
   max-width: 85%;
-  border-radius-top: var(--radius-s);
-  padding: 15px 15px 0px 15px ;
-  overflow-y: auto !important;
+  padding: 5px 15px 0px 15px ;
 }
 
 
@@ -1127,7 +1138,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
   padding: 10px 1px 10px 1px !important;
 }
 
-/* SECONDARY MENU 
+/* SECONDARY MENU
 
 .menu-separator:not(.is-mobile, .menu-item) {
 	border-bottom: 1.5px dashed var(--background-modifier-border);
@@ -1148,8 +1159,8 @@ body {
 .is-mobile .document-search input {}
 
 .mod-active .document-search-container {
-  border-radius: var(--radius-s);
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
+  border-radius: 0px 0px var(--radius-s) var(--radius-s);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px 0px, rgba(27, 31, 35, 0.1) 0px 0px 0px 0px !important;
 }
 
 .is-mobile .document-replace-container {
@@ -1769,6 +1780,24 @@ settings:
       default: 1.5
       format: em
   - 
+      id: headers-align
+      title: Align
+      type: variable-select
+      default: left
+      options:
+          - 
+              label: Justify
+              value: justify
+          - 
+              label: Center
+              value: center
+          - 
+              label: Left
+              value: left
+          - 
+              label: Right
+              value: right
+  - 
       id: inline-title-section
       title: Inline title
       type: heading
@@ -1966,10 +1995,15 @@ settings:
       level: 2
       collapsed: true
   - 
-      id: show-embed-title
-      title: Show  embed title
+      id: hide-embed-title
+      title: Hide  embed title
+      type: class-toggle
+      default: true
+  - 
+      id: icon-link-embed-notes
+      title: Show icon
       type: variable-select
-      default: none
+      default: Show
       options:
           - 
               label: Hide
@@ -2120,6 +2154,36 @@ settings:
       type: variable-number
       default: 16
       format: px
+  -
+      id: hyphens-files-explorer
+      title: Hyphens Enabled
+      type: variable-select
+      default: True
+      options:
+         - 
+             label: True
+             value: auto
+         - 
+             label: False
+             value: manual
+  -
+      id: multiline-files-explorer
+      title: Align text
+      type: variable-select
+      default: justify
+      options:
+          - 
+              label: Justify
+              value: justify
+          - 
+              label: Center
+              value: center
+          - 
+              label: Left
+              value: left
+          - 
+              label: Right
+              value: right
   - 
       id: popup-explorer
       title: Pop-up style
