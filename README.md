@@ -35,7 +35,7 @@ A phone-focused theme for Obsidian
 
 # Fonts
 
-**Main font:** Akrobat Semibold or Pragati Regular but *Interphases Pro Condensed Regular* It is more pleasant and perhaps more suitable for reading.*
+**Main font:** Akrobat Semibold or Pragati Regular but *Interphases Pro Condensed Regular* It is more pleasant and perhaps more suitable for reading.
 
 **Headers:** Play fair display 
 
@@ -83,7 +83,7 @@ Quotes with classic style
 
 # Note
 
-It is recommended to use *Commander*, *Iconize* and *File explorer note count* with this theme for a complete experience.
+It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* and *File explorer note count* with this theme for a complete experience.
 
 # Comparison 
 
