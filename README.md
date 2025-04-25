@@ -111,6 +111,11 @@ It is recommended to use *Commander*, *Iconize* and *File explorer note count* w
 
 # Changelog
 
+**V1.8**
+- Small fixes in the search and replace bar  
+- Option to show or hide the link icon in embedded notes (!)  
+- Option to choose text alignment in the notes list within the file explorer
+  
 **V1.7**
 - Option to change the background color of the active line
 - Now the images are centered by default and occupy all the width for a better visual consistency with the rest of the content.
