@@ -21,7 +21,7 @@ A phone-focused theme for Obsidian
   
 5. Do not follow a specific color palette or typeface (so you can use it with the one you prefer!) 
 
-6. Complementary and modular.
+6. [Complementary and modular](Comparison)
 
 *Work in progress...*
 
@@ -89,6 +89,7 @@ It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* 
 
 ![IMG_20241014_094621](https://github.com/user-attachments/assets/861dcc25-2a73-4ecd-a180-2b290e330adf)
 
+*If you want to use Lagom alongside another theme (Gruvebox, Rosé Pine, Borealis, etc.), you can simply move the theme.css file into your snippets folder and activate it.*
 
 # Roadmap
 
