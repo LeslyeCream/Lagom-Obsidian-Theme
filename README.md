@@ -112,6 +112,7 @@ It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* 
 
 # Changelog
 
+
 **V1.8**
 - Small fixes in the search and replace bar  
 - Option to show or hide the link icon in embedded notes (!)  
