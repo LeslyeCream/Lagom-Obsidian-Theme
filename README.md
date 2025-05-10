@@ -112,7 +112,7 @@ It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* 
 
 # Changelog
 
-**V1.9**
+**V1.9 (May **
 
 **V1.8**
 - Small fixes in the search and replace bar  
