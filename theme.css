@@ -137,7 +137,7 @@ body.theme-light {
 }
 
 
- /* ::::: EDITOR AND READ MODE ::::: */
+/* ::::: EDITOR AND READ MODE ::::: */
 
 .cm-s-obsidian, .markdown-preview-view, .CodeMirror-lines {
   line-height: var(--line-height-note);
