@@ -113,9 +113,9 @@ It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* 
 # Changelog
 
 **V1.9 (May 2025)**
-  - Now the macOS style buttons in the Code Blocks in Light Mode are images instead of symbols. It is no longer necessary to modify its size in Style Settings
+- Now the macOS style buttons in the Code Blocks in Light Mode are images instead of symbols. It is no longer necessary to modify its size in Style Settings
 
-  - The line borders of code blocks, callouts, and embedded notes share the same design. 
+- The line borders of code blocks, callouts, and embedded notes share the same design. 
 
 Some other small details corrected
 
