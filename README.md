@@ -81,7 +81,7 @@ A phone-focused theme for Obsidian
 
 - Touching the headers will collapse or expand their contents
 
-- 
+- Embedded notes have been slightly redesigned
 # Note
 
 It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* and *File explorer note count* with this theme for a complete experience.
