@@ -8,7 +8,7 @@
 
 /* ::::: LAGOM SETTINGS ::::: */
 body {
-  --mac-terminal-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
+  --mac-terminal-shadow: rgba(9, 30, 66, 0.10) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
   --nav-item-size: 15.8px; /* files */
   --radius-s: 11.5px;
   --nav-indentation-guide-width: unset;
@@ -190,20 +190,30 @@ body.theme-light {
   padding-right: 29px;
 }
 
-
-.page-style-read-mode .markdown-preview-view:not(.markdown-embed):not(.obsidian-metatable):not(.markdown-embed-title) {
-/* Style page for read mode */
-  height: fit-content;
-  min-width: auto;
+/* Style card */
+.page-style-card .markdown-preview-view:not(.markdown-embed):not(.obsidian-metatable):not(.markdown-embed-title) {
   width: auto;
-  margin: 10px 15px 0px 15px !important;
+  margin: 10px 15px 10px 15px !important;
   padding-left: 19px;
   padding-right: 19px;
   box-shadow: var(--mac-terminal-shadow);
-  border-top-left-radius: var(--radius-s); 
-  border-top-right-radius: var(--radius-s); 
-  border: 0.5px solid var(--background-modifier-border);
+  border: 0.7px solid var(--background-modifier-border);
+  margin: 10px 15px 10px 15px !important;
+  border-radius: var(--radius-s) !important;
 }
+
+.page-style-read-mode .markdown-preview-view:not(.markdown-embed):not(.obsidian-metatable):not(.markdown-embed-title) {
+/* Style page for read mode */
+  width: auto;
+  margin: 10px 15px 0px 15px !important;
+  border-top-left-radius: var(--radius-s);
+  border-top-right-radius: var(--radius-s);
+  padding-left: 19px;
+  padding-right: 19px;
+  box-shadow: var(--mac-terminal-shadow);
+  border: 0.7px solid var(--background-modifier-border);
+}
+
 
 /* :::::::::: ACTIVE LINE :::::::::: */
 
@@ -1432,15 +1442,18 @@ body {
   max-width: 85%;
 }
 
-.view-content img  {
+.enable-shadows-borders-img .view-content img {
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: var(--background-modifier-box-shadow) 0px 0px 2.5px 0px;
+}
+
+.view-content img {
   border-radius: var(--radius-s);
   display: block;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid var(--background-modifier-border);
   border-radius: var(--radius-s);
-  box-shadow: var(--background-modifier-box-shadow) 0px 0px 2.5px 0px;
 }
 
 .markdown-rendered img {
@@ -1731,6 +1744,13 @@ settings:
       id: page-style-read-mode
       title: Style Page
       type: class-toggle
+      description: Turn on the page-like view in reading mode.
+      default: false
+  - 
+      id: page-style-card
+      title: Card
+      type: class-toggle
+      description: Similar to a page, but designed more like a card.
       default: false
   - 
       id: background-image-editor
@@ -2036,6 +2056,11 @@ settings:
       type: heading
       level: 2
       collapsed: true
+  - 
+      id: enable-shadows-borders-img
+      title: Enable shadows and borders
+      type: class-toggle
+      default: true
   - 
       id: grayscale-dark-mode
       title: Grayscale images
