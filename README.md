@@ -75,11 +75,11 @@ A phone-focused theme for Obsidian
 
 ![IMG_20241014_091844](https://github.com/user-attachments/assets/7637aa52-3ff6-41c7-95d0-be6332659164)
 
-Quotes with classic style
+- Quotes with classic style
 
 ![Screenshot_20241205-163738_cropped](https://github.com/user-attachments/assets/c4224921-b5a2-469d-be93-6e0169d496ac)
 
-
+- Touching the headers will collapse or expand their contents
 # Note
 
 It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* and *File explorer note count* with this theme for a complete experience.
