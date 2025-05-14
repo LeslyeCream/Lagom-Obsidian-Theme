@@ -115,6 +115,7 @@ It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* 
 
 # Changelog
 ** V1.9.1**
+
 - You can now choose between two note styles for reading mode: page style and card style (though it still conflicts if the note has embedded notes)
 **V1.9 (May 2025)**
 - Now the macOS style buttons in the Code Blocks (Light Mode) are images instead of symbols. It is no longer necessary to modify its size in Style Settings
