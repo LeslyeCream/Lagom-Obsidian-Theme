@@ -86,7 +86,7 @@ A phone-focused theme for Obsidian
 
 # Note
 
-It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* and *File explorer note count* with this theme for a complete experience.
+It is recommended to use *Commander*, *Iconize*, *Custom file explorer sorting* and *File explorer note count* with this theme for a complete experience.
 
 # Snippets 
 
