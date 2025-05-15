@@ -91,7 +91,8 @@ It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* 
 # Snippets 
 
 To use the file name at the vault root to categorize a group of folders it is necessary to use a snippet:
-```
+
+```css
 .nav-file-title[data-path*=".md"]:before {
 	content: "";
 }
@@ -104,7 +105,7 @@ To use the file name at the vault root to categorize a group of folders it is ne
   color: var(--text-accent);
   font-weight: 500 !important;
 }
-  
+```
 
 # Comparison 
 
