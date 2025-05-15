@@ -116,7 +116,7 @@ It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* 
 # Changelog
 
 ** V1.9.1**
-- 7d6be6c62552abaa2d11e42a9d5a62b2e3bb5bc7
+- Improvements to the navigation bar: now it takes up less screen space with a floating design
 - Added an option to turn off image borders and shadows (resolves problems with transparent images)
 - You can now choose between two note styles for reading mode: page style and card style (though it still conflicts if the note has embedded notes)
 - 
