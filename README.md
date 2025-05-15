@@ -91,7 +91,9 @@ It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* 
 # Snippets 
 
 To use the file name at the vault root to categorize a group of folders it is necessary to use a snippet:
- 
+```
+
+  
 
 # Comparison 
 
