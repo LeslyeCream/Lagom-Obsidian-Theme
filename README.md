@@ -117,7 +117,7 @@ To use the file name at the vault root to categorize a group of folders it is ne
 
 - Clean and improve the css code 
 - Adapt it for the rest of the platforms 
-- Fix some aesthetic details
+- [x] ~~Fix some aesthetic issues~~
 - [x] ~~Add options for Style Settings~~
 
 # Special thanks
