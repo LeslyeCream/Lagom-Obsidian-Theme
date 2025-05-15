@@ -88,6 +88,11 @@ A phone-focused theme for Obsidian
 
 It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* and *File explorer note count* with this theme for a complete experience.
 
+# Snippets 
+
+To use the file name at the vault root to categorize a group of folders it is necessary to use a snippet:
+ 
+
 # Comparison 
 
 ![IMG_20241014_094621](https://github.com/user-attachments/assets/861dcc25-2a73-4ecd-a180-2b290e330adf)
