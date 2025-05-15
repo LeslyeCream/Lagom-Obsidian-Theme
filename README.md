@@ -128,7 +128,7 @@ It is recommended to use *Commander*, *Iconize*, *custom file explorer sorting* 
 
 **V1.8**
 - Small fixes in the search and replace bar  
-- Option to show or hide the link icon in embedded notes (!)  
+- Option to show or hide the link icon in embedded notes(!)  
 - Option to choose text alignment in the notes list within the file explorer
   
 **V1.7**
