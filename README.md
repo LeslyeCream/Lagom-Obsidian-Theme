@@ -84,6 +84,10 @@ A phone-focused theme for Obsidian
 - Embedded notes have been slightly redesigned
 ![IMG_20250514_091523](https://github.com/user-attachments/assets/d29696ba-ad6d-47d2-b051-45745d62924e)
 
+- Translucent navigation bar (optional)
+![IMG_20250517_183412](https://github.com/user-attachments/assets/d2398cdc-8ccd-440e-aef8-9db6a2c8b6db)
+
+
 # Note
 
 It is recommended to use *Commander*, *Iconize*, *Custom file explorer sorting* and *File explorer note count* with this theme for a complete experience.
