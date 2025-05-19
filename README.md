@@ -143,7 +143,7 @@ To use the file name at the vault root to categorize a group of folders it is ne
 - Fixed the issue with the small selector icon in dates within properties.
 - Option to adjust the padding of note content.
 - Some aesthetic corrections to the appearance of global search.
-- Fixed several inconsistencies when hiding or showing the settings button, vault name, number of notes, etc."
+- Fixed several inconsistencies when hiding or showing the settings button, vault name, number of notes, etc.
 
 ** V1.6.2**
 - The version number in the GitHub changelog directly becomes the same as the one shown in Obsidian to avoid confusion regarding changes
