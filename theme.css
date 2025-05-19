@@ -167,6 +167,7 @@ body.theme-light {
 /* TO-DO / FIND BACKGROUND */
 .theme-light, .cm-s-obsidian::not(.theme-dark) {}
 
+/* Editor mode */
 .cm-s-obsidian {
   font-size: var(--default-font-size);
   padding: 0px !important;
@@ -181,7 +182,9 @@ body.theme-light {
 
 
 /* ::::: READ MODE ::::: */
-.workspace-split.mod-root .view-content {}
+.workspace-split.mod-root .view-content {
+
+}
 
 
 .markdown-preview-view {
@@ -193,10 +196,9 @@ body.theme-light {
 /* Style card */
 .page-style-card .markdown-preview-view:not(.markdown-embed):not(.obsidian-metatable):not(.markdown-embed-title) {
   width: auto;
-  margin: 10px 15px 10
-  px 15px !important;
-  padding-left: 19px;
-  padding-right: 19px;
+  margin: 10px 35px 10px 35px !important;
+  padding-left: var(--padding-note-content);
+  padding-right: var(--padding-note-content);
   box-shadow: var(--mac-terminal-shadow);
   border: 0.7px solid var(--background-modifier-border);
   margin: 10px 15px 10px 15px !important;
@@ -209,8 +211,8 @@ body.theme-light {
   margin: 10px 15px 0px 15px !important;
   border-top-left-radius: var(--radius-s);
   border-top-right-radius: var(--radius-s);
-  padding-left: 19px;
-  padding-right: 19px;
+  padding-left: var(--padding-note-content);
+  padding-right: var(--padding-note-content);
   box-shadow: var(--mac-terminal-shadow);
   border: 0.7px solid var(--background-modifier-border);
 }
@@ -732,7 +734,7 @@ tr:last-child td:last-child {
 
 /* DATE VALUE */
 .metadata-property input[type='date'] {
-  left: 20px;
+  left: 0px;
   font-size: var(--metadata-label-font-size);
 }
 .metadata-property input[type='number'] {
@@ -959,13 +961,16 @@ hr {
 }
 
 
-/* ::::: EXPLORER BUTTONS :::::: */
+/* ::::: HIDE EXPLORER BUTTONS :::::: */
 .nav-header{
-  display: var(--show-explorer-buttons);
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
-  border: 1px solid var(--background-modifier-border);
-  margin: 0px 25px 12px 25px !important;
+  display: var(--show-explorer-buttons) !important;
   border-radius: var(--radius-s);
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  min-width: 75%;
+  bottom: 2px;
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
 }
 
 /* HIDE EXPLORER FOLDER ICON */
@@ -980,13 +985,14 @@ hr {
 /* GROUP SETTINGS */
 .vertical-tab-header-group-items {
   padding: 5px;
-  margin: 10px 25px 10px 25px !important;
+  margin: 5px 25px 0px 25px !important;
   border: 1px solid var(--background-modifier-border);
   border-radius: var(--radius-s);
   box-shadow: var(--mac-terminal-shadow)
 }
 
 .vertical-tab-header-group-title {
+  margin: 0px;
   text-align: center;
 }
 
@@ -995,33 +1001,26 @@ hr {
   display: var(--icon-settings);
   padding: 0px;
   position: relative;
-  top: 15px;
-  margin: 0px;
-  margin-right: 8px;
+  top: 7px;
+  margin: 0px 0px 0px 0px;
 }
 
 /* ::::: HIDE INFO AND NUM_NOTES VAULT ::::: */
 .workspace-drawer-header-info {
   display: var(--num-of-notes);
-  padding: 0px;
-  top: 15px;
-  position: absolute;
-  margin-left: 31%;
-  margin-right: auto;
- /* display: var(--num-of-notes); */
+  margin: 5px auto 0px auto ;
 }
 
 /* :::::  HIDE VAULT NAME ::::: */
 .workspace-drawer-header-switcher {
   display: var(--show-vault-name);
   font-style: normal ;
-  top: 5px;
-  left: 4px;
 }
 
 .workspace-drawer-header-name {}
 
 /* ::::: IMPORTANT - FILE EXPLORER ::::: */
+/* Background */
 .workspace-drawer {
   background: transparent !important;
   border-radius: 0px !important;
@@ -1054,7 +1053,7 @@ body.is-mobile .workspace-drawer-active-tab-header {
   border-radius: var(--radius-s);
   padding: 8px;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
-  margin: 8px 23px 0px 23px !important; 
+  margin: 10px 23px 5px 23px !important; 
 }
 
 /* multiline file text */
@@ -1068,6 +1067,7 @@ body.is-mobile .workspace-drawer-active-tab-header {
 }
 
 /*
+
 body.is-mobile .workspace-drawer-tab-option-item {
   background-color: brown;
   border-radius: 4px;
@@ -1135,9 +1135,10 @@ body.is-mobile .workspace-drawer-header {
 }
  
 
-/*  :::::  NAVIGATION BAR ::::: */
+/*  ::::: NAVIGATION BAR ::::: */
+
 .mobile-navbar {
-  display: block;
+  display: var(--hide-navbar);
   position: absolute;
   border: 0.5px solid var(--background-modifier-border);
   box-shadow: var(--mac-terminal-shadow);
@@ -1145,7 +1146,25 @@ body.is-mobile .workspace-drawer-header {
   width: 75%;
   margin-left: 12.5%;
   margin-right: 12.5%;
-  bottom: 7px;
+  bottom: 8px;
+}
+
+.nav-bar-blur .mobile-navbar {
+  backdrop-filter: blur(var(--navbar_blur_level)) !important;
+  background: rgba(255, 255, 255, 0.35) !important;
+}
+
+
+/* Enable glass effect */.
+.theme-light .mobile-navbar {
+  background: rgba(255, 255, 255, 0.35) !important;
+  backdrop-filter: blur(var(--navbar_blur_level)) !important; /*  */
+}
+
+
+.theme-dark .mobile-navbar {
+  background: rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(var(--navbar_blur_level)) !important; /*  */
 }
 
 
@@ -1460,9 +1479,7 @@ body {
   border-radius: var(--radius-s);
 }
 
-.markdown-rendered img {
-  transform: scale(9px.1);
-}
+.markdown-rendered img {}
 
 
 .theme-light img, .theme-light .page-gallery__image  {
@@ -1482,17 +1499,18 @@ body {
 
 /* ::::: SEARCH ::::: */
 .search-result-file-match {
-  text-align: justify !important;
   padding: 12px !important;
   font-size: calc(var(--default_size) - 1px);
+  
 }
-
+/* Background results */
 .search-result-container {
   font-size: var(--default-font-size);
 }
 
 .internal-query, .internal-query-header {
   border: 0px;
+
 }
 
 .internal-query, .internal-query-header-title {
@@ -1507,19 +1525,16 @@ body {
 .search-suggest-info-text {}
 
 .search-result-file-matches {
-  box-shadow: var(--background-modifier-box-shadow) 0px 0px 2.5px 0px;
-  border: 1px solid var(--background-modifier-border);
-  padding: 10px;
+  box-shadow: var(--mac-terminal-shadow);
+  padding: 7px;
   margin-left: 10px;
   margin-right: 10px;
 }
 
-/* EXACT TEXT */
+/* EXACT TEXT BAR */
 .search-info-container {}
 
-.search-result-file-match:hover .search-result-file-match-destination-file {
-  background: #7442 !important;
-}
+.search-result-file-match:hover .search-result-file-match-destination-file {}
 
 .search-params {
   font-size: calc(var(--default-font-size) - 1px);
@@ -1534,7 +1549,7 @@ body {
 .global-search-input-container {
   border-radius: var(--radius-s);
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
-  border: 1px solid var(--background-modifier-border);
+  border: 0.5px solid var(--background-modifier-border);
 }
 
 
@@ -1572,14 +1587,14 @@ settings:
       title: Show explorer buttons
 
       type: variable-select
-      default: unset
+      default: block
       options:
           - 
               label: Hide
               value: none
           - 
               label: Show
-              value: unset
+              value: block
   - 
       id: show-editor-text-bar
       title: Show toolbar
@@ -1592,6 +1607,18 @@ settings:
           - 
               label: Show
               value: unset
+  - 
+      id: hide-navbar
+      title: Hide Navigation bar
+      type: variable-select
+      default: block
+      options:
+          - 
+              label: Hide
+              value: none
+          - 
+              label: Show
+              value: block
   - 
       id: files-bookmarks-search-bar
       title: Show menu files
@@ -1754,8 +1781,14 @@ settings:
       id: page-style-card
       title: Card
       type: class-toggle
-      description: Similar to a page, but designed more like a card.
       default: false
+  - 
+      id: padding-note-content
+      title: Side paddings
+      type: variable-number
+      description: Change this value if the note content is too close to its edges.
+      default: 25
+      format: px
   - 
       id: background-image-editor
       title: Background image (source mode)
@@ -2172,6 +2205,16 @@ settings:
       type: variable-number
       default: 0.85
       format: px
+  - 
+      id: nav-bar-blur
+      title: Glass effect
+      type: class-toggle
+      default: true
+  - 
+      id: navbar_blur_level
+      title: Blur level
+      type: variable-text
+      default: 8px
   - 
       id: theme-light-opacity
       title: Light mode - Opacity
