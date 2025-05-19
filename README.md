@@ -145,7 +145,7 @@ To use the file name at the vault root to categorize a group of folders it is ne
 - Some aesthetic corrections to the appearance of global search.
 - Fixed several inconsistencies when hiding or showing the settings button, vault name, number of notes, etc.
 
-** V1.6.2**
+**V1.6.2**
 - The version number in the GitHub changelog directly becomes the same as the one shown in Obsidian to avoid confusion regarding changes
 - Improvements to the navigation bar: now it takes up less screen space with a floating design
 - Added an option to turn off image borders and shadows (resolves problems with transparent images)
