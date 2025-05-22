@@ -110,6 +110,56 @@ To use the file name at the vault root to categorize a group of folders it is ne
   font-weight: 500 !important;
 }
 ```
+The following settings can be pasted directly into the style settings to achieve the Lagom look as shown in the screenshots.
+
+```
+{
+  "files-folders@@nav-item-size": 15.4,
+  "notes-values@@default-font-size": 15.4,
+  "notes-values@@letter-spacing-note": -0.18,
+  "notes-values@@line-height-note": 21,
+  "others-values@@theme-dark-opacity": 0.65,
+  "notes-values@@inline-title-always-uppercase": false,
+  "notes-values@@inline-title-size": 20,
+  "notes-values@@headers-align": "left",
+  "notes-values@@p-spacing": 26,
+  "notes-values@@separator-icon-color": "#6C6C6C6E",
+  "notes-values@@icon-link-embed-notes": "block",
+  "notes-values@@quote-hide-top-line": "1.5px",
+  "notes-values@@quote-hide-down-line": "1.5px",
+  "yaml-values@@hide-separator-yaml": "unset",
+  "notes-values@@wrap-code-blocks": "pre",
+  "notes-values@@code-size": 13,
+  "notes-values@@code-size-edit-mode": 14,
+  "notes-values@@h1-size": 24,
+  "notes-values@@h2-size": 20,
+  "notes-values@@h3-size": 18,
+  "notes-values@@h4-size": 16,
+  "notes-values@@h5-size": 14,
+  "notes-values@@h6-size": 12,
+  "notes-values@@page-style-read-mode": true,
+  "notes-values@@page-style-card": false,
+  "notes-values@@enable-shadows-borders-img": false,
+  "notes-values@@hide-embed-title": false,
+  "obsidian-borealis@@syntax-highlighting": "sh3",
+  "notes-values@@padding-note-content": 25,
+  "others-values@@navbar_blur_level": "8px",
+  "hide-elements@@scrollbars": "none",
+  "hide-elements@@files-bookmarks-search-bar": "none",
+  "hide-elements@@show-explorer-buttons": "none",
+  "hide-elements@@show-editor-text-bar": "none",
+  "hide-elements@@hide-navbar": "block",
+  "hide-elements@@icon-settings": "none",
+  "others-values@@nav-bar-blur": false,
+  "notes-values@@active-line-indicator": "\"\"",
+  "notes-values@@show-dotted-line": "0px",
+  "yaml-values@@hide-add-button": "None",
+  "obsidian-borealis@@enable-alternative-checkboxes": false,
+  "files-folders@@popup-explorer": true,
+  "files-folders@@icon-file": "•",
+  "hide-elements@@show-vault-name": "none"
+}
+```
 
 # Comparison 
 
