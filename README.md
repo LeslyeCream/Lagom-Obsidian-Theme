@@ -112,7 +112,7 @@ To use the file name at the vault root to categorize a group of folders it is ne
 ```
 The following snippet can be pasted directly into the style settings to achieve the Lagom look as shown in the screenshots.
 
-```
+```json
 {
   "files-folders@@nav-item-size": 15.4,
   "notes-values@@default-font-size": 15.4,
