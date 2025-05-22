@@ -110,7 +110,7 @@ To use the file name at the vault root to categorize a group of folders it is ne
   font-weight: 500 !important;
 }
 ```
-The following settings can be pasted directly into the style settings to achieve the Lagom look as shown in the screenshots.
+The following snippet can be pasted directly into the style settings to achieve the Lagom look as shown in the screenshots.
 
 ```
 {
