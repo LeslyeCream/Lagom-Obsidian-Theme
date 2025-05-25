@@ -8,13 +8,18 @@
 
 /* ::::: LAGOM SETTINGS ::::: */
 body {
+
+  /* --interactive-normal: var(--background-modifier-border) !important; button colors */
+  --input-shadow: var(--background-modifier-border) 0 0 0 1px !important;
+  --input-shadow-hover: hsla(var(--color-accent-hsl), 0.6) 0 0 0px 1px !important;
+  --interactive-hover: hsla(var(--color-accent-hsl), 0.1) !important;
   --mac-terminal-shadow: rgba(9, 30, 66, 0.10) 0px 4px 8px 5px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
-  --nav-item-size: 15.8px; /* files */
+  --nav-item-size: 15.4px; /* files */
   --radius-s: 11.5px;
   --nav-indentation-guide-width: unset;
-  --default-font-size: 15.8px; /* Notes and editor */
-  --line-height-note: 26px;
-  --letter-spacing-note: 0px;
+  --default-font-size: 15.4px; /* Notes and editor */
+  --line-height-note: 21px;
+  --letter-spacing-note: 0.18px;
   --text-note-align: justify;
   --focus-active-line-opacity: 0.8;
   --focus-non-active-line-opacity: 0.55;
@@ -58,7 +63,7 @@ body {
   --metadata-display-editing: none;
   --properties-editor-font-size: var(--default-font-size);
   --theme-dark-opacity: 0.85;
-  --theme-light-opacity: 0.95;
+  --theme-light-opacity: 0.90;
   --table-border-width: 1px solid;
   --table-header-weight: normal;
   --h1-size: 20px;
@@ -66,6 +71,7 @@ body {
   --h3-size: 17px;
   --h4-size: 14px;
   --h5-size: 12px;
+  --headers-align: left;
   --headers-space-simetry: 1.3em;
   --folder-border-color: #50505088;
   --list-indent: 17px;
@@ -137,23 +143,24 @@ body.theme-light {
 }
 
 
- /* ::::: EDITOR AND READ MODE ::::: */
-
+ /* ::::: BOTH MODES ::::: */
 .cm-s-obsidian, .markdown-preview-view, .CodeMirror-lines {
-  line-height: var(--line-height-note);
-  letter-spacing: var(--letter-spacing-note); 
   text-align: var(--text-note-align);
   font-size: var(--default-font-size);
+  width: auto;
 }
+
 
 /* EDITOR MODE */
-.markdown-preview-view .metadata-add-button {
---metadata-display-editing: none;
-}
+.markdown-preview-view .metadata-add-button {}
+.theme-light, .cm-s-obsidian::not(.theme-dark) {}
+.mod-cm6 .cm-editor {}
 
+
+/* ::::: CUSTOM BACKGROUNG ::::: */
 .theme-light .cm-s-obsidian {
   content: "";
-  background-image: var(--background-image-editor);
+  background-image: var(--background-image-editor)!important;
   background-repeat: ;
   background-size: var(--background-image-editor-size);
   left: 0;
@@ -164,57 +171,34 @@ body.theme-light {
 }
 
 
-/* TO-DO / FIND BACKGROUND */
-.theme-light, .cm-s-obsidian::not(.theme-dark) {}
-
-/* Editor mode */
-.cm-s-obsidian {
-  font-size: var(--default-font-size);
-  padding: 0px !important;
-  margin-top: 10px;
-  margin-left: 15px;
-  margin-right: 15px;
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
-  border: 0.5px solid var(--background-modifier-border);
+/* Style page for editor mode */
+.page-style-editor-mode .cm-s-obsidian {
+  margin: 10px 15px 0px 15px !important;
   border-top-left-radius: var(--radius-s);
   border-top-right-radius: var(--radius-s);
+  box-shadow: var(--mac-terminal-shadow);
+  border: 0.5px solid var(--background-modifier-border);
 }
 
 
 /* ::::: READ MODE ::::: */
-.workspace-split.mod-root .view-content {
-
-}
-
+.workspace-split.mod-root .view-content {}
 
 .markdown-preview-view {
-  margin-top: 0px;
-  padding-left: 29px;
-  padding-right: 29px;
+  letter-spacing: var(--letter-spacing-note); 
+  line-height: var(--line-height-note) !important;
 }
 
-/* Style card */
-.page-style-card .markdown-preview-view:not(.markdown-embed):not(.obsidian-metatable):not(.markdown-embed-title) {
-  width: auto;
-  margin: 10px 35px 10px 35px !important;
-  padding-left: var(--padding-note-content);
-  padding-right: var(--padding-note-content);
-  box-shadow: var(--mac-terminal-shadow);
-  border: 0.7px solid var(--background-modifier-border);
-  margin: 10px 15px 10px 15px !important;
-  border-radius: var(--radius-s) !important;
-}
 
-.page-style-read-mode .markdown-preview-view:not(.markdown-embed):not(.obsidian-metatable):not(.markdown-embed-title) {
 /* Style page for read mode */
-  width: auto;
+.page-style-read-mode .markdown-preview-view{
   margin: 10px 15px 0px 15px !important;
   border-top-left-radius: var(--radius-s);
   border-top-right-radius: var(--radius-s);
   padding-left: var(--padding-note-content);
   padding-right: var(--padding-note-content);
+  border: 0.5px solid var(--background-modifier-border);
   box-shadow: var(--mac-terminal-shadow);
-  border: 0.7px solid var(--background-modifier-border);
 }
 
 
@@ -257,21 +241,22 @@ body.theme-light {
 /* :::::::::: INLINE TITLE :::::::::: */
 .inline-title {
   font-family: unset;
-  padding-bottom: 10px;
-  letter-spacing: var(--letter-spacing-note);
-  margin-bottom: 0px;
+  margin: 0px;
+  padding: 0px;
   text-align: var(--inline-title-align) !important;
   font-size: var(--inline-title-size);
   font-weight: var(--inline-title-bold);
+  letter-spacing: var(--letter-spacing-note);
 }
 
 .inline-title-always-uppercase .inline-title {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .block-title-read-mode .workspace-leaf-content[data-mode="preview"] .markdown-preview-view .mod-header .inline-title {
-pointer-events: none;
+  pointer-events: none;
 }
+
 
 /* ::::::::::: HIGHLIGHTS :::::::::: */
 .cm-s-obsidian span.cm-formatting-highlight, .cm-s-obsidian span.cm-highlight, .markdown-preview-view mark {
@@ -281,13 +266,9 @@ pointer-events: none;
 }
 
 
+
 /* :::::::::: BLOCK QUOTES :::::::::: */
-.markdown-rendered blockquote, .blockquote-normal .markdown-rendered blockquote {
-  /*
-  --blockquote-background-color:var(--background-secondary);
-  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px !important;
-*/
-  padding: 0px !important;
+.markdown-rendered blockquote, .blockquote-normal {
   margin: 0px !important;
   text-align: var(--quotes-align);
   padding: var(--quote-padding) !important;
@@ -341,7 +322,6 @@ blockquote::before {
 .markdown-source-view.cm-s-obsidian ol {
   padding: 2px 0px 2px 0px;
   margin: 0px 0px 0px -17px;
-	
 }
 
 /* ::::: SUB-LISTS ::::: */
@@ -542,7 +522,7 @@ body:not(.no-codeblock-line-numbers)
 
 
 /* :::::::::: HEADERS :::::::::: */
-.mod-cm6 .cm-editor .HyperMD-header,
+.cm-editor .mod-cm6 .HyperMD-header,
 .markdown-reading-view h1,
 .markdown-reading-view h2,
 .markdown-reading-view h3,
@@ -552,7 +532,6 @@ body:not(.no-codeblock-line-numbers)
   text-align: var(--headers-align) !important;
   page-break-after: avoid;
   margin: 18px 0px 18px 0px !important;
- /* letter-spacing: 0.5px !important; */
   max-width: fit-content !important;
   padding: 0px !important;
   line-height: var(--headers-space-simetry);
@@ -560,8 +539,10 @@ body:not(.no-codeblock-line-numbers)
 
 
 .heading-collapse-indicator {
-  width: 80% !important;
-  position: absolute !important;
+  border-right: 2.5px solid var(--text-accent) !important;
+  left: 90% !important;
+  width: 10%;
+  margin: 0px !important;
 }
 
 
@@ -856,7 +837,7 @@ body {
 
 /* HIDE EMBED ICON NOTE */
 .markdown-embed-link >.svg-icon.lucide-link {
-  display: var(--icon-link-embed-notes);
+  display: var(--hide-icon-link-embed-notes);
   color: transparent;
   margin: 3px 3px 3px 3px;
   border-radius: 100%;
@@ -1014,7 +995,7 @@ hr {
 /* :::::  HIDE VAULT NAME ::::: */
 .workspace-drawer-header-switcher {
   display: var(--show-vault-name);
-  font-style: normal ;
+  font-style: normal;
 }
 
 .workspace-drawer-header-name {}
@@ -1077,7 +1058,6 @@ body.is-mobile .workspace-drawer-tab-option-item {
 
 body.is-mobile .workspace-drawer-header {
   padding: 12px 12px 0;
-  background: green;
 }
 */
 
@@ -1140,7 +1120,7 @@ body.is-mobile .workspace-drawer-header {
 .mobile-navbar {
   display: var(--hide-navbar);
   position: absolute;
-  border: 0.5px solid var(--background-modifier-border);
+  border: 0.5px solid var(--background-modifier-box-shadow);
   box-shadow: var(--mac-terminal-shadow);
   border-radius: var(--radius-s);
   width: 75%;
@@ -1149,22 +1129,12 @@ body.is-mobile .workspace-drawer-header {
   bottom: 8px;
 }
 
+
+/* Enable glass effect*/
+
 .nav-bar-blur .mobile-navbar {
+  background: rgba(255, 255, 255, 0.10) !important;
   backdrop-filter: blur(var(--navbar_blur_level)) !important;
-  background: rgba(255, 255, 255, 0.35) !important;
-}
-
-
-/* Enable glass effect */.
-.theme-light .mobile-navbar {
-  background: rgba(255, 255, 255, 0.35) !important;
-  backdrop-filter: blur(var(--navbar_blur_level)) !important; /*  */
-}
-
-
-.theme-dark .mobile-navbar {
-  background: rgba(0, 0, 0, 0.15) !important;
-  backdrop-filter: blur(var(--navbar_blur_level)) !important; /*  */
 }
 
 
@@ -1778,8 +1748,8 @@ settings:
       description: Turn on the page-like view in reading mode.
       default: false
   - 
-      id: page-style-card
-      title: Card
+      id: page-style-editor-mode
+      title: Style Page (Editor)
       type: class-toggle
       default: false
   - 
@@ -2076,7 +2046,7 @@ settings:
       type: class-toggle
       default: true
   - 
-      id: icon-link-embed-notes
+      id: hide-icon-link-embed-notes
       title: Show icon
       type: variable-select
       default: Show
