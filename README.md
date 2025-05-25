@@ -79,7 +79,8 @@ A phone-focused theme for Obsidian
 
 ![Screenshot_20241205-163738_cropped](https://github.com/user-attachments/assets/c4224921-b5a2-469d-be93-6e0169d496ac)
 
-- Touching the headers will collapse or expand their contents
+- Touching the right side of the header will collapse or expand their contents
+![IMG_20250525_080615](https://github.com/user-attachments/assets/893aecea-094b-4c1c-bffe-c954ccba0590)
 
 - Embedded notes have been slightly redesigned
 ![IMG_20250514_091523](https://github.com/user-attachments/assets/d29696ba-ad6d-47d2-b051-45745d62924e)
