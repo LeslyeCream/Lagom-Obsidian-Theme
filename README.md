@@ -190,9 +190,9 @@ The following snippet can be pasted directly into the style settings to achieve 
 # Changelog
 
 **V1.6.4**
-- Collapsible Heading Indicators:  A visual indicator now appears in headings when their content is collapsed. This indicator has been repositioned to the right margin for improved readability and to minimize interference with text.
-- Independent Page Style Selection:  Users can now select page styles independently for both the editor and reading modes.
-- Title Corrections: Minor corrections have been applied to the title display within notes.
+- **Collapsible Heading Indicators:**  A visual indicator now appears in headings when their content is collapsed. This indicator has been repositioned to the right margin for improved readability and to minimize interference with text.
+- **Independent Page Style Selection:**  Users can now select page styles independently for both the editor and reading modes.
+- **Title Corrections: Minor corrections have been applied to the title display within notes.
 - Interface Enhancements: Border lines have been added to several previously missing interface elements for improved visual consistency.
 
 **V1.6.3**
