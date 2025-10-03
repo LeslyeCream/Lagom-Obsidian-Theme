@@ -188,6 +188,10 @@ The following snippet can be pasted directly into the style settings to achieve 
 @LuisaKart By the code to modify the new tab view
 
 # Changelog
+**V1.6.5**
+- Minor visual fixes for the latest update from Obsidian. 
+- Improvements in the appearance of the settings panel. 
+- Fixed issue that prevented setting a symbol preceding the file name in the file explorer.
 
 **V1.6.4**
 - **Collapsible Heading Indicators:**  A visual indicator now appears in headings when their content is collapsed. This indicator has been repositioned to the right margin for improved readability and to minimize interference with text.
