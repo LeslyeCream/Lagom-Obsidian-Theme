@@ -115,50 +115,54 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 ```json
 {
-  "files-folders@@nav-item-size": 15.4,
-  "notes-values@@default-font-size": 15.4,
-  "notes-values@@letter-spacing-note": -0.18,
-  "notes-values@@line-height-note": 21,
-  "others-values@@theme-dark-opacity": 0.65,
+  "files-folders@@nav-item-size": 16,
+  "notes-values@@letter-spacing-note": 0,
+  "others-values@@theme-dark-opacity": 0.5,
   "notes-values@@inline-title-always-uppercase": false,
-  "notes-values@@inline-title-size": 20,
+  "notes-values@@inline-title-size": 21,
   "notes-values@@headers-align": "left",
-  "notes-values@@p-spacing": 26,
-  "notes-values@@separator-icon-color": "#6C6C6C6E",
-  "notes-values@@icon-link-embed-notes": "block",
+  "notes-values@@p-spacing": 32,
   "notes-values@@quote-hide-top-line": "1.5px",
   "notes-values@@quote-hide-down-line": "1.5px",
   "yaml-values@@hide-separator-yaml": "unset",
   "notes-values@@wrap-code-blocks": "pre",
   "notes-values@@code-size": 13,
   "notes-values@@code-size-edit-mode": 14,
-  "notes-values@@h1-size": 24,
-  "notes-values@@h2-size": 20,
-  "notes-values@@h3-size": 18,
+  "notes-values@@h1-size": 23,
+  "notes-values@@h2-size": 21,
+  "notes-values@@h3-size": 19,
   "notes-values@@h4-size": 16,
-  "notes-values@@h5-size": 14,
-  "notes-values@@h6-size": 12,
-  "notes-values@@page-style-read-mode": true,
-  "notes-values@@page-style-card": false,
+  "notes-values@@h5-size": 13,
+  "notes-values@@h6-size": 11,
+  "notes-values@@page-style-read-mode": false,
   "notes-values@@enable-shadows-borders-img": false,
-  "notes-values@@hide-embed-title": false,
-  "obsidian-borealis@@syntax-highlighting": "sh3",
-  "notes-values@@padding-note-content": 25,
+  "notes-values@@hide-embed-title": true,
   "others-values@@navbar_blur_level": "8px",
   "hide-elements@@scrollbars": "none",
   "hide-elements@@files-bookmarks-search-bar": "none",
   "hide-elements@@show-explorer-buttons": "none",
   "hide-elements@@show-editor-text-bar": "none",
   "hide-elements@@hide-navbar": "block",
-  "hide-elements@@icon-settings": "none",
-  "others-values@@nav-bar-blur": false,
+  "others-values@@nav-bar-blur": true,
   "notes-values@@active-line-indicator": "\"\"",
-  "notes-values@@show-dotted-line": "0px",
-  "yaml-values@@hide-add-button": "None",
-  "obsidian-borealis@@enable-alternative-checkboxes": false,
+  "notes-values@@show-dotted-line": "1.5px",
+  "yaml-values@@hide-add-button": "flex",
   "files-folders@@popup-explorer": true,
   "files-folders@@icon-file": "•",
-  "hide-elements@@show-vault-name": "none"
+  "hide-elements@@show-vault-name": "none",
+  "notes-values@@headers-space-simetry": 1.2,
+  "notes-values@@page-style-editor-mode": true,
+  "notes-values@@separator-icon-color": "#9090906B",
+  "notes-values@@default-font-size": 16.4,
+  "notes-values@@inline-title-bold": 600,
+  "notes-values@@line-height-note": 23,
+  "notes-values@@focus-non-active-line-opacity": 1,
+  "notes-values@@focus-active-line-opacity": 1,
+  "notes-values@@hide-icon-link-embed-notes": "transparent",
+  "hide-elements@@icon-settings": "none",
+  "hide-elements@@num-of-notes": "none",
+  "notes-values@@padding-note-content": 0,
+  "notes-values@@padding-default-note-style": 35
 }
 ```
 
@@ -188,6 +192,9 @@ The following snippet can be pasted directly into the style settings to achieve 
 @LuisaKart By the code to modify the new tab view
 
 # Changelog
+**V1.6.6**
+- Bug fixes
+
 **V1.6.5**
 - Minor visual fixes for the latest update from Obsidian. 
 - Improvements in the appearance of the settings panel. 
