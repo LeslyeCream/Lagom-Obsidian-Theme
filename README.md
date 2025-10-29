@@ -1,4 +1,4 @@
-![IMG_20241009_134537](https://github.com/user-attachments/assets/2e1aa59f-633e-4d55-a696-e9930a093022)
+<img width="3488" height="1955" alt="IMG_20241008_144509" src="https://github.com/user-attachments/assets/dc14688b-943f-4e4c-84cd-1ccfc5284af7" />
 
 A phone-focused theme for Obsidian
 
@@ -81,7 +81,7 @@ A phone-focused theme for Obsidian
 
 It is recommended to use *Commander*, *Iconize*, *Custom file explorer sorting* and *File explorer note count* with this theme for a complete experience.
 
-# Snippets 
+# Snippets
 
 To use the file name at the vault root to categorize a group of folders it is necessary to use a snippet:
 
