@@ -12,7 +12,6 @@ A phone-focused theme for Obsidian
 
 1. Avoid as much as possible an extreme minimalism that prevents me from recognizing what is and what is not in the UI.
   
-
 2. Make subtle changes that are noticeable and make a difference both aesthetically and functionally but do not prove to be a distraction when using Obsidian.
    
 3. Symmetry and visual consistency.
