@@ -49,7 +49,7 @@ A phone-focused theme for Obsidian
 
 - The file panel occupies 100% of the screen to take advantage of the available space (optional pop-up style)
 
-  ![Screenshot_20241022-092322](https://github.com/user-attachments/assets/34297bcd-458b-477d-97ea-c42d90a5404f)
+![Screenshot_20241022-092322](https://github.com/user-attachments/assets/34297bcd-458b-477d-97ea-c42d90a5404f)
 
 
 - Files show their full name on multiple lines. No more unfinished titles or ellipses!
@@ -59,7 +59,7 @@ A phone-focused theme for Obsidian
 
 - Nested folders with a subtle open-folder indicator
 
-  ![IMG_20241010_162206](https://github.com/user-attachments/assets/2ac5c144-f451-44ce-a2f0-c52c70850f04)
+![IMG_20241010_162206](https://github.com/user-attachments/assets/2ac5c144-f451-44ce-a2f0-c52c70850f04)
 
 
 - Editor dims blocks of text that is not in focus (and slightly increases the font size of text in focus) 
