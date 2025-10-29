@@ -51,7 +51,6 @@ A phone-focused theme for Obsidian
 
 ![Screenshot_20241022-092322](https://github.com/user-attachments/assets/34297bcd-458b-477d-97ea-c42d90a5404f)
 
-
 - Files show their full name on multiple lines. No more unfinished titles or ellipses!
 
 ![IMG_20241010_165149](https://github.com/user-attachments/assets/6269362e-9edc-4973-bfe0-bb7808d1e7b8)
