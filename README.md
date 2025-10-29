@@ -68,7 +68,6 @@ A phone-focused theme for Obsidian
 
 ![IMG_20241010_165116](https://github.com/user-attachments/assets/3bb1ae60-0999-417d-8014-5766fee9c06b)
 
-  
 - Code blocks more similar in appearance to a MacOS terminal (colorful for dark mode and monochromatic for light mode)
 
 ![IMG_20241014_091844](https://github.com/user-attachments/assets/7637aa52-3ff6-41c7-95d0-be6332659164)
