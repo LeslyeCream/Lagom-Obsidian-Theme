@@ -56,7 +56,6 @@ A phone-focused theme for Obsidian
 
 ![IMG_20241010_165149](https://github.com/user-attachments/assets/6269362e-9edc-4973-bfe0-bb7808d1e7b8)
 
-
 - Nested folders with a subtle open-folder indicator
 
 ![IMG_20241010_162206](https://github.com/user-attachments/assets/2ac5c144-f451-44ce-a2f0-c52c70850f04)
