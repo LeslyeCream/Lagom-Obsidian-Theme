@@ -93,16 +93,13 @@ To use the file name at the vault root to categorize a group of folders it is ne
 
 ```css
 .nav-file-title[data-path*=".md"]:before {
-	content: "";
+	content: "" !important;
 }
 
 .nav-file-title:not([data-path*="/"]) {
-  margin: 0px;
-  padding: 0px;
-  left: 25px;
-  font-size: calc(var(--default-font-size) + 1.2px);
+  left: 0px !important;
+  margin: -10px !important;
   color: var(--text-accent);
-  font-weight: 500 !important;
 }
 ```
 The following snippet can be pasted directly into the style settings to achieve the Lagom look as shown in the screenshots.
