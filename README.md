@@ -76,6 +76,9 @@ A phone-focused theme for Obsidian
 - Translucent navigation bar (optional)
 ![IMG_20250517_183412](https://github.com/user-attachments/assets/d2398cdc-8ccd-440e-aef8-9db6a2c8b6db)
 
+- An elegant inline title inspired by The New Yorker covers
+<img width="1080" height="1920" alt="Screenshot_20251114-173048" src="https://github.com/user-attachments/assets/e2317624-e762-44ce-b099-76970360ed5b" />
+
 
 # Note
 
