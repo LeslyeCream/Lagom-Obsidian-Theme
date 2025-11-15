@@ -2,8 +2,10 @@
 
 A phone-focused theme for Obsidian
 
+![Downloads](https://img.shields.io/github/downloads/LeslyeCream/Lagom-Obsidian-Theme/total.svg)
+
 [Screenshots](#screenshots) | 
-[Features](#features) | [Snippets](#Snippets) | [What's new](#changelog) | [Fonts](#fonts) | [Support me](#contribution)
+[Features](#features) | [Snippets](#Snippets) | [What's new](#changelog) | [Fonts](#fonts) | [Bugs & Support](#contribution)
 
 
 [Lagom](https://en.wikipedia.org/wiki/Lagom) tries to focus on just the right amount of changes needed to make it look aesthetically more conventional and modern. It's not about reinventing the wheel or offering a unique or special theme. I simply think Obsidian is a diamond in the rough that needs to be polished to shine on its own.✨ 
@@ -180,6 +182,10 @@ The following snippet can be pasted directly into the style settings to achieve 
 @LuisaKart By the code to modify the new tab view
 
 # Changelog
+
+**V1.6.7**
+- I've added a new style to the inline titles! 
+
 **V1.6.6**
 - Bug fixes
 
