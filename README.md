@@ -189,6 +189,9 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 
 # Changelog
+**V1.6.8**
+- Added option to revert the position of some elements in the new Obsidian UI
+- General improvements and fixes for (hopefully) the theme's correct functioning with the latest Obsidian update. 
 
 **V1.6.7**
 - I've added a new style to the inline titles! 
