@@ -79,8 +79,7 @@ A phone-focused theme for Obsidian
 ![IMG_20250517_183412](https://github.com/user-attachments/assets/d2398cdc-8ccd-440e-aef8-9db6a2c8b6db)
 
 - An elegant inline title inspired by The New Yorker covers
-![MAGAZINE](https://github.com/user-attachments/assets/e2317624-e762-44ce-b099-76970360ed5b)
-
+![magazine](https://github.com/user-attachments/assets/78f5f307-5b93-40f0-8e5e-4a63b8ae4211)
 
 # Note
 
