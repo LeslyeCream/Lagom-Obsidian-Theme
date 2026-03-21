@@ -273,7 +273,7 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 This is my personal Obsidian theme, but since I'm not a CSS expert, there'll probably always be stuff to fix or improve. Please contribute reporting bugs, code improvements and of course, any feedback is welcome! 
 
-Please open an issue on Github or send me an [email](mailto:lagom_request.follow887@aleeas.com). I will try to fix it as soon as possible. 
+Please open an issue on Github or DM on Twitter / BlueSky. I will try to fix it as soon as possible. 
 
 If you really like this theme, please consider support me ᵔᴥᵔ
 
