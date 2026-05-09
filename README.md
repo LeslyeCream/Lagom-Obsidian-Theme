@@ -187,9 +187,11 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 # Changelog
 **V1.6.9**
-- Bugs fixes (using Claude)
+- Bugs fixes (this time using Claude)
 - Added a separator in editor mode for the inline title
 - Fixed the page style that was being applied unnecessarily to embedded notes
+- Fixed the issue with the icons next to the filenames
+
 **V1.6.8**
 - Added option to revert the position of some elements in the new Obsidian UI
 - General improvements and fixes for (hopefully) the theme's correct functioning with the latest Obsidian update. 
