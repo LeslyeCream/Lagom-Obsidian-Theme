@@ -76,13 +76,13 @@ A phone-focused theme for Obsidian
 ![IMG_20250514_091523](https://github.com/user-attachments/assets/d29696ba-ad6d-47d2-b051-45745d62924e)
 
 - Inline title separator in editor mode
-<img width="1080" height="356" alt="Screenshot_20260510-124555_cropped" src="https://github.com/user-attachments/assets/34945366-df50-4ccc-9a92-c859c2bbabd9" />
+![Screenshot_20260510-124555_cropped](https://github.com/user-attachments/assets/34945366-df50-4ccc-9a92-c859c2bbabd9)
 
 - Translucent navigation bar (optional)
 ![IMG_20250517_183412](https://github.com/user-attachments/assets/d2398cdc-8ccd-440e-aef8-9db6a2c8b6db)
 
 - An elegant inline title inspired by The New Yorker covers
-<img width="1080" height="1964" alt="IMG_20260510_124111" src="https://github.com/user-attachments/assets/54e992cf-17c8-4445-a666-bbe47f72da98" />
+![IMG_20260510_124111](https://github.com/user-attachments/assets/54e992cf-17c8-4445-a666-bbe47f72da98)
 
 # Note
 
