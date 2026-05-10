@@ -83,7 +83,7 @@ A phone-focused theme for Obsidian
 
 # Note
 
-It is recommended to use *Commander*, *Iconize*, *Custom file explorer sorting* and *File explorer note count* with this theme for a complete experience.
+Make sure to use *Commander*, *Iconize*, *Custom file explorer sorting*, *Style Settings* and *File explorer note count* with this theme for a complete experience.
 
 
 # Snippets
@@ -166,7 +166,7 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 # Roadmap
 
-- Clean and improve the css code 
+- [x] ~~Clean and improve the css code~~
 - Adapt it for the rest of the platforms 
 - [x] ~~Fix some aesthetic issues~~
 - [x] ~~Add options for Style Settings~~
@@ -182,12 +182,12 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 [AlanG](https://forum.obsidian.md/t/how-to-disable-line-wrapping-in-code-blocks/69900) for its snippet for the code blocks
 
-@LuisaKart By the code to modify the new tab view
+@LuisaKart For the code to modify the new tab view
 
 
 # Changelog
 **V1.6.9**
-- Bugs fixes (this time using Claude)
+- Bug fixes (this time using Claude)
 - Added a separator in editor mode for the inline title
 - Fixed the page style that was being applied unnecessarily to embedded notes
 - Fixed the issue with the icons next to the filenames
