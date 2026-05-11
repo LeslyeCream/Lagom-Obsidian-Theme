@@ -2,7 +2,7 @@
 
 A phone-focused theme for Obsidian
 
-[Screenshots](#screenshots) | [Features](#features) | [Snippets](#Snippets) | [Lagom vs Default Theme](#Comparison) | [What's new](#changelog) | [Fonts](#fonts) | [Bugs & Support](#contribution)
+[Screenshots](#screenshots) | [Features](#features) | [Snippets](#Snippets) | [Lagom vs Default Theme](#Comparison) | [What's new](#changelog) | [Fonts](#fonts) | [Buy me a coffee](#contribution)
 
 
 [Lagom](https://en.wikipedia.org/wiki/Lagom) tries to focus on just the right amount of changes needed to make it look aesthetically more conventional and modern. It's not about reinventing the wheel or offering a unique or special theme. I simply think Obsidian is a diamond in the rough that needs to be polished to shine on its own.✨ 
@@ -201,6 +201,10 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 
 # Changelog
+**V1.7.0**
+- Fixed the issue of overlapping settings in Style Settings 
+- Now the divider line can be hidden in files at the vault root
+
 **V1.6.9**
 - Bug fixes (this time using Claude)
 - Added a separator in editor mode for the inline title
@@ -292,9 +296,9 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 # Contribution
 
-This is my personal Obsidian theme, but since I'm not a CSS expert, there'll probably always be things to fix or improve. Please contribute by reporting bugs and code improvements — any feedback is welcome! 
+This is my personal Obsidian theme, but since I'm not a CSS expert, there'll probably always be things to fix or improve. Contribute by reporting bugs and code improvements, any feedback is welcome! 
 
-Please open an issue on GitHub or DM me on Twitter / Bluesky. I will try to fix it as soon as possible. 
+Please open an issue on GitHub, DM me on Twitter / Bluesky or via [Email](mailto:lagom-theme.opacity165@slmail.me). I will try to fix it as soon as possible. 
 
 If you really like this theme, please consider supporting me ᵔᴥᵔ
 
