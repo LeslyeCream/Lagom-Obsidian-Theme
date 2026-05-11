@@ -103,6 +103,19 @@ To use the file name at the vault root to categorize a group of folders, it is n
   color: var(--text-accent);
 }
 ```
+
+To remove the separator lines at the root of the vault, so it doesn't interfere with the files that will be used as categories, you can use this snippet:
+```css
+
+.nav-file {
+  border-bottom: none !important;
+}
+
+.nav-folder:not(.mod-root) .nav-file {
+  border-bottom: var(--filename-line-thickness) var(--filename-separator-style) var(--background-modifier-border) !important;
+}
+```
+
 The following snippet can be pasted directly into the style settings to achieve the Lagom look as shown in the screenshots.
 
 ```json
