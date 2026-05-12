@@ -1,3 +1,5 @@
+# Lagom
+
 ![Main](https://github.com/user-attachments/assets/dc14688b-943f-4e4c-84cd-1ccfc5284af7)
 
 A phone-focused theme for Obsidian
