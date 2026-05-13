@@ -82,6 +82,9 @@ A phone-focused theme for Obsidian
 - Translucent navigation bar (optional)
 ![IMG_20250517_183412](https://github.com/user-attachments/assets/d2398cdc-8ccd-440e-aef8-9db6a2c8b6db)
 
+- Chat bubble style callouts (optional)
+![Screenshot_20260513-114849_cropped](https://github.com/user-attachments/assets/224e6f02-df9a-4426-b35a-69c125bbe283)
+
 - An elegant inline title inspired by The New Yorker covers
 ![IMG_20260510_124111](https://github.com/user-attachments/assets/54e992cf-17c8-4445-a666-bbe47f72da98)
 
