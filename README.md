@@ -77,7 +77,8 @@ A phone-focused theme for Obsidian
 ![IMG_20250514_091523](https://github.com/user-attachments/assets/d29696ba-ad6d-47d2-b051-45745d62924e)
 
 - Inline title separator in editor mode
-![Screenshot_20260510-124555_cropped](https://github.com/user-attachments/assets/34945366-df50-4ccc-9a92-c859c2bbabd9)
+![Screenshot_20260513-141552_cropped](https://github.com/user-attachments/assets/180478f6-fa07-4390-8703-46fb4f8d61be)
+
 
 - Translucent navigation bar (optional)
 ![IMG_20250517_183412](https://github.com/user-attachments/assets/d2398cdc-8ccd-440e-aef8-9db6a2c8b6db)
@@ -86,7 +87,8 @@ A phone-focused theme for Obsidian
 ![Screenshot_20260513-114849_cropped](https://github.com/user-attachments/assets/224e6f02-df9a-4426-b35a-69c125bbe283)
 
 - An elegant inline title inspired by The New Yorker covers
-![IMG_20260510_124111](https://github.com/user-attachments/assets/54e992cf-17c8-4445-a666-bbe47f72da98)
+![Screenshot_20260513-141832_cropped](https://github.com/user-attachments/assets/507bd3ad-1c84-4d7b-ac25-e37e8c56f79e)
+
 
 # Note
 
@@ -209,7 +211,7 @@ The following snippet can be pasted directly into the style settings to achieve 
 **V1.7.1**
 - Fixed visual inconsistencies in tables, code blocks, and pop-ups
 - Added Aliases with a pill-shaped design (optional)
-- Added chat bubble-style callouts
+- Added chat bubble-style callouts: [!IN] and [!OUT] 
 
 **V1.7.0**
 - Fixed the issue of overlapping settings in Style Settings 
