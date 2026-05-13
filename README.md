@@ -203,6 +203,11 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 
 # Changelog
+**V1.7.1**
+- Fixed visual inconsistencies in tables, code blocks, and pop-ups
+- Added Aliases with a pill-shaped design (optional)
+- Added chat bubble-style callouts
+
 **V1.7.0**
 - Fixed the issue of overlapping settings in Style Settings 
 - Now the divider line can be hidden in files at the vault root
