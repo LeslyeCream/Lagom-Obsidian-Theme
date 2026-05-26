@@ -208,6 +208,15 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 
 # Changelog
+**V1.7.2**
+- Options to customize some list settings
+- Added descriptions for all settings within Style Settings
+- Switched to em instead of pixels for font sizes
+- Settings icon now shows by default when installing the theme
+- Fixed bug when setting font size in the inline-title
+- Fixed the font size issue in inline code and code blocks
+- Fixed the issue with showing or hiding the file explorer toolbar
+
 **V1.7.1**
 - Fixed visual inconsistencies in tables, code blocks, and pop-ups
 - Added Aliases with a pill-shaped design (optional)
