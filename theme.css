@@ -36,7 +36,7 @@ body {
   --line-height-note: 25px;
 
   --properties-icon-size: 1.2em;
-  --icon-file-size: 1.7em !important;
+  --icon-file-size: 1.7em;
 
   
   --radius-s: 11.5px;
@@ -74,9 +74,9 @@ body {
   --folder-border-color: #50505088;
   --theme-light-opacity: 1;
   --icon-ui-opacity: 0.9;
-  --input-shadow: var(--background-modifier-border) 0 0 0 1px !important;
-  --input-shadow-hover: hsla(var(--color-accent-hsl), 0.6) 0 0 0px 1px !important;
-  --interactive-hover: hsla(var(--color-accent-hsl), 0.1) !important;
+  --input-shadow: var(--background-modifier-border) 0 0 0 1px;
+  --input-shadow-hover: hsla(var(--color-accent-hsl), 0.6) 0 0 0px 1px;
+  --interactive-hover: hsla(var(--color-accent-hsl), 0.1);
  
   --metadata-property-radius: var(--radius-s);
   /* --metadata-gap: 23px; */
@@ -93,7 +93,7 @@ body {
   --bg-url: ;
   --filename-line-thickness: 1.8px;
   --filename-separator-style: dotted;
-  --setting-items-background: none !important;
+  --setting-items-background: none;
 }
 
 
@@ -115,7 +115,7 @@ body {
 /* SAFE PLACE */
 body.is-phone,
 body.is-mobile {
-  --safe-area-inset-top: var(--safe-place-position) !important;
+  --safe-area-inset-top: var(--safe-place-position);
 }
 
 
@@ -359,6 +359,13 @@ top: -100px !important;
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 20%,
+        black 80%,
+        transparent 100%
+    );
   mask-image: linear-gradient(
         to bottom,
         transparent 0%,
@@ -436,7 +443,7 @@ li:has(> ol) > ol > li {
 }
 
 /* Vertical Line */
-le .cm-hmd-list-indent .cm-tab, ul ul { 
+.cm-hmd-list-indent .cm-tab, ul ul { 
   position: relative;
 }
 
@@ -488,34 +495,8 @@ ul ul::before {
   padding-inline-start: 10px;
 }
 
-/* 
-
-input[type=checkbox] {
-  -webkit-appearance: none;
-  appearance: none;
-  border-radius: 50%;
-  border: 2px solid !important;
-  padding-top: 0;
-  margin: 0;
-}
-
-input[type=checkbox]:focus{
-  outline:0;
-}
-
-input[type=checkbox]:checked {
-  background-color: var(--red);
-  border: 2px solid var(--red);
-  background-position: center;
-  background-size: 70%;
-  background-repeat: no-repeat;
-}
- */
-
 
 /* CODE BLOCKS */
-
-
 .cm-inline-code,
 :not(pre) > code {
   color: var(--background-primary) !important;
@@ -665,7 +646,6 @@ body:not(.no-codeblock-line-numbers)
 .markdown-reading-view h5,
 .markdown-reading-view h6 {
   text-align: var(--headers-align) !important;
-  break-after: avoid;
   margin: 18px 0px 18px 0px !important;
   max-width: fit-content !important;
   padding: 0px !important;
@@ -1098,7 +1078,9 @@ body {
 .markdown-preview-view hr {
   margin-block-start: 4em;
   margin-block-end: 4em;
-  border: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
   height: 0;
   border-bottom: 1px solid;
   border-image-slice: 1;
@@ -1226,6 +1208,7 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
 	& .setting-item:not(.style-settings-heading) {
 		border-inline: 1px solid var(--background-modifier-border);
 		box-shadow: var(--mac-terminal-shadow);
+		-webkit-clip-path: inset(0px -24px 0px -24px);
 		clip-path: inset(0px -24px 0px -24px);
 		padding: 12px 20px 12px 22px;
 		flex-wrap: wrap;
@@ -1244,10 +1227,10 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
 	& .setting-item:last-of-type,
 	.setting-item:has( + .setting-item.setting-item-heading),
 	.setting-item:not(.setting-item-heading):has( + :not(.setting-item)) {
-		box-shadow: 
-		var(--mac-terminal-shadow);
+		box-shadow: var(--mac-terminal-shadow);
     border-bottom: 1px solid var(--background-modifier-border);
     border-radius: 0 0 var(--radius-s) var(--radius-s);
+		-webkit-clip-path: inset(0px -24px -24px -24px);
 		clip-path: inset(0px -24px -24px -24px);
 		padding-bottom: 14px;
 	}
@@ -1262,6 +1245,7 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
 	div[class*="settings-section"] > .setting-item {
 		border: 1px solid var(--background-modifier-border);
 		border-radius: var(--radius-s) !important; 
+		-webkit-clip-path: none !important;
 		clip-path: none !important;
 		padding-block: 14px;
 	}
@@ -1270,6 +1254,7 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
 	:not(.setting-item) + .setting-item:has( + .setting-item) {
 		border-top: 1px solid var(--background-modifier-border);
 		border-radius: var(--radius-s) var(--radius-s) 0 0;
+		-webkit-clip-path: inset(-24px -24px 0px -24px);
 		clip-path: inset(-24px -24px 0px -24px);
 		padding-top: 16px;
 	}
@@ -1534,7 +1519,6 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 /* BACKGROUND SEARCH */
 .is-mobile .document-search-container {
   margin-bottom: 5px;
-  border-bottom: 1px;
   border-bottom: 1px solid var(--background-modifier-border);
   box-shadow: var(--background-modifier-box-shadow) 0px 0px 2.5px 0px;
 }
@@ -1854,8 +1838,11 @@ body {
 .style-settings-container .setting-item:first-of-type,
 .style-settings-container .setting-item:last-of-type,
 .style-settings-container .setting-item:not(.setting-item-heading):only-of-type {
-  clip-path: none !important;
-  border: none !important;
+  -webkit-clip-path: none;
+  clip-path: none;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
   border-bottom: 1px solid var(--background-modifier-border) !important;
   border-radius: 0 !important;
   box-shadow: none !important;
