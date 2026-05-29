@@ -79,7 +79,6 @@ A phone-focused theme for Obsidian
 - Inline title separator in editor mode
 ![Screenshot_20260513-141552_cropped](https://github.com/user-attachments/assets/180478f6-fa07-4390-8703-46fb4f8d61be)
 
-
 - Translucent navigation bar (optional)
 ![IMG_20250517_183412](https://github.com/user-attachments/assets/d2398cdc-8ccd-440e-aef8-9db6a2c8b6db)
 
