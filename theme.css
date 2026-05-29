@@ -15,7 +15,7 @@ body {
   --inline-title-size: 1.2em;
   --code-size-edit-mode: 0.9em;
   --quote-font-size: 0.98em;
-  --nav-item-size: 0.98em; /* font size files */
+  --explorer-font-size: 0.98em; /* font size files */
   --callout-font-size-title: 0.98em;
   --metadata-label-font-size: 1em;
   --metadata-input-font-size: 1em;
@@ -70,7 +70,7 @@ body {
   --separator-icon-color: #6C6C6C6B;
   --mac-terminal-shadow: rgba(9, 30, 66, 0.10) 0px 4px 8px 5px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
   --metadata-divider-color: red;
-  --theme-dark-opacity: 0.85;
+  --theme-dark-opacity: 1;
   --folder-border-color: #50505088;
   --theme-light-opacity: 1;
   --icon-ui-opacity: 0.9;
@@ -89,7 +89,6 @@ body {
   --list-indent: 18px;
   --tabs-height: 300px;
   
-  /* Others */ 
   --bg-url: ;
   --filename-line-thickness: 1.8px;
   --filename-separator-style: dotted;
@@ -115,7 +114,7 @@ body {
 /* SAFE PLACE */
 body.is-phone,
 body.is-mobile {
-  --safe-area-inset-top: var(--safe-place-position);
+  --safe-area-inset-top: var(--safe-place-position) !important;
 }
 
 
@@ -359,13 +358,6 @@ top: -100px !important;
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat;
-  -webkit-mask-image: linear-gradient(
-        to bottom,
-        transparent 0%,
-        black 20%,
-        black 80%,
-        transparent 100%
-    );
   mask-image: linear-gradient(
         to bottom,
         transparent 0%,
@@ -378,6 +370,7 @@ top: -100px !important;
   font-weight: var(--inline-title-bold);
   letter-spacing: var(--letter-spacing-note);
 }
+
 
 .inline-title-always-uppercase .inline-title {
   text-transform: uppercase;
@@ -495,8 +488,34 @@ ul ul::before {
   padding-inline-start: 10px;
 }
 
+/* 
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  border: 2px solid !important;
+  padding-top: 0;
+  margin: 0;
+}
+
+input[type=checkbox]:focus{
+  outline:0;
+}
+
+input[type=checkbox]:checked {
+  background-color: var(--red);
+  border: 2px solid var(--red);
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+ */
+
 
 /* CODE BLOCKS */
+
+
 .cm-inline-code,
 :not(pre) > code {
   color: var(--background-primary) !important;
@@ -646,6 +665,7 @@ body:not(.no-codeblock-line-numbers)
 .markdown-reading-view h5,
 .markdown-reading-view h6 {
   text-align: var(--headers-align) !important;
+  /* break-after: avoid; */
   margin: 18px 0px 18px 0px !important;
   max-width: fit-content !important;
   padding: 0px !important;
@@ -1078,9 +1098,7 @@ body {
 .markdown-preview-view hr {
   margin-block-start: 4em;
   margin-block-end: 4em;
-  border-top: none;
-  border-right: none;
-  border-left: none;
+  border: none;
   height: 0;
   border-bottom: 1px solid;
   border-image-slice: 1;
@@ -1208,7 +1226,6 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
 	& .setting-item:not(.style-settings-heading) {
 		border-inline: 1px solid var(--background-modifier-border);
 		box-shadow: var(--mac-terminal-shadow);
-		-webkit-clip-path: inset(0px -24px 0px -24px);
 		clip-path: inset(0px -24px 0px -24px);
 		padding: 12px 20px 12px 22px;
 		flex-wrap: wrap;
@@ -1230,7 +1247,6 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
 		box-shadow: var(--mac-terminal-shadow);
     border-bottom: 1px solid var(--background-modifier-border);
     border-radius: 0 0 var(--radius-s) var(--radius-s);
-		-webkit-clip-path: inset(0px -24px -24px -24px);
 		clip-path: inset(0px -24px -24px -24px);
 		padding-bottom: 14px;
 	}
@@ -1245,7 +1261,6 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
 	div[class*="settings-section"] > .setting-item {
 		border: 1px solid var(--background-modifier-border);
 		border-radius: var(--radius-s) !important; 
-		-webkit-clip-path: none !important;
 		clip-path: none !important;
 		padding-block: 14px;
 	}
@@ -1254,7 +1269,6 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
 	:not(.setting-item) + .setting-item:has( + .setting-item) {
 		border-top: 1px solid var(--background-modifier-border);
 		border-radius: var(--radius-s) var(--radius-s) 0 0;
-		-webkit-clip-path: inset(-24px -24px 0px -24px);
 		clip-path: inset(-24px -24px 0px -24px);
 		padding-top: 16px;
 	}
@@ -1461,7 +1475,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 
 /* MENU - RIBBON */
 .is-mobile .menu {
-  font-size: var(--nav-item-size) !important;
+  font-size: var(--explorer-font-size) !important;
   max-width: 85%;
   padding: 1px 1px 1px 1px;
   bottom: 10px !important;
@@ -1838,11 +1852,8 @@ body {
 .style-settings-container .setting-item:first-of-type,
 .style-settings-container .setting-item:last-of-type,
 .style-settings-container .setting-item:not(.setting-item-heading):only-of-type {
-  -webkit-clip-path: none;
-  clip-path: none;
-  border-top: none !important;
-  border-right: none !important;
-  border-left: none !important;
+  clip-path: none !important;
+  border: none !important;
   border-bottom: 1px solid var(--background-modifier-border) !important;
   border-radius: 0 !important;
   box-shadow: none !important;
@@ -2771,7 +2782,7 @@ settings:
       title: Dark mode - Opacity
       description: "Background opacity of the main content area in dark mode."
       type: variable-number
-      default: 0.75
+      default: 1
       format: 
  */
 
@@ -2780,28 +2791,21 @@ name: Explorer & Files
 id: files-folders
 settings:
   -
-      id: icon-file-indicator
-      title: Icon file
-      description: "Character displayed before each file name in the explorer."
-      type: variable-text
-      default: "•"
-      quotes: true 
-  -
       id: enable-icon-file
       title: Enable icon file
       description: "Enables or disables the icon shown before file names."
       type: class-toggle
       default: true
   -
-      id: nav-item-size
-      title: Explorer Font size
-      description: "Font size of file and folder names in the explorer."
-      type: variable-number
-      default: 0.99
-      format: em
+      id: icon-file-indicator
+      title: Icon file symbol
+      description: "Character displayed before each file name in the explorer."
+      type: variable-text
+      default: "•"
+      quotes: true 
   -
       id: icon-file-size
-      title: Icon file
+      title: Icon file size
       description: "Size of the icon displayed before each file name."
       type: variable-number
       default: 1.5
@@ -2885,6 +2889,13 @@ settings:
       type: variable-number
       default: 1.8
       format: px
+  -
+      id: explorer-font-size
+      title: Explorer Font size
+      description: "Font size of file and folder names in the explorer."
+      type: variable-number
+      default: 0.98
+      format: em
  */
 
 /* @settings
