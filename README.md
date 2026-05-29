@@ -70,7 +70,7 @@ A phone-focused theme for Obsidian
 - Quotes with classic style
 ![Screenshot_20241205-163738_cropped](https://github.com/user-attachments/assets/c4224921-b5a2-469d-be93-6e0169d496ac)
 
-- Touching the right side of a heading will collapse or expand its contents
+- Collapsed header indicator
 ![IMG_20250525_080615](https://github.com/user-attachments/assets/893aecea-094b-4c1c-bffe-c954ccba0590)
 
 - Embedded notes have been slightly redesigned
