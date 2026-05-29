@@ -96,7 +96,27 @@ Make sure to use *Commander*, *Iconize*, *Custom file explorer sorting*, *Style 
 
 # Snippets
 
-To use the file name at the vault root to categorize a group of folders, it is necessary to use a snippet:
+## Grouping folders
+
+To use the file name at the vault root to categorize a group of folders, it is necessary to set up the Custom File Explorer Settings with something like:
+
+```
+---
+sorting-spec: |
+  // ::::: ROOT :::::
+  target-folder: /*
+  /:files
+  > a-z by-metadata: Created
+  /:folders
+   Markdown filename here.md
+   Folder name here
+   Markdown filename here.md
+   Folder name here
+   Folder name here
+-----
+```
+
+And this snippet to adjust the filenames in the vault root relative to the folders:
 
 ```css
 .nav-file-title[data-path*=".md"]:before {
@@ -110,17 +130,7 @@ To use the file name at the vault root to categorize a group of folders, it is n
 }
 ```
 
-To remove the separator lines at the root of the vault, so it doesn't interfere with the files that will be used as categories, you can use this snippet:
-```css
-
-.nav-file {
-  border-bottom: none !important;
-}
-
-.nav-folder:not(.mod-root) .nav-file {
-  border-bottom: var(--filename-line-thickness) var(--filename-separator-style) var(--background-modifier-border) !important;
-}
-```
+## Style Settings
 
 The following snippet can be pasted directly into the style settings to achieve the Lagom look as shown in the screenshots.
 
@@ -130,7 +140,7 @@ The following snippet can be pasted directly into the style settings to achieve 
   "notes-values@@page-style-editor-mode": true,
   "hide-elements@@safe-place-position": 35,
   "notes-values@@magazine-style": false,
-  "others-values@@theme-light-opacity": null,
+  "others-values@@theme-light-opacity": 1,
   "others-values@@theme-dark-opacity": 0.8,
   "notes-values@@inline-title-always-uppercase": false,
   "notes-values@@headers-align": "left",
@@ -191,7 +201,7 @@ The following snippet can be pasted directly into the style settings to achieve 
   "hide-elements@@show-editor-text-bar": "unset",
   "hide-elements@@hide-navbar": "block",
   "hide-elements@@files-bookmarks-search-bar": "none",
-  "others-values@@icon-ui-opacity": 0.9,
+  "others-values@@icon-ui-opacity": 1,
   "hide-elements@@show-vault-name": "none",
   "hide-elements@@show-explorer-buttons": "none",
   "notes-values@@main-list-item-style": "italic",
