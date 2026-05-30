@@ -43,8 +43,8 @@ body {
   --separator-icon: "o0o";
   --nav-indentation-guide-width: unset;
   --padding-default-note-style: 35px;
-  --focus-active-line-opacity: 0.8;
-  --focus-non-active-line-opacity: 0.55;
+  --focus-active-line-opacity: 1;
+  --focus-non-active-line-opacity: 1;
   --show-dotted-line: 1px;
   --active-line-indicator: "+ ";
   --icon-file-indicator: "·";
@@ -70,9 +70,9 @@ body {
   --separator-icon-color: #6C6C6C6B;
   --mac-terminal-shadow: rgba(9, 30, 66, 0.10) 0px 4px 8px 5px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
   --metadata-divider-color: red;
-  --theme-dark-opacity: 1;
+  --dark-theme-opacity: 1;
   --folder-border-color: #50505088;
-  --theme-light-opacity: 1;
+  --light-theme-opacity: 1;
   --icon-ui-opacity: 0.9;
   --input-shadow: var(--background-modifier-border) 0 0 0 1px;
   --input-shadow-hover: hsla(var(--color-accent-hsl), 0.6) 0 0 0px 1px;
@@ -146,7 +146,6 @@ body.is-mobile {
 .workspace-bg .app-container::before {
   background-image: var(--bg-url);
   opacity: var(--bg-opacity, 0.8);
-  filter: blur(var(--bg-blur, 4px));
   background-color: var(--uw-background);
   background-position: center;
   background-repeat: no-repeat;
@@ -163,11 +162,11 @@ body.is-mobile {
 
 /* OBSIDIAN THEME */
 body.theme-dark {
-  opacity: var(--theme-dark-opacity); 
+  opacity: var(--dark-theme-opacity);
 }
 
 body.theme-light {
-   opacity: var(--theme-light-opacity);
+  opacity: var(--light-theme-opacity);
 }
 
 
@@ -2123,13 +2122,13 @@ settings:
       title: Opacity active line
       description: "Opacity of the currently focused line in the editor."
       type: variable-number
-      default: 0.8
+      default: 1
   - 
       id: focus-non-active-line-opacity
       title: Opacity non-active line
       description: "Opacity of non-active lines when focus mode is enabled."
       type: variable-number
-      default: 0.65
+      default: 1
   - 
       id: separator-icon
       title: Separator content
@@ -2771,19 +2770,17 @@ settings:
       type: variable-text
       default: 8px
   - 
-      id: theme-light-opacity
+      id: light-theme-opacity
       title: Light mode - Opacity
       description: "Background opacity of the main content area in light mode."
       type: variable-number
       default: 1
-      format: 
   - 
-      id: theme-dark-opacity
+      id: dark-theme-opacity
       title: Dark mode - Opacity
       description: "Background opacity of the main content area in dark mode."
       type: variable-number
       default: 1
-      format: 
  */
 
 /* @settings
