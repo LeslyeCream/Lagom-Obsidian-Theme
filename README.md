@@ -242,6 +242,13 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 
 # Changelog
+**V1.7.3**
+- Fixed the ghost text
+- Improvements in code block numbers
+- Small improvements in the appearance of code blocks in editor mode
+- Option to hide the note burger menu
+- Option to correct the position of the toggle view button
+
 **V1.7.2**
 - Options to customize some list settings
 - Added descriptions for all settings within Style Settings
