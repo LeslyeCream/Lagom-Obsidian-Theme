@@ -248,6 +248,7 @@ The following snippet can be pasted directly into the style settings to achieve 
 - Small improvements in the appearance of code blocks in editor mode
 - Option to hide the note burger menu
 - Option to correct the position of the toggle view button
+- Fixes when setting font sizes on some items
 
 **V1.7.2**
 - Options to customize some list settings
