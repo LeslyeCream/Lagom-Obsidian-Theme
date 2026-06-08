@@ -26,7 +26,7 @@ body {
   --h3-size: 1.1em;
   --h4-size: 0.9em;
   --h5-size: 0.8em;
-  
+
   --inline-title-align: center;
   --quotes-align: justify;
   --text-note-align: justify;
@@ -77,18 +77,18 @@ body {
   --input-shadow: var(--background-modifier-border) 0 0 0 1px;
   --input-shadow-hover: hsla(var(--color-accent-hsl), 0.6) 0 0 0px 1px;
   --interactive-hover: hsla(var(--color-accent-hsl), 0.1);
- 
+
   --metadata-property-radius: var(--radius-s);
   /* --metadata-gap: 23px; */
   --metadata-display-editing: none;
   --table-border-width: 1px;
   --table-header-weight: normal;
-  
+
   --headers-space-symmetry: 1em;
   --input-border-width: 1px;
   --list-indent: 18px;
   --tabs-height: 300px;
-  
+
   --bg-url: ;
   --filename-line-thickness: 1.8px;
   --filename-separator-style: dotted;
@@ -208,7 +208,6 @@ body.theme-light {
 
 /* ::::: MORE MENU ::::: */
 .view-action[aria-label="More options"] {
-  margin-right: 0px !important;
   display: var(--hide-more-menu);
 }
 
@@ -229,8 +228,7 @@ body.theme-light {
 
 /* EDITOR MODE */
 .mod-cm6 .cm-editor {
-top: -100px !important;
-
+top: -90px !important;
 }
 
 /* Editor mode */
@@ -240,7 +238,7 @@ top: -100px !important;
 }
 
 .cm-s-obsidian {
-  padding: 10px !important;
+  padding: 0px !important;
 }
 
 
@@ -260,10 +258,10 @@ top: -100px !important;
 
 /* Style page for editor mode */
 .page-style-editor-mode .cm-s-obsidian {
-   position: absolute !important; 
+  position: relative !important;
   padding-left: calc(var(--padding-note-content) - 5%);
   padding-right: calc(var(--padding-note-content) - 5%);
-  margin: 80px 15px 0px 15px !important;
+  margin: 90px 15px 0px 15px !important;
   border-top-left-radius: var(--radius-s);
   border-top-right-radius: var(--radius-s);
   box-shadow: var(--mac-terminal-shadow);
