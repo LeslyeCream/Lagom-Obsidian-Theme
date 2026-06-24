@@ -51,7 +51,8 @@ body {
   --quote-padding: 10px 15px 10px 15px;
   --quote-icon: "“";
   /* --icon-size-properties: 70px !important; */
-
+ --position-top-page-editor: 5px;
+ --position-top-page-view: 90px;
 
   --safe-place-position: 25px;
   --hide-empty-properties: none;
@@ -219,28 +220,23 @@ body.theme-light {
 
 /* ::::: BOTH MODES ::::: */
  .markdown-preview-view, .cm-s-obsidian {
-  padding-left: var(--padding-default-note-style) !important;
-  padding-right: var(--padding-default-note-style) !important;
-  text-align: var(--text-note-align);
+    text-align: var(--text-note-align);
   width: auto;
+  max-width: 100%;
 }
 
 
 /* EDITOR MODE */
-.mod-cm6 .cm-editor {
-top: -90px !important;
-}
-
-/* Editor mode */
+.mod-cm6 {}
 
 .cm-editor .cm-content {
   font-size: var(--content-note-font-size);
 }
 
-.cm-s-obsidian {
-  padding: 0px !important;
-}
+.cm-s-obsidian {}
 
+.cm-editor { 
+}
 
 /* CUSTOM BACKGROUND */
 .theme-light .cm-s-obsidian {
@@ -259,19 +255,20 @@ top: -90px !important;
 /* Style page for editor mode */
 .page-style-editor-mode .cm-s-obsidian {
   position: relative !important;
-  padding-left: calc(var(--padding-note-content) - 5%);
-  padding-right: calc(var(--padding-note-content) - 5%);
-  margin: 90px 15px 0px 15px !important;
+  top: var(--position-top-page-editor)px !important;
+  margin: 85px 15px 0px 15px !important;
   border-top-left-radius: var(--radius-s);
   border-top-right-radius: var(--radius-s);
-  box-shadow: var(--mac-terminal-shadow);
-  border: 0.5px solid var(--background-modifier-border);
+  padding-left: var(--padding-note-content);
+  padding-right: var(--padding-note-content);
+  border: 1px solid var(--background-modifier-border);
 }
 
 
-/* READ MODE */
+/* ::::: READ MODE ::::: */
 .markdown-preview-view {
-  /* padding: auto removed — not a valid CSS value */
+  padding-left: var(--padding-default-note-style) !important;
+  padding-right: var(--padding-default-note-style) !important;
   letter-spacing: var(--letter-spacing-note); 
   line-height: var(--line-height-note) !important;
 }
@@ -280,7 +277,7 @@ top: -90px !important;
 /* Style page for read mode — excludes embedded notes */
 .page-style-read-mode .markdown-preview-view:not(.markdown-embed .markdown-preview-view) {
   padding-top: 5px !important;
-  top: 85px !important;
+  top: var(--position-top-page-view) !important;
   margin: 0px 15px 0px 15px !important;
   border-top-left-radius: var(--radius-s);
   border-top-right-radius: var(--radius-s);
@@ -290,7 +287,14 @@ top: -90px !important;
   box-shadow: var(--mac-terminal-shadow);
 }
 
-/* Reset page style for embedded notes (read & editor mode) */
+
+.cm-content {
+ padding-top: 25px !important;
+}
+
+
+/* Reset page style for embedded notes (read & editor mode) 
+
 .page-style-read-mode .markdown-embed .markdown-preview-view,
 .page-style-editor-mode .markdown-embed .markdown-preview-view {
   margin: 0 !important;
@@ -303,6 +307,8 @@ top: -90px !important;
   box-shadow: none !important;
 }
 
+
+  
 
 /* ACTIVE LINE */
 
@@ -327,7 +333,7 @@ top: -90px !important;
 }
 
 .CodeMirror-activeline.CodeMirror-linebackground, .cm-active.cm-line::before {
-  content: var(--active-line-indicator);
+  content: var(--active-line-indicator) !important;
   color: var(--text-accent);
   font-weight: 600;
 }
@@ -344,7 +350,8 @@ top: -90px !important;
   font-family: unset;
   margin: 0;
   padding: 0;
-  padding-bottom: 6px;
+  padding-top: -90px !important;
+  padding-bottom: 8px;
   text-align: var(--inline-title-align) !important;
   font-size: var(--inline-title-size) !important;
   font-weight: var(--inline-title-bold);
@@ -880,6 +887,7 @@ tr:last-child td:last-child {
 }
 
 .metadata-content {
+  background: red;
   background: var(--background-primary) !important;
   border-radius: 0px !important;
 }
@@ -1516,6 +1524,7 @@ body.is-mobile .workspace-drawer-header {
 
 /* NAVIGATION BAR */
 .mobile-navbar {
+  background: var(--background-primary) !important;
   display: var(--hide-navbar);
   border: 0.5px solid var(--background-modifier-box-shadow);
   box-shadow: var(--mac-terminal-shadow);
@@ -1529,7 +1538,7 @@ body.is-mobile .workspace-drawer-header {
 /* Enable glass effect */
 .nav-bar-blur .mobile-navbar {
   background: rgba(255, 255, 255, 0.10) !important;
-  backdrop-filter: blur(var(--navbar_blur_level)) !important;
+  backdrop-filter: blur(10px) !important;
 }
 
 
@@ -2243,7 +2252,7 @@ settings:
       title: Active line indicator
       description: "Symbol shown next to the active line in the editor."
       type: variable-text
-      default: —
+      default: +
       quotes: true
   - 
       id: active-line-background
@@ -2283,6 +2292,20 @@ settings:
       type: class-toggle
       default: false
   - 
+      id: position-top-page-view
+      title: Ajust position page (view)
+      description: This allows you to adjust the vertical space occupied by the note. It's especially useful on iPads and perhaps computers. Use it if there's a blank space above the note.
+      type: variable-number
+      default: 90
+      format: px
+  -
+      id: position-top-page-editor
+      title: Ajust position page (editor)
+      description: This allows you to adjust the vertical space occupied by the note. It's especially useful on iPads and perhaps computers. Use it if there's a blank space above the note.""
+      type: variable-number
+      default: 5
+      format: px
+  -
       id: padding-note-content
       title: Side paddings
       type: variable-number
@@ -2405,7 +2428,7 @@ settings:
       title: Magazine style
       description: An elegant inline title inspired by The New Yorker covers 
       type: class-toggle
-      default: true
+      default: false
   -
       id: magazine-background
       title: Magazine background
@@ -2853,12 +2876,6 @@ settings:
       description: "Applies a frosted glass blur effect to the navigation bar."
       type: class-toggle
       default: true
-  - 
-      id: navbar_blur_level
-      title: Blur level
-      description: "Intensity of the blur effect on the navigation bar."
-      type: variable-text
-      default: 8px
   - 
       id: light-theme-opacity
       title: Light mode - Opacity
