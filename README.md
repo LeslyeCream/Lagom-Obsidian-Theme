@@ -242,6 +242,10 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 
 # Changelog
+**V1.7.4**
+- Fixed bug with search bar inside a note
+- Minor Fixes
+
 **V1.7.3**
 - Fixed the ghost text
 - Improvements in code block numbers
