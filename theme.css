@@ -51,8 +51,8 @@ body {
   --quote-padding: 10px 15px 10px 15px;
   --quote-icon: "“";
   /* --icon-size-properties: 70px !important; */
- --position-top-page-editor: 5px;
- --position-top-page-view: 90px;
+  --position-top-page-editor: 5px;
+  --position-top-page-view: 90px;
 
   --safe-place-position: 25px;
   --hide-empty-properties: none;
@@ -220,7 +220,7 @@ body.theme-light {
 
 /* ::::: BOTH MODES ::::: */
  .markdown-preview-view, .cm-s-obsidian {
-    text-align: var(--text-note-align);
+  text-align: var(--text-note-align);
   width: auto;
   max-width: 100%;
 }
@@ -235,13 +235,12 @@ body.theme-light {
 
 .cm-s-obsidian {}
 
-.cm-editor { 
-}
+.cm-editor {}
 
 /* CUSTOM BACKGROUND */
 .theme-light .cm-s-obsidian {
   /* content: ""; */
-  background-image: var(--background-image-editor)!important;
+  background-image: var(--background-image-editor) !important;
  /* background-repeat: ; */
   background-size: var(--background-image-editor-size);
   left: 0;
@@ -255,13 +254,13 @@ body.theme-light {
 /* Style page for editor mode */
 .page-style-editor-mode .cm-s-obsidian {
   position: relative !important;
-  top: var(--position-top-page-editor)px !important;
+  top: var(--position-top-page-editor) !important;
   margin: 85px 15px 0px 15px !important;
-  border-top-left-radius: var(--radius-s);
-  border-top-right-radius: var(--radius-s);
+  max-width: auto;
+  border-radius: var(--radius-s);
   padding-left: var(--padding-note-content);
   padding-right: var(--padding-note-content);
-  border: 1px solid var(--background-modifier-border);
+  border: 1.5px solid var(--background-modifier-border);
 }
 
 
@@ -276,11 +275,13 @@ body.theme-light {
 
 /* Style page for read mode — excludes embedded notes */
 .page-style-read-mode .markdown-preview-view:not(.markdown-embed .markdown-preview-view) {
+  position: relative;
   padding-top: 5px !important;
   top: var(--position-top-page-view) !important;
-  margin: 0px 15px 0px 15px !important;
-  border-top-left-radius: var(--radius-s);
-  border-top-right-radius: var(--radius-s);
+  margin:  0px 15px 0px 15px !important;
+  max-width: auto;
+  top: 45px;
+  border-radius: var(--radius-s);
   padding-left: var(--padding-note-content);
   padding-right: var(--padding-note-content);
   border: 0.5px solid var(--background-modifier-border);
@@ -289,7 +290,7 @@ body.theme-light {
 
 
 .cm-content {
- padding-top: 25px !important;
+ padding-top: 20px !important; 
 }
 
 
@@ -519,7 +520,6 @@ input[type=checkbox] {
   -webkit-appearance: none;
   appearance: none;
   border-radius: 50%;
-  border: 2px solid !important;
   padding-top: 0;
   margin: 0;
 }
@@ -894,8 +894,11 @@ tr:last-child td:last-child {
 
 /* HIDE ADD BUTTON */
 .metadata-add-button {
-  display: var(--hide-add-button) !important;
-  width:50% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 50% !important;
+  border: 1.5px solid var(--background-modifier-border);
   margin: 0px auto 0px auto !important;
 }
 
@@ -1032,7 +1035,7 @@ background: var(--callout-three-color);
   font-size: var(--callout-font-size-title);
   margin: 7px auto 7px auto;
   padding-bottom: 3.8px;
-  border-bottom: 0.7px solid;
+  border-bottom: 0.7px solid var(--background-modifier-border);
   white-space: normal !important;
 }
 
@@ -1587,6 +1590,14 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 .mod-active .document-search-container {
   border-radius: 0px 0px var(--radius-s) var(--radius-s);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px 0px, rgba(27, 31, 35, 0.1) 0px 0px 0px 0px !important;
+
+  position: absolute;
+  border-radius: 0px 0px var(--radius-s) var(--radius-s);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px 0px, rgba(27, 31, 35, 0.1) 0px 0px 0px 0px !important;
+  margin: 0px, 35px, 0px, 35px;
+  width: 100%;
+  display: flex;
+  
 }
 
 .is-mobile .document-replace-container {
