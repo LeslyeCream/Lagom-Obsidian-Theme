@@ -98,7 +98,6 @@ body {
   --filename-line-thickness: 1.8px;
   --filename-separator-style: dotted;
   --setting-items-background: none;
-  --dinamic-note-value: -75px;
 }
 
 
@@ -267,11 +266,6 @@ body.theme-light {
   padding-left: var(--padding-note-content);
   padding-right: var(--padding-note-content);
   border: 1.5px solid var(--background-modifier-border);
-
-
-  position: absolute;
-  display: flex;
-
 }
 
 
@@ -291,7 +285,6 @@ body.theme-light {
   top: var(--position-top-page-view) !important;
   margin:  0px 15px 0px 15px !important;
   max-width: auto;
-  top: 45px;
   border-radius: var(--radius-s);
   padding-left: var(--padding-note-content);
   padding-right: var(--padding-note-content);
@@ -945,7 +938,6 @@ tr:last-child td:last-child {
 }
 
 .metadata-content {
-  background: red;
   background: var(--background-primary) !important;
   border-radius: 0px !important;
 }
@@ -1462,7 +1454,6 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
   font-size: var(--h2-size) !important;
   text-align: center;
   margin: auto auto !important;
-  margin: 0 25px !important;
   padding: var(--size-4-2) !important;
 }
 
@@ -1501,7 +1492,6 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
   justify-content: center;
   border: 0px solid green !important;
   box-shadow: none !important;
-  border-radius: 0px !important;
   border-radius: var(--radius-s) !important;
   background: var(--background-secondary) !important;
 }
@@ -1574,9 +1564,6 @@ select,
 }
 
 
-
-
-
 /* HIDE SETTINGS ICON */
 
 .workspace-drawer-header-icon {
@@ -1588,7 +1575,6 @@ select,
   /* padding: 0;
   margin: 0px 0px 0px 0px; */
 }
-
 
 
 /* HIDE INFO AND NUM_NOTES VAULT */
@@ -1784,10 +1770,7 @@ body:not(.native-scrollbars) ::-webkit-scrollbar {
 .mod-active .document-search-container {
   border-radius: 0px 0px var(--radius-s) var(--radius-s);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px 0px, rgba(27, 31, 35, 0.1) 0px 0px 0px 0px !important;
-
   position: absolute;
-  border-radius: 0px 0px var(--radius-s) var(--radius-s);
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px 0px, rgba(27, 31, 35, 0.1) 0px 0px 0px 0px !important;
   margin: 0px, 35px, 0px, 35px;
   width: 100%;
   display: flex;
@@ -2728,7 +2711,7 @@ settings:
       collapsed: true
   - 
     id: wrap-code-blocks
-    title: Wrap code (Preview and Editor)
+    title: Wrap code (Read mode)
     description: "Wraps long lines in code blocks instead of scrolling horizontally (reading mode only)."
     type: class-toggle
     default: false
