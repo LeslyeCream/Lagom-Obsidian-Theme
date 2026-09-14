@@ -2727,7 +2727,7 @@ settings:
       collapsed: true
   - 
     id: wrap-code-blocks
-    title: Wrap code (Read mode)
+    title: Wrap code (Preview and Editor)
     description: "Wraps long lines in code blocks instead of scrolling horizontally (reading mode only)."
     type: class-toggle
     default: false
