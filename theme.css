@@ -98,6 +98,7 @@ body {
   --filename-line-thickness: 1.8px;
   --filename-separator-style: dotted;
   --setting-items-background: none;
+  --dinamic-note-value: -75px;
 }
 
 
