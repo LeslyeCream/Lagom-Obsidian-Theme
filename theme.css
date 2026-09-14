@@ -9,15 +9,17 @@
 /* LAGOM SETTINGS */
 body {
   --default-font-size: 0.99em; /* Notes and editor */
-  --p-spacing: 10px; 
+  --p-spacing: 24px; 
   --active-line-font-size: 0.98em;
-  --inline-code-font-size: 0.9em;
-  --inline-title-size: 1.2em;
-  --code-size-edit-mode: 0.9em;
-  --quote-font-size: 0.98em;
+  /* --inline-code-font-size: 0.9em; */
+  --inline-code-size-editor: 0.9em; 
+  --inline-code-size-read: 0.9em;
+  --inline-title-size: 1.1em;
+  --code-size-edit-mode: 0.98em;
+  --quote-font-size: 1.1em;
   --files-explorer-font-size: 0.98em; /* font size files */
   --callout-font-size-title: 0.98em;
-  --metadata-label-font-size: 1em;
+  --metadata-label-font-size: var(--default-font-size);
   --metadata-input-font-size: 1em;
   --code-size: 0.98em;
   --embed-font-size: 0.98em;
@@ -26,6 +28,7 @@ body {
   --h3-size: 1.1em;
   --h4-size: 0.9em;
   --h5-size: 0.8em;
+  --h6-size: 0.8em;
 
   --inline-title-align: center;
   --quotes-align: justify;
@@ -33,21 +36,21 @@ body {
   --callouts-align-text: justify;
   --headers-align: left;
   --letter-spacing-note: 0px;
-  --line-height-note: 25px;
+  --line-height-note: 24.5px;
 
   --properties-icon-size: 1.2em;
-  --icon-file-size: 1.7em;
+  --icon-file-size: 1.5em;
 
   
   --radius-s: 11.5px;
   --separator-icon: "o0o";
   --nav-indentation-guide-width: unset;
-  --padding-default-note-style: 35px;
+  --padding-default-note-style: 50px;
   --focus-active-line-opacity: 1;
   --focus-non-active-line-opacity: 1;
   --show-dotted-line: 1px;
   --active-line-indicator: "+ ";
-  --icon-file-indicator: "·";
+  --icon-file-indicator: "•";
   --quote-padding: 10px 15px 10px 15px;
   --quote-icon: "“";
   /* --icon-size-properties: 70px !important; */
@@ -72,9 +75,9 @@ body {
   --mac-terminal-shadow: rgba(9, 30, 66, 0.10) 0px 4px 8px 5px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;	
   --metadata-divider-color: unset;
   --dark-theme-opacity: 1;
-  --folder-border-color: #50505088;
+  --folder-border-color: #6c6c6c6b;
   --light-theme-opacity: 1;
-  --icon-ui-opacity: 0.9;
+  --icon-ui-opacity: 1;
   --input-shadow: var(--background-modifier-border) 0 0 0 1px;
   --input-shadow-hover: hsla(var(--color-accent-hsl), 0.6) 0 0 0px 1px;
   --interactive-hover: hsla(var(--color-accent-hsl), 0.1);
@@ -87,7 +90,8 @@ body {
 
   --headers-space-symmetry: 1em;
   --input-border-width: 1px;
-  --list-indent: 18px;
+  --list-indent: 17px;
+  --callout-sublist-padding: 1.3em;
   --tabs-height: 300px;
 
   --bg-url: ;
@@ -235,7 +239,8 @@ body.theme-light {
 
 .cm-s-obsidian {}
 
-.cm-editor {}
+.cm-editor { 
+}
 
 /* CUSTOM BACKGROUND */
 .theme-light .cm-s-obsidian {
@@ -261,6 +266,11 @@ body.theme-light {
   padding-left: var(--padding-note-content);
   padding-right: var(--padding-note-content);
   border: 1.5px solid var(--background-modifier-border);
+
+
+  position: absolute;
+  display: flex;
+
 }
 
 
@@ -294,6 +304,32 @@ body.theme-light {
 }
 
 
+/* ::::: DINAMIC FULLSCREEN NOTE ::::: */
+.is-phone.is-hidden-nav .view-header {
+  --hidden-nav-offset: calc(var(--view-header-height) + var(--view-header-top-offset));
+  transform: translateY(calc(var(--hidden-nav-offset) * -1));
+  opacity: 0;
+}
+
+.page-style-read-mode .markdown-preview-view:not(.markdown-embed .markdown-preview-view),
+.page-style-editor-mode .cm-s-obsidian {
+  transition: margin-top 0.25s ease-in-out, min-height 0.25s ease-in-out;
+}
+
+.is-phone.is-hidden-nav.page-style-read-mode .markdown-preview-view:not(.markdown-embed .markdown-preview-view) {
+  margin-top: calc(var(--dinamic-note-value) + var(--position-top-page-view) - var(--view-header-height) - var(--view-header-top-offset)) !important;
+  min-height: calc(100% + var(--view-header-height) + var(--view-header-top-offset)) !important;
+}
+
+.is-phone.is-hidden-nav.page-style-editor-mode .cm-s-obsidian {
+  margin-top: calc(85px + var(--position-top-page-editor) - var(--view-header-height) - var(--view-header-top-offset)) !important;
+  min-height: calc(100% + var(--view-header-height) + var(--view-header-top-offset)) !important;
+}
+
+
+
+
+
 /* Reset page style for embedded notes (read & editor mode) 
 
 .page-style-read-mode .markdown-embed .markdown-preview-view,
@@ -325,10 +361,10 @@ body.theme-light {
 
 /* focus active line */
 .CodeMirror-activeline.CodeMirror-linebackground, .cm-active.cm-line {
- /*
+ 
   border-bottom: var(--show-dotted-line) dotted var(--text-accent);
   font-size: var(--active-line-font-size);
- */
+ 
   width: fit-content;
   background: var(--active-line-background);
 }
@@ -346,7 +382,7 @@ body.theme-light {
 }
 
 
-/* INLINE TITLE */
+/* ::::: INLINE TITLE ::::: */
 .inline-title {
   font-family: unset;
   margin: 0;
@@ -360,7 +396,7 @@ body.theme-light {
 }
 
 
-/* INLINE TITLE - SEPARATOR */
+/* ::::: INLINE TITLE - SEPARATOR ::::: */
 .enable-inline-title-separator .cm-editor .inline-title {
   border-bottom: 1px solid var(--background-modifier-border);
 }
@@ -477,6 +513,9 @@ li:has(> ol) > ol > li {
 ul ul::before { 
   left: -11px; top: 0; bottom: 0;
 }
+
+
+
 
 
 /* TASK LISTS */
@@ -621,10 +660,28 @@ input[type=checkbox]:checked {
 }
 
 
-/* Don't wrap codeblocks */
-.code-wrap pre > code, code[class*="language-"] {
-  white-space: var(--wrap-code-blocks);
+/* DON'T WRAP CODE BLOCKS */
+
+/* ::::: READ MODE - CODE BLOCK ::::: */
+.wrap-code-blocks .markdown-rendered pre,
+.wrap-code-blocks .markdown-rendered pre code[class*="language-"] {
+  white-space: pre-wrap !important;
 }
+body:not(.wrap-code-blocks) .markdown-rendered pre,
+body:not(.wrap-code-blocks) .markdown-rendered pre code[class*="language-"] {
+  white-space: pre !important;
+  overflow-x: auto;
+}
+
+/* ::: EDITOR MODE - CODE BLOCK :::: */
+.wrap-code-blocks .cm-line.HyperMD-codeblock {
+  white-space: pre-wrap !important;
+  word-break: break-word;
+}
+body:not(.wrap-code-blocks) .cm-line.HyperMD-codeblock {
+  white-space: pre !important;
+}
+
 
 /* MACOS TERMINAL */
 .markdown-preview-view pre {
@@ -894,7 +951,7 @@ tr:last-child td:last-child {
 
 /* HIDE ADD BUTTON */
 .metadata-add-button {
-  display: flex !important;
+  display: var(--hide-add-button) !important;
   justify-content: center !important;
   align-items: center !important;
   width: 50% !important;
@@ -905,9 +962,10 @@ tr:last-child td:last-child {
 /* TO-DO fix aliases, dates values and so on */
 .metadata-properties, .metadata-properties *, .metadata-properties-heading {
   text-transform: capitalize;
-  font-size: var(--metadata-label-font-size);
+  font-size: var(--default-font-size) !important;
   text-align: right;
 }
+
 
 /* ICONS */
 .metadata-property-key .metadata-property-icon {
@@ -915,7 +973,7 @@ tr:last-child td:last-child {
 }
 
 .metadata-container {
-  font-size: var(--properties-editor-font-size) !important;
+  font-size: var(--default-font-size) !important;
 
 	margin-top: 10px;
   border-bottom: dotted 2.1px var(--background-modifier-border);
@@ -1101,7 +1159,18 @@ background: var(--callout-three-color);
 }
 
 
- /* EMBED NOTES */
+/* :::: FIXED INDENT SUBLIST - CALLOUTS::::: */
+
+.markdown-preview-view .callout-content ul,
+.markdown-preview-view .callout-content ol,
+.markdown-source-view.cm-s-obsidian .callout-content ul,
+.markdown-source-view.cm-s-obsidian .callout-content ol {
+  padding-left: var(--callout-sublist-padding) !important;
+}
+
+
+/* ::::: EMBED NOTES ::::: */
+ 
 body {
   --embed-max-height: 400px;
   --embed-border-left: none;
@@ -1340,7 +1409,7 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
 	& .setting-item:not(.setting-item-heading):first-of-type,
 	.setting-item.setting-item-heading + .setting-item,
 	:not(.setting-item) + .setting-item:has( + .setting-item) {
-		border-top: 1px solid var(--background-modifier-border);
+		border-top: 0px solid var(--background-modifier-border);
 		border-radius: var(--radius-s) var(--radius-s) 0 0;
 		clip-path: inset(-24px -24px 0px -24px);
 		padding-top: 16px;
@@ -1367,7 +1436,9 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
 }
 
 
+
 /* GROUP SETTINGS */
+
 .vertical-tab-header-group-items {
   padding: 5px;
   margin: 5px 25px 0px 25px !important;
@@ -1376,11 +1447,133 @@ body.is-mobile.popup-explorer .workspace-drawer-backdrop {
   box-shadow: var(--mac-terminal-shadow);
 }
 
+
+.vertical-tab-header-group-items {
+  padding: 5px;
+  margin: 5px 25px 0px 25px !important;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-s);
+  box-shadow: var(--mac-terminal-shadow);
+}
+
+/* ::::: CENTER SETTING HEADERS ::::: */
 .vertical-tab-header-group-title {
   font-size: var(--h2-size) !important;
   text-align: center;
   margin: auto auto !important;
+  margin: 0 25px !important;
+  padding: var(--size-4-2) !important;
 }
+
+
+/* ::::: SUB-SETTINGS GROUPS ::::: */
+
+.setting-group-search:not(.vertical-tab-header .setting-search-container) {
+  border: 1px solid var(--background-modifier-border) !important;
+  border-bottom: none !important;
+  border-radius: var(--radius-s) var(--radius-s) 0 0 !important;
+  box-shadow: var(--mac-terminal-shadow) !important;
+  background-color: var(--background-primary) !important;
+}
+
+.setting-group-search:not(:empty) + .setting-items {
+  border-top: none !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+
+/* Refuerzo explícito: la barra de búsqueda principal de Ajustes queda intacta */
+.vertical-tab-header .setting-search-container {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background-color: transparent !important;
+}
+
+
+/* ::::: CLOSE BUTTONS ::::: */
+.modal-close-button,
+.modal-header-button,
+.modal-setting-back-button,
+.titlebar-button-container .mod-back,
+.titlebar-button-container .mod-forward {
+  justify-content: center;
+  border: 0px solid green !important;
+  box-shadow: none !important;
+  border-radius: 0px !important;
+  border-radius: var(--radius-s) !important;
+  background: var(--background-secondary) !important;
+}
+
+.modal.mod-settings .vertical-tab-header .setting-search-container {
+  flex-shrink: 0;
+  padding: var(--size-4-3) var(--size-4-3) 0 var(--size-4-3);
+}
+
+
+/* ::::: SEARCH BAR - SETTINGS ::::*/
+.search-input-container {
+  max-width: 80%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: none !important;
+  border: 1.5px solid var(--background-modifier-border) !important;
+  border-radius: var(--radius-s) !important;
+}
+.search-input-container input {
+  border-radius: var(--radius-s);
+}
+
+/* ::::: SEARCH BAR - SUB-SETTINGS ::::: */
+.setting-group-search {
+  justify-content: center;
+}
+
+.setting-group-search .search-input-container {
+  max-width: 100%;   
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+select:focus-visible,
+.combobox-button:focus-visible,
+.dropdown:focus-visible {
+  box-shadow: 0 0 0px 1px var(--text-accent) !important;
+}
+
+
+
+/* ::::: SEARCH RESULTS - SETTINGS ::::: */
+.is-phone .modal.mod-settings .vertical-tab-header-group-items,
+.is-phone .modal.mod-settings .setting-search-result-group {
+  border-radius: var(--radius-s) !important;
+  margin-bottom: 15px !important;
+  margin: 5px 25px 0px 25px !important;
+  box-shadow: var(--mac-terminal-shadow) !important;
+  border: 1px solid var(--background-modifier-border);
+}
+
+
+/* ::::: BUTTONS - SETTINGS ::::: */
+
+.modal.mod-settings .setting-item-control button,
+.modal.mod-settings .setting-item-control .clickable-icon,
+.modal.mod-settings .extra-setting-button {
+  border: 1.3px solid var(--background-modifier-border);
+}
+
+/* ::::: MENU SELECTOR - SETTINGS ::::: */
+select,
+.combobox-button,
+.dropdown {
+  border: 1.3px solid var(--background-modifier-border);
+
+}
+
+
+
 
 
 /* HIDE SETTINGS ICON */
@@ -1720,9 +1913,21 @@ body:not(.is-grabbing) .nav-file-title.is-active:hover {
   content: var(--icon-file-indicator) !important;
   font-size: var(--icon-file-size);
   padding-right: 5px;
+  /* 
   margin-left: 8px;
   margin-top: -7px;
+  */
   order: -1;
+}
+
+
+/* ::::: ICON FILE - CENTER ::::: */
+.nav-file .nav-file-title {
+  align-items: center !important;
+}
+
+.nav-file-title::after {
+  margin-top: 0 !important;
 }
 
 
@@ -1975,7 +2180,11 @@ audio {
 }
 
 
-
+/* ::::: TOGGLE VIEW - WINDOWS FIX(?) ::::: */
+body.mod-windows .view-action[aria-label*="view"],
+body.mod-linux .view-action[aria-label*="view"] {
+  margin-right: max(0px, calc(var(--toggle-buttom-distance) - var(--frame-right-space))) !important;
+}
 
 
 /* @settings
@@ -2303,6 +2512,13 @@ settings:
       type: class-toggle
       default: false
   - 
+      id: dinamic-note-value
+      title: Dinamic note top space
+      description: "A negative value will take up more upper space on screen. Change it if it causes problems with notch or status bar."
+      type: variable-number
+      default: -75
+      format: px
+  - 
       id: position-top-page-view
       title: Ajust position page (view)
       description: This allows you to adjust the vertical space occupied by the note. It's especially useful on iPads and perhaps computers. Use it if there's a blank space above the note.
@@ -2381,14 +2597,14 @@ settings:
       title: Header H5
       description: "Font size for H5 headings."
       type: variable-number
-      default: 0.7
+      default: 0.8
       format: em
   - 
       id: h6-size
       title: Header H6
       description: "Font size for H6 headings."
       type: variable-number
-      default: 0.5
+      default: 0.8
       format: em
   - 
       id: headers-others
@@ -2397,7 +2613,7 @@ settings:
       level: 3
       collapsed: true
   - 
-      id: headers-space-simetry
+      id: headers-space-symmetry
       title: Header space
       description: "Top and bottom margin around all headings."
       type: variable-number
@@ -2470,7 +2686,7 @@ settings:
       title: Title align
       description: "Horizontal alignment of the inline title."
       type: variable-select
-      default: justify
+      default: center
       options:
           - 
               label: Justify
@@ -2510,18 +2726,11 @@ settings:
       level: 2
       collapsed: true
   - 
-      id: wrap-code-blocks
-      title: Wrap code (Read mode)
-      description: "Wraps long lines in code blocks instead of scrolling horizontally (reading mode only)."
-      type: variable-select
-      default: normal
-      options:
-          - 
-              label: Enable
-              value: pre
-          - 
-              label: Disabled
-              value: normal
+    id: wrap-code-blocks
+    title: Wrap code (Read mode)
+    description: "Wraps long lines in code blocks instead of scrolling horizontally (reading mode only)."
+    type: class-toggle
+    default: false
   - 
       id: code-size
       title: Code block - Font size (Read Mode)
@@ -2628,7 +2837,12 @@ settings:
       level: 2
       collapsed: true
   - 
-      
+      id: callout-sublist-padding
+      title: Sublist padding
+      description: Modifies the indent space in lists within callouts
+      type: variable-number
+      format: em
+      default: 1.3
   -
       id: main-list-item-weight
       title: Font weight - Main list item
