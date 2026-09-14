@@ -244,7 +244,7 @@ The following snippet can be pasted directly into the style settings to achieve 
 # Changelog
 ** V1.7.5**
 
-- Added dynamic full screen in notes! 
+- Added dynamic full screen in notes! (Requires to be configured within Style Settings)
 
 - Fixed ghost spacing above the inline title in Editor mode.
 
