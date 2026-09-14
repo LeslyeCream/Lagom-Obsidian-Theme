@@ -88,6 +88,10 @@ A phone-focused theme for Obsidian
 - An elegant inline title inspired by The New Yorker covers
 ![Screenshot_20260513-141832_cropped](https://github.com/user-attachments/assets/507bd3ad-1c84-4d7b-ac25-e37e8c56f79e)
 
+- Dynamic fullscreen notes
+![Dinamic notes](https://github.com/user-attachments/assets/07ceeab5-182c-41c6-88cf-0cfd68ba8f6a)
+
+
 
 # Note
 
