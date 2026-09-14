@@ -212,6 +212,7 @@ The following snippet can be pasted directly into the style settings to achieve 
   "notes-values@@main-list-item-color": "var(--text-accent)",
   "notes-values@@sublist-vertical-line": 1.2,
   "notes-values@@main-list-item-weight": 600,
+  "notes-values@@dinamic-note-value": -75,
   "notes-values@@hide-callout-title": "none"
 }
 ```
@@ -246,7 +247,7 @@ The following snippet can be pasted directly into the style settings to achieve 
 
 
 # Changelog
-** V1.7.5**
+**V1.7.5**
 
 - Added dynamic full screen in notes! (Requires to be configured within Style Settings)
 
