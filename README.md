@@ -101,6 +101,37 @@ Make sure to use *Commander*, *Iconize*, *Custom file explorer sorting*, *Style 
 
 # Snippets
 
+## Icons (No plugins needed)
+
+To add icons next to each Folder Name:
+
+```css
+.nav-folder-title[data-path]::before {
+  content: "" !important;
+  display: inline-block !important;
+  position: relative;
+  top: 3px; 
+  width: 22px !important;
+  height: 22px !important;
+  margin-right: 5px;
+  flex-shrink: 0;
+  background-color: var(--text-muted);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+
+.nav-folder-title[data-path="Folder_path_name_here"]::before {
+  -webkit-mask-image: url("data:image/here");
+  mask-image: url("data:image/here");
+}
+```
+
+
 ## Grouping folders
 
 To use the file name at the vault root to categorize a group of folders, it is necessary to set up the Custom File Explorer Settings with something like:
