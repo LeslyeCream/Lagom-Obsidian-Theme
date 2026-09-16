@@ -251,21 +251,13 @@ The following snippet can be pasted directly into the style settings to achieve 
 **V1.7.5**
 
 - Added dynamic full screen in notes! (Style Settings option)
-
 - Fixed ghost spacing above the inline title in Editor mode.
-
 - Fixed top overflow affecting the note element.
-
 - Visual improvements to search bars, buttons, settings cards, and the accessibility focus outline.
-
 - Fixed an issue where code blocks displayed code in single unwrapped lines instead of wrapping across multiple lines.
-
 - Better vertical centering of the icon preceding each file name.
-
 - Fixed inconsistencies in some Style Settings defaults.
-
 - Fixed(?) issue with the view toggle button appearing off-screen on Windows (I hope so @Disa)
-
 - Fixed list indentation inside callouts (Style Settings option)
 
 **V1.7.4**
