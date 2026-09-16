@@ -11,7 +11,7 @@ A phone-focused theme for Obsidian
 
 **The theme follows these core principles:**
 
-1. Avoid extreme minimalism—the UI should always be clear and recognizable.
+1. Avoid extreme minimalism. The UI should always be clear and recognizable.
   
 2. Make subtle, noticeable improvements that feel natural and don't distract from your work in Obsidian.
    
