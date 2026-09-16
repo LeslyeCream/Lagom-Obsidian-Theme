@@ -7,21 +7,22 @@ A phone-focused theme for Obsidian
 [Screenshots](#screenshots) | [Features](#features) | [Snippets](#Snippets) | [Lagom vs Default Theme](#Comparison) | [What's new](#changelog) | [Fonts](#fonts) | [Support & Contributions](#contribution)
 
 
-[Lagom](https://en.wikipedia.org/wiki/Lagom) tries to focus on just the right amount of changes needed to make it look aesthetically more conventional and modern. It's not about reinventing the wheel or offering a unique or special theme. I simply think Obsidian is a diamond in the rough that needs to be polished to shine on its own.✨ 
+[Lagom](https://en.wikipedia.org/wiki/Lagom) tries to focus on just the right amount of changes needed to make Obsidian look more aesthetically conventional and modern. It's not about reinventing the wheel or offering a unique or flashy theme. I simply think Obsidian is a diamond in the rough that needs some polishing to shine. ✨
 
-**The theme attempts to follow the following principles:**
+**The theme follows these core principles:**
 
-1. Avoid, as much as possible, extreme minimalism that prevents me from recognizing what is and what is not in the UI.
+1. Avoid extreme minimalism—the UI should always be clear and recognizable.
   
-2. Make subtle changes that are noticeable and make a difference both aesthetically and functionally, but are not a distraction when using Obsidian.
+2. Make subtle, noticeable improvements that feel natural and don't distract from your work in Obsidian.
    
-3. Symmetry and visual consistency.
+3. Maintain symmetry and visual consistency throughout.
    
-4. Focused exclusively on phones or tablets.
+4. Optimize exclusively for phones and tablets.
   
-5. Does not follow a specific color palette or typeface (so you can use it with the one you prefer!) 
+5. Stay color-palette and typeface agnostic, so you can pair it with whatever you prefer.
 
 6. [Complementary and modular](Comparison)
+
 
 *Work in progress...*
 
@@ -249,7 +250,7 @@ The following snippet can be pasted directly into the style settings to achieve 
 # Changelog
 **V1.7.5**
 
-- Added dynamic full screen in notes! (Requires to be configured within Style Settings)
+- Added dynamic full screen in notes! (Style Settings option)
 
 - Fixed ghost spacing above the inline title in Editor mode.
 
